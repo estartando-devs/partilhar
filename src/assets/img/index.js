@@ -4,5 +4,6 @@ import heart from "./heart.svg";
 import home from "./home.svg";
 import ongs from "./ongs.svg";
 import star from "./star.svg";
+import arrow from "./arrow.svg";
 
-export { about, add, heart, home, ongs, star };
+export { about, add, heart, home, ongs, star, arrow };
