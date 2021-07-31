@@ -1,11 +1,9 @@
 import React from "react";
-import { Menu } from "../../components/Menu";
 
 const Home = () => {
-  // return <div>home works</div>;
   return (
     <div>
-      <Menu />
+      <h1>home works</h1>
     </div>
   );
 };
