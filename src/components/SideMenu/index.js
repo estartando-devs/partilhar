@@ -3,7 +3,7 @@ import * as I from "../../assets/img/index";
 
 const SideMenu = ({ show, onClose }) => {
   return (
-    <S.Teste show={show}>
+    <S.ContainerMenu show={show}>
       <S.Container show={show}>
         <S.Menu>
           <S.Arrow onClick={onClose}>
@@ -39,7 +39,7 @@ const SideMenu = ({ show, onClose }) => {
           </S.ItemMenu>
         </S.Menu>
       </S.Container>
-    </S.Teste>
+    </S.ContainerMenu>
   );
 };
 

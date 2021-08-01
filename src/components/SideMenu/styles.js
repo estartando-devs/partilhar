@@ -38,7 +38,7 @@ const Arrow = styled.div`
   margin-bottom: 28px;
 `;
 
-const Teste = styled.div`
+const ContainerMenu = styled.div`
   position: fixed;
   opacity: 0;
   pointer-events: none;
@@ -55,4 +55,4 @@ const Teste = styled.div`
     `};
 `;
 
-export { Container, Menu, ItemMenu, Arrow, Teste };
+export { Container, Menu, ItemMenu, Arrow, ContainerMenu };
