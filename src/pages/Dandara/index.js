@@ -1,8 +1,8 @@
 import React from "react";
-import SideMenu from "../../components/SideMenu";
+import Header from "../../components/Header";
 
 const Dandara = () => {
-  return <SideMenu />;
+  return <Header />;
 };
 
 export default Dandara;
