@@ -9,8 +9,6 @@ const Header = () => {
   const toggleSideMenu = (e) => {
     e.preventDefault();
     setShowMenu((prev) => !prev);
-
-    console.log(showMenu);
   };
   return (
     <S.Container>
