@@ -1,10 +1,13 @@
 import React from "react";
 import Routes from "./routes";
 
-import "./styles/global.scss";
-import "./styles/reset.scss";
-import "./styles/fonts.scss";
+import GlobalStyle from "./styles/globalStyles";
 
 export default function App() {
-  return <Routes />;
+  return (
+    <>
+      <GlobalStyle />
+      <Routes />
+    </>
+  );
 }
