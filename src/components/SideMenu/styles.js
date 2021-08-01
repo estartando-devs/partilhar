@@ -2,17 +2,19 @@ import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   width: 176px;
   height: 323px;
   background-color: #5a7770;
   border-radius: 6px;
 `;
+
 const Menu = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 21.69px;
+  gap: 18px;
+  margin-top: 15px;
+  margin-left: 16px;
 `;
 
 const ItemMenu = styled.div`
@@ -23,5 +25,8 @@ const ItemMenu = styled.div`
   font-weight: 500;
   gap: 11px;
 `;
+const Arrow = styled.div`
+  margin-bottom: 28px;
+`;
 
-export { Container, Menu, ItemMenu };
+export { Container, Menu, ItemMenu, Arrow };

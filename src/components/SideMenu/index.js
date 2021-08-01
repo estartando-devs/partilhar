@@ -7,9 +7,9 @@ const SideMenu = () => {
     <div>
       <S.Container>
         <S.Menu>
-          <S.ItemMenu>
+          <S.Arrow>
             <img src={I.arrow} alt="Seta" />
-          </S.ItemMenu>
+          </S.Arrow>
           <S.ItemMenu>
             <img src={I.home} alt="Icone home" />
             Home
