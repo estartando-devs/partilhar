@@ -6,11 +6,6 @@ const Container = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 114px;
-  font-size: 23.42px;
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  font-style: normal;
-  color: #5a7770;
   box-sizing: border-box;
 `;
 const ContentHeader = styled.div`

@@ -17,17 +17,17 @@ const SideMenu = ({ show, onClose }) => {
             {" "}
             <img src={I.ongs} alt="Icone ongs" /> Ongs
           </S.ItemMenu>
-          <S.ItemMenu>
+          <S.ItemMenu to="/">
             {" "}
             <img src={I.heart} alt="Icone coração" />
             Doadores destaque
           </S.ItemMenu>
-          <S.ItemMenu>
+          <S.ItemMenu to="/">
             {" "}
             <img src={I.star} alt="Icone estrela" />
             Ongs destaque
           </S.ItemMenu>
-          <S.ItemMenu>
+          <S.ItemMenu to="/">
             {" "}
             <img src={I.about} alt="Icone informação" />
             Sobre Nós
