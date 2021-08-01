@@ -1,20 +1,19 @@
-// import * as S from "./styles";
 import * as S from "./styles";
 import * as I from "../../assets/img/index";
 
-const SideMenu = () => {
+const SideMenu = ({ show, onClose }) => {
   return (
-    <div>
-      <S.Container>
+    <S.Teste show={show}>
+      <S.Container show={show}>
         <S.Menu>
-          <S.Arrow>
+          <S.Arrow onClick={onClose}>
             <img src={I.arrow} alt="Seta" />
           </S.Arrow>
-          <S.ItemMenu>
+          <S.ItemMenu to="/">
             <img src={I.home} alt="Icone home" />
             Home
           </S.ItemMenu>
-          <S.ItemMenu>
+          <S.ItemMenu to="/busca">
             {" "}
             <img src={I.ongs} alt="Icone ongs" /> Ongs
           </S.ItemMenu>
@@ -33,14 +32,14 @@ const SideMenu = () => {
             <img src={I.about} alt="Icone informação" />
             Sobre Nós
           </S.ItemMenu>
-          <S.ItemMenu>
+          <S.ItemMenu to="/login">
             {" "}
             <img src={I.add} alt="Icone adicionar ong" />
             Área da ONG
           </S.ItemMenu>
         </S.Menu>
       </S.Container>
-    </div>
+    </S.Teste>
   );
 };
 
