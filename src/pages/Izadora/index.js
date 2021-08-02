@@ -1,11 +1,8 @@
 import React from "react";
+import Footer from "../../components/Footer";
 
 const Izadora = () => {
-  return (
-    <div>
-      <h1>Izadora works</h1>
-    </div>
-  );
+  return <Footer />;
 };
 
 export default Izadora;
