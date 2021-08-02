@@ -1,13 +1,8 @@
 import React from "react";
-import { Button } from "../../components/Button/styles";
-// import Header from "../../components/Header";
+import { Input } from "../../components/Input/styles";
 
 const Dandara = () => {
-  return (
-    <Button width="90px" height="31px" backgroundColor="#5A7770" color="#fff">
-      Buscar
-    </Button>
-  );
+  return <Input />;
 };
 
 export default Dandara;
