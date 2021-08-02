@@ -13,7 +13,7 @@ const SideMenu = ({ show, onClose }) => {
             <img src={I.home} alt="Icone home" />
             Home
           </S.ItemMenu>
-          <S.ItemMenu to="/busca">
+          <S.ItemMenu to="/">
             {" "}
             <img src={I.ongs} alt="Icone ongs" /> Ongs
           </S.ItemMenu>
