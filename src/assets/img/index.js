@@ -8,5 +8,24 @@ import arrow from "./arrow.svg";
 import logo from "./logo.png";
 import menu from "./menu.svg";
 import lupa from "./lupa.svg";
+import instagram from "./instagram.svg";
+import facebook from "./facebook.svg";
+import whatsapp from "./wpp.svg";
+import whitelogo from "./logobranco.png";
 
-export { about, add, heart, home, ongs, star, arrow, logo, menu, lupa };
+export {
+  about,
+  add,
+  heart,
+  home,
+  ongs,
+  star,
+  arrow,
+  logo,
+  menu,
+  instagram,
+  facebook,
+  whatsapp,
+  whitelogo,
+  lupa,
+};
