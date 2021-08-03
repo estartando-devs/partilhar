@@ -2,13 +2,24 @@ import styled from "styled-components";
 
 const ContainerFooter = styled.footer`
   position: absolute;
-  bottom: 0;
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 100%;
   height: 92px;
   background: #5a7770;
+`;
+
+const ContainerMenu = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const TitleMenu = styled.a`
+  font-weight: 400;
+  font-size: 12px;
+  color: #ffffff;
 `;
 
 const ContainerLogo = styled.div`
@@ -50,6 +61,8 @@ export {
   ContainerLogo,
   ContainerInformation,
   ContainerImg,
+  ContainerMenu,
   TitleInformation,
+  TitleMenu,
   LogoImg,
 };

@@ -8,10 +8,17 @@ const Footer = () => {
         <img alt="White Logo" src={I.whitelogo} />
       </S.ContainerLogo>
 
+      <S.ContainerMenu>
+        <S.TitleMenu>Home</S.TitleMenu>
+        <S.TitleMenu>Contato</S.TitleMenu>
+        <S.TitleMenu>Sobre</S.TitleMenu>
+      </S.ContainerMenu>
+
       <S.ContainerInformation>
         <S.TitleInformation>
           © 2021. Todos os direitos reservados.
         </S.TitleInformation>
+
         <S.ContainerImg>
           <img alt="WhatsApp" src={I.whatsapp} />
           <img alt="Facebook" src={I.facebook} />
