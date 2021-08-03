@@ -7,5 +7,6 @@ import star from "./star.svg";
 import arrow from "./arrow.svg";
 import logo from "./logo.png";
 import menu from "./menu.svg";
+import search from "./search.svg";
 
-export { about, add, heart, home, ongs, star, arrow, logo, menu };
+export { about, add, heart, home, ongs, star, arrow, logo, menu, search };
