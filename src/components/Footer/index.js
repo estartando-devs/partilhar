@@ -4,19 +4,21 @@ import * as I from "../../assets/img";
 const Footer = () => {
   return (
     <S.ContainerFooter>
-      <S.ContainerLogo>
-        <img alt="White Logo" src={I.whitelogo} />
-      </S.ContainerLogo>
+      <S.Container>
+        <S.ContainerLogo>
+          <img alt="White Logo" src={I.whitelogo} />
+        </S.ContainerLogo>
 
-      <S.ContainerMenu>
-        <S.TitleMenu>Home</S.TitleMenu>
-        <S.TitleMenu>Contato</S.TitleMenu>
-        <S.TitleMenu>Sobre</S.TitleMenu>
-      </S.ContainerMenu>
+        <S.ContainerMenu>
+          <S.TitleMenu>Home</S.TitleMenu>
+          <S.TitleMenu>Contato</S.TitleMenu>
+          <S.TitleMenu>Sobre</S.TitleMenu>
+        </S.ContainerMenu>
+      </S.Container>
 
       <S.ContainerInformation>
         <S.TitleInformation>
-          © 2021. Todos os direitos reservados.
+          &copy; 2021. Todos os direitos reservados.
         </S.TitleInformation>
 
         <S.ContainerImg>
