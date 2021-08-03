@@ -18,7 +18,7 @@ export default function Routes() {
         <Route exact path="/login" component={Login} />
         <Route exact path="/perfil" component={Profile} />
         <Route exact path="/cadastro" component={Register} />
-        <Route exact path="/busca=:search" component={Search} />
+        <Route exact path="/busca" component={Search} />
         <Route exact path="/dandara" component={Dandara} />
         <Route exact path="/izadora" component={Izadora} />
         <Route path="*">

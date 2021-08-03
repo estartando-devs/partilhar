@@ -1,11 +1,11 @@
 import React from "react";
-import * as C from "../../components";
+import { Header, Search } from "../../components";
 
 const Dandara = () => {
   return (
     <>
-      <C.Header />
-      <C.Search />
+      <Header />
+      <Search />
     </>
   );
 };

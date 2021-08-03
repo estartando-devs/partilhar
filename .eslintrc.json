@@ -30,7 +30,7 @@
           "react/react-in-jsx-scope": "off",
           "linebreak-style":0,
           "no-multiple-empty-lines": [2, {"max":2}],
-          "object-curly-newline": "off"
-
+          "object-curly-newline": "off",
+          "react/jsx-props-no-spreading": 0
     }
 }

@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
-const ButtonStyled = styled.input`
+const ButtonStyled = styled.button`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
-  background-color: ${(props) => props.theme.palette.primary};
+  background-color: ${(props) => props.backgroundColor};
   font-size: ${(props) => props.fontSize};
-  /* color: ${(props) => props.color}; */
-  color: ${(props) => props.theme.palette.text.light.primary};
+  color: ${(props) => props.color};
   border-style: none;
   border-radius: 3px;
   font-weight: 700;
