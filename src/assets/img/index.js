@@ -7,6 +7,7 @@ import star from "./star.svg";
 import arrow from "./arrow.svg";
 import logo from "./logo.png";
 import menu from "./menu.svg";
+import lupa from "./lupa.svg";
 import instagram from "./instagram.svg";
 import facebook from "./facebook.svg";
 import whatsapp from "./wpp.svg";
@@ -26,4 +27,5 @@ export {
   facebook,
   whatsapp,
   whitelogo,
+  lupa,
 };

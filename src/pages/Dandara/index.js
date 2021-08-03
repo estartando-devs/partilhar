@@ -1,8 +1,13 @@
 import React from "react";
-import Header from "../../components/Header";
+import { Header, Search } from "../../components";
 
 const Dandara = () => {
-  return <Header />;
+  return (
+    <>
+      <Header />
+      <Search />
+    </>
+  );
 };
 
 export default Dandara;
