@@ -10,7 +10,7 @@ import menu from "./menu.svg";
 import instagram from "./instagram.svg";
 import facebook from "./facebook.svg";
 import whatsapp from "./wpp.svg";
-import whitelogo from "./whitelogo.svg";
+import whitelogo from "./logobranco.png";
 
 export {
   about,

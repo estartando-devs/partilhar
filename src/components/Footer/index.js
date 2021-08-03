@@ -5,14 +5,12 @@ const Footer = () => {
   return (
     <S.ContainerFooter>
       <S.Container>
-        <S.ContainerLogo>
-          <img alt="White Logo" src={I.whitelogo} />
-        </S.ContainerLogo>
+        <S.ContainerLogo alt="White Logo" src={I.whitelogo} />
 
         <S.ContainerMenu>
-          <S.TitleMenu>Home</S.TitleMenu>
-          <S.TitleMenu>Contato</S.TitleMenu>
-          <S.TitleMenu>Sobre</S.TitleMenu>
+          <S.TitleMenu to="/">Home</S.TitleMenu>
+          <S.TitleMenu to="/">Contato</S.TitleMenu>
+          <S.TitleMenu to="/">Sobre</S.TitleMenu>
         </S.ContainerMenu>
       </S.Container>
 
