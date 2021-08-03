@@ -11,7 +11,6 @@ const Search = () => {
   function onSubmit(e) {
     e.preventDefault();
     setSearch("");
-    console.log(search);
   }
 
   return (
