@@ -1,19 +1,8 @@
 import React from "react";
-import { search } from "../../assets/img";
-import { Input } from "../../components/Input/styles";
+import * as C from "../../components";
 
 const Dandara = () => {
-  return (
-    <Input
-      width="177px"
-      height="31px"
-      placeholder="Pesquisar..."
-      borderColor="#5A7770"
-      colorPlaceholder="#84A59D"
-      image={search}
-      paddingLeft="50px"
-    />
-  );
+  return <C.Search />;
 };
 
 export default Dandara;
