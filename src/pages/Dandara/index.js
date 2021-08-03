@@ -2,7 +2,12 @@ import React from "react";
 import * as C from "../../components";
 
 const Dandara = () => {
-  return <C.Search />;
+  return (
+    <>
+      <C.Header />
+      <C.Search />
+    </>
+  );
 };
 
 export default Dandara;

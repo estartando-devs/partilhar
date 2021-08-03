@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Input = styled.input`
+const InputStyles = styled.input`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
   color: ${(props) => props.color};
@@ -20,4 +20,4 @@ const Input = styled.input`
   }
 `;
 
-export { Input };
+export { InputStyles };

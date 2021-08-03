@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
-const Container = styled.div`
+const Container = styled.form`
+  display: flex;
+  align-items: center;
   width: 375px;
   height: 45px;
-  background-color: red;
+  padding-left: 20px;
+  box-sizing: border-box;
 `;
 
 export { Container };
