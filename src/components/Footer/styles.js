@@ -1,28 +1,55 @@
 import styled from "styled-components";
 
-const Container = styled.div`
+const ContainerFooter = styled.footer`
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 92px;
+  background: #5a7770;
+`;
+
+const ContainerLogo = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  height: 114px;
-  box-sizing: border-box;
+  width: 129px;
+  height: 46px;
+  margin: 10px 0 0 16px;
 `;
-const ContentHeader = styled.div`
+
+const ContainerInformation = styled.div`
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  padding-left: 18px;
 `;
 
-const ContainerMenu = styled.div`
-  margin-right: 20px;
-  button {
-    display: flex;
-    border: none;
-    background-color: #fff;
-    padding: 2px;
-  }
+const ContainerImg = styled.div`
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  padding: 12px 0;
 `;
 
-export { Container, ContentHeader, ContainerMenu };
+const TitleInformation = styled.p`
+  color: #ffffff;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+`;
+
+const LogoImg = styled.img`
+  width: 43.29px;
+  height: 46.09px;
+`;
+
+export {
+  ContainerFooter,
+  ContainerLogo,
+  ContainerInformation,
+  ContainerImg,
+  TitleInformation,
+  LogoImg,
+};
