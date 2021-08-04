@@ -1,12 +1,12 @@
 import React from "react";
-import { Header, Search, Causa } from "../../components";
+import { Header, Search, FilterCard } from "../../components";
 
 const Dandara = () => {
   return (
     <>
       <Header />
       <Search />
-      <Causa />
+      <FilterCard />
     </>
   );
 };

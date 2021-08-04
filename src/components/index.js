@@ -3,6 +3,6 @@ import Input from "./Input";
 import SideMenu from "./SideMenu";
 import Search from "./Search";
 import Button from "./Button";
-import Causa from "./Causa";
+import FilterCard from "./FilterCard";
 
-export { Header, Input, SideMenu, Search, Button, Causa };
+export { Header, Input, SideMenu, Search, Button, FilterCard };
