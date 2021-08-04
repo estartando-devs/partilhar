@@ -1,8 +1,15 @@
 import React from "react";
-import Footer from "../../components/Footer";
+
+import { LayoutComponent, Search } from "../../components";
 
 const Izadora = () => {
-  return <Footer />;
+  return (
+    <LayoutComponent>
+      <div style={{ minHeight: "70vh" }}>
+        <Search />
+      </div>
+    </LayoutComponent>
+  );
 };
 
 export default Izadora;
