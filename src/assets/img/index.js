@@ -7,19 +7,19 @@ import star from "./star.svg";
 import arrow from "./arrow.svg";
 import logo from "./logo.png";
 import menu from "./menu.svg";
-import lupa from "./lupa.svg";
+import magnifier from "./magnifier.svg";
 import instagram from "./instagram.svg";
 import facebook from "./facebook.svg";
 import whatsapp from "./wpp.svg";
 import whitelogo from "./logobranco.png";
 import woman from "./woman.svg";
-import saude from "./saude.svg";
-import idoso from "./idoso.svg";
-import esporte from "./esporte.svg";
-import cultura from "./cultura.svg";
-import crianca from "./crianca.svg";
+import cheers from "./cheers.svg";
+import oldman from "./oldman.svg";
+import sport from "./sport.svg";
+import culture from "./culture.svg";
+import kid from "./kid.svg";
 import animal from "./animal.svg";
-import ambiente from "./ambiente.svg";
+import ambience from "./ambience.svg";
 
 export {
   about,
@@ -35,13 +35,13 @@ export {
   facebook,
   whatsapp,
   whitelogo,
-  lupa,
+  magnifier,
   woman,
-  saude,
-  idoso,
-  esporte,
-  cultura,
-  crianca,
+  cheers,
+  oldman,
+  sport,
+  culture,
+  kid,
   animal,
-  ambiente,
+  ambience,
 };
