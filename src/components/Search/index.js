@@ -23,7 +23,7 @@ const Search = () => {
         placeholder="Pesquisar..."
         borderColor={theme.palette.primary}
         colorPlaceholder="#84A59D"
-        image={I.lupa}
+        image={I.magnifier}
         paddingLeft="50px"
         value={search}
         event={(ev) => setSearch(ev.target.value)}
