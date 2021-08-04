@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
-const Container = styled.div`
+export const Container = styled.div`
   display: flex;
   position: absolute;
   top: 40px;
@@ -16,7 +16,7 @@ const Container = styled.div`
   transition: transform 1s;
 `;
 
-const Menu = styled.div`
+export const Menu = styled.div`
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -24,7 +24,7 @@ const Menu = styled.div`
   margin-left: 16px;
 `;
 
-const ItemMenu = styled(Link)`
+export const ItemMenu = styled(Link)`
   display: flex;
   align-items: center;
   font-size: 14px;
@@ -34,11 +34,11 @@ const ItemMenu = styled(Link)`
   text-decoration: none;
 `;
 
-const Arrow = styled.div`
+export const Arrow = styled.div`
   margin-bottom: 28px;
 `;
 
-const ContainerMenu = styled.div`
+export const ContainerMenu = styled.div`
   position: fixed;
   opacity: 0;
   pointer-events: none;
@@ -55,4 +55,4 @@ const ContainerMenu = styled.div`
     `};
 `;
 
-export { Container, Menu, ItemMenu, Arrow, ContainerMenu };
+export const Imagem = styled.img``;

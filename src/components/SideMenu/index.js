@@ -7,34 +7,35 @@ const SideMenu = ({ show, onClose }) => {
       <S.Container show={show}>
         <S.Menu>
           <S.Arrow onClick={onClose}>
-            <img src={I.arrow} alt="Seta" />
+            <S.Imagem src={I.arrow} alt="Seta" />
           </S.Arrow>
           <S.ItemMenu to="/">
-            <img src={I.home} alt="Icone home" />
+            <S.Imagem src={I.home} alt="Icone home" />
             Home
           </S.ItemMenu>
           <S.ItemMenu to="/">
             {" "}
-            <img src={I.ongs} alt="Icone ongs" /> Ongs
+            <S.Imagem src={I.ongs} alt="Icone ongs" />
+            Ongs
           </S.ItemMenu>
           <S.ItemMenu to="/">
             {" "}
-            <img src={I.heart} alt="Icone coração" />
+            <S.Imagem src={I.heart} alt="Icone coração" />
             Doadores destaque
           </S.ItemMenu>
           <S.ItemMenu to="/">
             {" "}
-            <img src={I.star} alt="Icone estrela" />
+            <S.Imagem src={I.star} alt="Icone estrela" />
             Ongs destaque
           </S.ItemMenu>
           <S.ItemMenu to="/">
             {" "}
-            <img src={I.about} alt="Icone informação" />
+            <S.Imagem src={I.about} alt="Icone informação" />
             Sobre Nós
           </S.ItemMenu>
           <S.ItemMenu to="/login">
             {" "}
-            <img src={I.add} alt="Icone adicionar ong" />
+            <S.Imagem src={I.add} alt="Icone adicionar ong" />
             Área da ONG
           </S.ItemMenu>
         </S.Menu>
