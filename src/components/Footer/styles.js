@@ -54,10 +54,6 @@ const ContainerImg = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  img {
-    padding-right: 16.95px;
-  }
 `;
 
 const TitleInformation = styled.p`
@@ -68,7 +64,11 @@ const TitleInformation = styled.p`
   padding-left: 16px;
 `;
 
+const BoxImg = styled.img`
+  padding-right: 16.95px;
+`;
 export {
+  BoxImg,
   Container,
   ContainerFooter,
   ContainerLogo,

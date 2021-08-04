@@ -20,9 +20,9 @@ const Footer = () => {
         </S.TitleInformation>
 
         <S.ContainerImg>
-          <img alt="WhatsApp" src={I.whatsapp} />
-          <img alt="Facebook" src={I.facebook} />
-          <img alt="Instagram" src={I.instagram} />
+          <S.BoxImg alt="WhatsApp" src={I.whatsapp} />
+          <S.BoxImg alt="Facebook" src={I.facebook} />
+          <S.BoxImg alt="Instagram" src={I.instagram} />
         </S.ContainerImg>
       </S.ContainerInformation>
     </S.ContainerFooter>
