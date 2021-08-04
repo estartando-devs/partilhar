@@ -1,8 +1,9 @@
 import React from "react";
-import Footer from "../../components/Footer";
+
+import LayoutComponent from "../../components/LayoutComponent";
 
 const Izadora = () => {
-  return <Footer />;
+  return <LayoutComponent />;
 };
 
 export default Izadora;
