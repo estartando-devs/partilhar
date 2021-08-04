@@ -11,7 +11,7 @@ import lupa from "./lupa.svg";
 import instagram from "./instagram.svg";
 import facebook from "./facebook.svg";
 import whatsapp from "./wpp.svg";
-import whitelogo from "./logobranco.png";
+import whitelogo from "./whitelogo.png";
 
 export {
   about,
