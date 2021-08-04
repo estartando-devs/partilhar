@@ -2,13 +2,10 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const ContainerFooter = styled.footer`
-  position: absolute;
-  bottom: 0;
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 92px;
   background-color: ${({ theme }) => theme.palette.primary};
 `;
 

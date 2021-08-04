@@ -1,16 +1,14 @@
 import Footer from "../Footer";
+import Header from "../Header";
+import * as S from "./styles";
 
-const LayoutComponent = () => {
+const LayoutComponent = ({ children }) => {
   return (
-    <div>
-      <div>
-        <Header />;
-      </div>
-
-      <div>
-        <Footer />;
-      </div>
-    </div>
+    <S.Container>
+      <Header />
+      {children}
+      <Footer />
+    </S.Container>
   );
 };
 export default LayoutComponent;

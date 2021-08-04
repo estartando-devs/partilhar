@@ -1,9 +1,15 @@
 import React from "react";
 
-import LayoutComponent from "../../components/LayoutComponent";
+import { LayoutComponent, Search } from "../../components";
 
 const Izadora = () => {
-  return <LayoutComponent />;
+  return (
+    <LayoutComponent>
+      <div style={{ minHeight: "70vh" }}>
+        <Search />
+      </div>
+    </LayoutComponent>
+  );
 };
 
 export default Izadora;
