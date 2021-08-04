@@ -12,6 +12,14 @@ import instagram from "./instagram.svg";
 import facebook from "./facebook.svg";
 import whatsapp from "./wpp.svg";
 import whitelogo from "./logobranco.png";
+import woman from "./woman.svg";
+import saude from "./saude.svg";
+import idoso from "./idoso.svg";
+import esporte from "./esporte.svg";
+import cultura from "./cultura.svg";
+import crianca from "./crianca.svg";
+import animal from "./animal.svg";
+import ambiente from "./ambiente.svg";
 
 export {
   about,
@@ -28,4 +36,12 @@ export {
   whatsapp,
   whitelogo,
   lupa,
+  woman,
+  saude,
+  idoso,
+  esporte,
+  cultura,
+  crianca,
+  animal,
+  ambiente,
 };
