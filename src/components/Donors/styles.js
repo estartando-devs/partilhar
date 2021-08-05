@@ -5,6 +5,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
 `;
 
 const Title = styled.div`
@@ -12,14 +15,14 @@ const Title = styled.div`
   font-size: 18px;
   font-weight: 500;
   text-align: center;
-  color: ${({ theme }) => theme.palette.primary};
 `;
 
 const ContainerImg = styled.div`
-  width: 100%;
+  width: 347px;
   display: flex;
-  justify-content: space-around;
-  margin: 9px 0 30px;
+  justify-content: center;
+  gap: 19px;
+  padding-top: 9px;
 `;
 
 const TitleStrong = styled.strong`

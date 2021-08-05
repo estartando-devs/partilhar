@@ -65,7 +65,7 @@ const FilterCard = () => {
   return (
     <S.Container>
       <S.Titulo>
-        Escolha uma <strong>ONG</strong> para doar:
+        Escolha uma <S.TextStrong>ONG</S.TextStrong> para doar:
       </S.Titulo>
       <S.ContainerCausa>
         {filters.map((filter) => (

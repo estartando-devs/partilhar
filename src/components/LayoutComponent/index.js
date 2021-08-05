@@ -6,8 +6,11 @@ const LayoutComponent = ({ children }) => {
   return (
     <S.Container>
       <Header />
-      {children}
-      <Footer />
+      <S.Content>{children}</S.Content>
+
+      <S.FooterStyled>
+        <Footer />
+      </S.FooterStyled>
     </S.Container>
   );
 };

@@ -1,10 +1,14 @@
 import React from "react";
+import { Donors, FilterCard, LayoutComponent, Search } from "../../components";
+// import * as S from "./styles";
 
 const Home = () => {
   return (
-    <div>
-      <h1>home works</h1>
-    </div>
+    <LayoutComponent>
+      <Search />
+      <FilterCard />
+      <Donors />
+    </LayoutComponent>
   );
 };
 
