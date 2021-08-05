@@ -20,6 +20,8 @@ import culture from "./culture.svg";
 import kid from "./kid.svg";
 import animal from "./animal.svg";
 import ambience from "./ambience.svg";
+import donorsone from "./donors1.svg";
+import donorstwo from "./donors2.svg";
 
 export {
   about,
@@ -44,4 +46,6 @@ export {
   kid,
   animal,
   ambience,
+  donorsone,
+  donorstwo,
 };
