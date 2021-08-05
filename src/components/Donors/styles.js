@@ -18,7 +18,7 @@ const Title = styled.div`
 `;
 
 const ContainerImg = styled.div`
-  width: 347px;
+  width: 100%;
   display: flex;
   justify-content: center;
   gap: 19px;
