@@ -40,3 +40,6 @@ export const Imagem = styled.img``;
 export const TextFilter = styled.p`
   font-weight: 500;
 `;
+export const TextStrong = styled.strong`
+  font-weight: 800;
+`;
