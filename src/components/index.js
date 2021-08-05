@@ -6,6 +6,7 @@ import Button from "./Button";
 import Footer from "./Footer";
 import FilterCard from "./FilterCard";
 import LayoutComponent from "./LayoutComponent";
+import Donors from "./Donors";
 
 export {
   Header,
@@ -16,4 +17,5 @@ export {
   Footer,
   LayoutComponent,
   FilterCard,
+  Donors,
 };

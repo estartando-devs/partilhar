@@ -1,12 +1,12 @@
 import React from "react";
 
-import { LayoutComponent, Search } from "../../components";
+import { LayoutComponent, Donors } from "../../components";
 
 const Izadora = () => {
   return (
     <LayoutComponent>
       <div style={{ minHeight: "70vh" }}>
-        <Search />
+        <Donors />
       </div>
     </LayoutComponent>
   );
