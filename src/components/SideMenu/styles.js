@@ -35,7 +35,7 @@ export const ItemMenu = styled(Link)`
 `;
 
 export const Button = styled.button`
-  margin-bottom: 28px;
+  padding-bottom: 28px;
   border-radius: 50%;
   height: 30px;
   width: 30px;
@@ -50,7 +50,7 @@ export const Button = styled.button`
 `;
 
 export const Overlay = styled.div`
-  position: absolute;
+  position: fixed;
   opacity: 0;
   pointer-events: none;
   background-color: #c4c4c4a3;
