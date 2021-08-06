@@ -1,8 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-body {
-    
+body {  
     box-sizing: border-box;
     width: 100%;
     font-family: 'Roboto', sans-serif;

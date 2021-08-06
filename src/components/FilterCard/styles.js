@@ -6,6 +6,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   height: 248px;
+  width: 100%;
 `;
 
 export const Titulo = styled.p`
@@ -40,6 +41,4 @@ export const Imagem = styled.img``;
 export const TextFilter = styled.p`
   font-weight: 500;
 `;
-export const TextStrong = styled.strong`
-  font-weight: 800;
-`;
+export const TextStrong = styled.strong``;
