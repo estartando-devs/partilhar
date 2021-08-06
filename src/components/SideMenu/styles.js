@@ -13,7 +13,7 @@ export const Container = styled.div`
   right: -176px;
   transform: translateX(${(props) => (props.show ? "-100%" : "0")});
   box-sizing: border-box;
-  transition: transform 1s;
+  transition: transform 0.8s;
 `;
 
 export const Menu = styled.div`

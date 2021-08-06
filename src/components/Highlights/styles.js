@@ -45,7 +45,7 @@ export const CardSubtitle = styled.div`
   height: 32px;
   background-color: #00000096;
   color: #ffffff;
-  gap: 2px;
+  gap: 4px;
   margin-top: -32px;
 `;
 export const ImgSubtitle = styled.img`

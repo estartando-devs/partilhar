@@ -4,7 +4,7 @@ import * as I from "../../assets/img/index";
 const SideMenu = ({ show, onClose }) => {
   return (
     <S.Overlay show={show} onClick={onClose}>
-      <S.Container show={show}>
+      <S.Container show={show} onClick={(e) => e.stopPropagation()}>
         <S.Menu>
           <S.Button onClick={onClose}>X</S.Button>
           <S.ItemMenu to="/">
