@@ -1,11 +1,10 @@
 import React from "react";
-import { BorderBottom, BorderTop } from "../../components";
+import Border from "../../components/Border";
 
 const Dandara = () => {
   return (
     <>
-      <BorderTop />
-      <BorderBottom />
+      <Border />
     </>
   );
 };
