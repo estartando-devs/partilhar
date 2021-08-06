@@ -1,26 +1,35 @@
+import { useHistory } from "react-router-dom";
 import * as S from "./styles";
 import Border from "../Border";
 import * as I from "../../assets/img";
 
 const Highlights = () => {
+  const history = useHistory();
+
+  const handleCkick = (valor) => {
+    history.push(`/busca?q=${valor}`);
+  };
   const ongs = [
     {
       value: 0,
       img: I.cats,
       text: "ONG Home Pets",
       ImgSubtitle: I.animallight,
+      typeOng: "animais",
     },
     {
       value: 1,
       img: I.kids,
       text: "ONG Kids",
       ImgSubtitle: I.kidlight,
+      typeOng: "criancas",
     },
     {
       value: 2,
       img: I.care,
       text: "ONG Care",
       ImgSubtitle: I.oldlight,
+      typeOng: "idosos",
     },
   ];
   return (
@@ -32,11 +41,11 @@ const Highlights = () => {
         <Border>
           <S.Content>
             {ongs.map((ong) => (
-              <S.Card key={ong.value}>
+              <S.Card key={ong.value} onClick={() => handleCkick(ong.typeOng)}>
                 <S.Img src={ong.img} alt={ong.text} />
                 <S.CardSubtitle>
                   <S.ImgSubtitle src={ong.ImgSubtitle} alt={ong.text} />
-                  <S.Text>ONG Home Pets</S.Text>
+                  <S.Text>{ong.text}</S.Text>
                 </S.CardSubtitle>
               </S.Card>
             ))}
