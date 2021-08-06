@@ -1,12 +1,11 @@
 import React from "react";
-import { Header, Search, FilterCard } from "../../components";
+import { BorderBottom, BorderTop } from "../../components";
 
 const Dandara = () => {
   return (
     <>
-      <Header />
-      <Search />
-      <FilterCard />
+      <BorderTop />
+      <BorderBottom />
     </>
   );
 };

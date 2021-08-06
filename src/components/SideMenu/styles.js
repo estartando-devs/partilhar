@@ -34,12 +34,23 @@ export const ItemMenu = styled(Link)`
   text-decoration: none;
 `;
 
-export const Arrow = styled.div`
+export const Button = styled.button`
   margin-bottom: 28px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-color: #6b8c82;
+  color: ${(props) => props.theme.palette.text.light.primary};
+  font-weight: 700;
+  border-style: none;
+
+  :active {
+    background-color: #a6bdb6;
+  }
 `;
 
-export const ContainerMenu = styled.div`
-  position: fixed;
+export const Overlay = styled.div`
+  position: absolute;
   opacity: 0;
   pointer-events: none;
   background-color: #c4c4c4a3;
@@ -47,6 +58,7 @@ export const ContainerMenu = styled.div`
   height: 100vh;
   top: 0;
   transition: opacity 0.5s;
+
   ${(props) =>
     props.show &&
     css`

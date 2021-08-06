@@ -7,6 +7,8 @@ import Footer from "./Footer";
 import FilterCard from "./FilterCard";
 import LayoutComponent from "./LayoutComponent";
 import Donors from "./Donors";
+import BorderTop from "./BorderTop";
+import BorderBottom from "./BorderBottom";
 
 export {
   Header,
@@ -18,4 +20,6 @@ export {
   LayoutComponent,
   FilterCard,
   Donors,
+  BorderTop,
+  BorderBottom,
 };

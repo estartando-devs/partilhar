@@ -3,12 +3,10 @@ import * as I from "../../assets/img/index";
 
 const SideMenu = ({ show, onClose }) => {
   return (
-    <S.ContainerMenu show={show}>
+    <S.Overlay show={show} onClick={onClose}>
       <S.Container show={show}>
         <S.Menu>
-          <S.Arrow onClick={onClose}>
-            <S.Imagem src={I.arrow} alt="Seta" />
-          </S.Arrow>
+          <S.Button onClick={onClose}>X</S.Button>
           <S.ItemMenu to="/">
             <S.Imagem src={I.home} alt="Icone home" />
             Home
@@ -40,7 +38,7 @@ const SideMenu = ({ show, onClose }) => {
           </S.ItemMenu>
         </S.Menu>
       </S.Container>
-    </S.ContainerMenu>
+    </S.Overlay>
   );
 };
 

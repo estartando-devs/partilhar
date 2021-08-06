@@ -5,7 +5,7 @@ import home from "./home.svg";
 import ongs from "./ongs.svg";
 import star from "./star.svg";
 import arrow from "./arrow.svg";
-import logo from "./logo.png";
+import logo from "./logo.svg";
 import menu from "./menu.svg";
 import magnifier from "./magnifier.svg";
 import instagram from "./instagram.svg";
