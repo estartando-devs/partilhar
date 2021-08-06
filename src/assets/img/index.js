@@ -22,6 +22,12 @@ import animal from "./animal.svg";
 import ambience from "./ambience.svg";
 import donorsone from "./donors1.svg";
 import donorstwo from "./donors2.svg";
+import care from "./care.svg";
+import cats from "./cats.svg";
+import kids from "./kids.svg";
+import animallight from "./animallight.svg";
+import oldlight from "./oldlight.svg";
+import kidlight from "./kidlight.svg";
 
 export {
   about,
@@ -48,4 +54,10 @@ export {
   ambience,
   donorsone,
   donorstwo,
+  care,
+  cats,
+  kids,
+  animallight,
+  oldlight,
+  kidlight,
 };

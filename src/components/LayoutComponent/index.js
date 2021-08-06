@@ -6,6 +6,7 @@ const LayoutComponent = ({ children }) => {
   return (
     <S.Container>
       <Header />
+
       <S.Content>{children}</S.Content>
 
       <S.FooterStyled>

@@ -8,6 +8,7 @@ import FilterCard from "./FilterCard";
 import LayoutComponent from "./LayoutComponent";
 import Donors from "./Donors";
 import Border from "./Border";
+import Highlights from "./Highlights";
 
 export {
   Header,
@@ -20,4 +21,5 @@ export {
   FilterCard,
   Donors,
   Border,
+  Highlights,
 };

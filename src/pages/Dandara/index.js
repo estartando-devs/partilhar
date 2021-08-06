@@ -1,12 +1,9 @@
 import React from "react";
-import Border from "../../components/Border";
+
+import { Highlights } from "../../components";
 
 const Dandara = () => {
-  return (
-    <>
-      <Border />
-    </>
-  );
+  return <Highlights />;
 };
 
 export default Dandara;
