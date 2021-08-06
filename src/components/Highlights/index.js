@@ -3,6 +3,26 @@ import Border from "../Border";
 import * as I from "../../assets/img";
 
 const Highlights = () => {
+  const ongs = [
+    {
+      value: 0,
+      img: I.cats,
+      text: "ONG Home Pets",
+      ImgSubtitle: I.animallight,
+    },
+    {
+      value: 1,
+      img: I.kids,
+      text: "ONG Kids",
+      ImgSubtitle: I.kidlight,
+    },
+    {
+      value: 2,
+      img: I.care,
+      text: "ONG Care",
+      ImgSubtitle: I.oldlight,
+    },
+  ];
   return (
     <S.Container>
       <S.ContainerContent>
@@ -11,28 +31,15 @@ const Highlights = () => {
         </S.Title>
         <Border>
           <S.Content>
-            <S.Card>
-              <S.Img src={I.cats} alt="Ong Home Pets" />
-              <S.CardSubtitle>
-                <S.ImgSubtitle src={I.animallight} alt="Ong Animais" />
-                <S.Text>ONG Home Pets</S.Text>
-              </S.CardSubtitle>
-            </S.Card>
-
-            <S.Card>
-              <S.Img src={I.kids} alt="Ong kid" />
-              <S.CardSubtitle>
-                <S.ImgSubtitle src={I.kidlight} alt="Kids" />
-                <S.Text>ONG Kids</S.Text>
-              </S.CardSubtitle>
-            </S.Card>
-            <S.Card>
-              <S.Img src={I.care} alt="Ong Care" />
-              <S.CardSubtitle>
-                <S.ImgSubtitle src={I.oldlight} alt="Ong Animais" />
-                <S.Text>ONG Care</S.Text>
-              </S.CardSubtitle>
-            </S.Card>
+            {ongs.map((ong) => (
+              <S.Card key={ong.value}>
+                <S.Img src={ong.img} alt={ong.text} />
+                <S.CardSubtitle>
+                  <S.ImgSubtitle src={ong.ImgSubtitle} alt={ong.text} />
+                  <S.Text>ONG Home Pets</S.Text>
+                </S.CardSubtitle>
+              </S.Card>
+            ))}
           </S.Content>
         </Border>
       </S.ContainerContent>

@@ -19,7 +19,7 @@ export const Container = styled.div`
 export const Menu = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 20px;
   margin-top: 15px;
   margin-left: 16px;
 `;
@@ -35,7 +35,10 @@ export const ItemMenu = styled(Link)`
 `;
 
 export const Button = styled.button`
-  padding-bottom: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
   border-radius: 50%;
   height: 30px;
   width: 30px;
@@ -43,6 +46,7 @@ export const Button = styled.button`
   color: ${(props) => props.theme.palette.text.light.primary};
   font-weight: 700;
   border-style: none;
+  margin-bottom: 20px;
 
   :active {
     background-color: #a6bdb6;
