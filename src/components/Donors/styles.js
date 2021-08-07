@@ -15,6 +15,7 @@ const Title = styled.div`
   font-size: 18px;
   font-weight: 500;
   text-align: center;
+  color: ${({ theme }) => theme.palette.text.primary};
 `;
 
 const ContainerImg = styled.div`
@@ -25,8 +26,32 @@ const ContainerImg = styled.div`
   padding-top: 9px;
 `;
 
-const TitleStrong = styled.strong`
-  font-weight: 800;
+const TitleStrong = styled.strong``;
+
+const ContainerInfor = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
-export { Container, Title, TitleStrong, ContainerImg };
+const TextInfor = styled.p`
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  margin-left: 14px;
+`;
+
+const ContainerTextInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+`;
+
+export {
+  Container,
+  Title,
+  TitleStrong,
+  ContainerImg,
+  ContainerInfor,
+  ContainerTextInfo,
+  TextInfor,
+};
