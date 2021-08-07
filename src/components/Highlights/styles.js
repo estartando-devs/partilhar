@@ -43,8 +43,8 @@ export const CardSubtitle = styled.div`
   justify-content: center;
   align-items: center;
   height: 32px;
-  background-color: #00000096;
-  color: #ffffff;
+  background-color: ${(props) => props.theme.palette.text.secondary}96;
+  color: ${(props) => props.theme.palette.text.light.primary};
   gap: 4px;
   margin-top: -32px;
 `;
