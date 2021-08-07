@@ -1,14 +1,9 @@
 import React from "react";
-import { Header, Search, FilterCard } from "../../components";
+
+import { Highlights } from "../../components";
 
 const Dandara = () => {
-  return (
-    <>
-      <Header />
-      <Search />
-      <FilterCard />
-    </>
-  );
+  return <Highlights />;
 };
 
 export default Dandara;

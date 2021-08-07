@@ -36,6 +36,7 @@ const Theme = {
     },
     background: {
       default: "#fff",
+      modal: "#c4c4c4a3",
     },
   },
 };

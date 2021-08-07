@@ -1,11 +1,18 @@
 import React from "react";
-import { Donors, FilterCard, LayoutComponent, Search } from "../../components";
+import {
+  Donors,
+  FilterCard,
+  Highlights,
+  LayoutComponent,
+  Search,
+} from "../../components";
 
 const Home = () => {
   return (
     <LayoutComponent>
       <Search />
       <FilterCard />
+      <Highlights />
       <Donors />
     </LayoutComponent>
   );

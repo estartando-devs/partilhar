@@ -5,7 +5,7 @@ import home from "./home.svg";
 import ongs from "./ongs.svg";
 import star from "./star.svg";
 import arrow from "./arrow.svg";
-import logo from "./logo.png";
+import logo from "./logo.svg";
 import menu from "./menu.svg";
 import magnifier from "./magnifier.svg";
 import instagram from "./instagram.svg";
@@ -22,6 +22,12 @@ import animal from "./animal.svg";
 import ambience from "./ambience.svg";
 import donorsone from "./donors1.svg";
 import donorstwo from "./donors2.svg";
+import care from "./care.svg";
+import cats from "./cats.svg";
+import kids from "./kids.svg";
+import animallight from "./animallight.svg";
+import oldlight from "./oldlight.svg";
+import kidlight from "./kidlight.svg";
 
 export {
   about,
@@ -48,4 +54,10 @@ export {
   ambience,
   donorsone,
   donorstwo,
+  care,
+  cats,
+  kids,
+  animallight,
+  oldlight,
+  kidlight,
 };
