@@ -17,16 +17,14 @@ export const Container = styled.div`
 
   @media (min-width: 768px) {
     display: flex;
-    position: absolute;
+    position: unset;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 56px;
+    width: 100vw;
+    height: 42px;
     border-radius: 0px;
     background-color: ${(props) => props.theme.palette.primary};
-    left: 0;
-    top: 0px;
   }
 `;
 
@@ -55,7 +53,7 @@ export const ItemMenu = styled(Link)`
   text-decoration: none;
 
   @media (min-width: 768px) {
-    font-size: 25px;
+    font-size: 1.2rem;
   }
 `;
 export const ItemMenuDesktop = styled(Link)`
@@ -66,6 +64,7 @@ export const ItemMenuDesktop = styled(Link)`
     font-size: 25px;
     color: ${(props) => props.theme.palette.text.light.primary};
     font-weight: 500;
+    font-size: 1.2rem;
   }
 `;
 export const Button = styled.button`
@@ -88,7 +87,7 @@ export const Button = styled.button`
 `;
 
 export const Overlay = styled.div`
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     position: fixed;
     opacity: 0;
     pointer-events: none;

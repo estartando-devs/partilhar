@@ -18,21 +18,21 @@ const Search = () => {
   return (
     <S.Container>
       <Input
-        width="177px"
-        height="31px"
+        width="68%"
+        height="100%"
         placeholder="Pesquisar..."
         borderColor={theme.palette.primary}
         colorPlaceholder="#84A59D"
         image={I.magnifier}
-        paddingLeft="50px"
+        paddingLeft="32px"
         value={search}
         event={(ev) => setSearch(ev.target.value)}
       />
 
       <Button
-        width="90px"
-        height="31px"
-        fontSize="13px"
+        width="32%"
+        height="100%"
+        fontSize="0.8rem"
         type="submit"
         color={theme.palette.text.light.primary}
         backgroundColor={theme.palette.primary}

@@ -1,9 +1,13 @@
 import React from "react";
 
-import { SideMenu } from "../../components";
+import { Header } from "../../components";
 
 const Dandara = () => {
-  return <SideMenu />;
+  return (
+    <>
+      <Header />
+    </>
+  );
 };
 
 export default Dandara;
