@@ -13,7 +13,7 @@ const Card = () => {
           medos e adquirem novas metas e desejos para o futuro. Um lugar
           construído com apoio e amor.
         </S.TextContents>
-        <p>Ver mais...</p>
+        <S.TextLink>Ver mais...</S.TextLink>
       </S.ContainerOngInfor>
     </S.ContainerCard>
   );
