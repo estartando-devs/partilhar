@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <S.Container>
       <S.ContentHeader>
-        <S.Imagem src={I.logo} alt="Logo" />
+        <S.ImagemLogo src={I.logo} alt="Logo" />
       </S.ContentHeader>
       <S.ContainerMenu>
         <Button

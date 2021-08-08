@@ -1,9 +1,9 @@
 import React from "react";
 
-import { Highlights } from "../../components";
+import { SideMenu } from "../../components";
 
 const Dandara = () => {
-  return <Highlights />;
+  return <SideMenu />;
 };
 
 export default Dandara;

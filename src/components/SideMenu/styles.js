@@ -14,6 +14,20 @@ export const Container = styled.div`
   transform: translateX(${(props) => (props.show ? "-100%" : "0")});
   box-sizing: border-box;
   transition: transform 0.8s;
+
+  @media (min-width: 768px) {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 56px;
+    border-radius: 0px;
+    background-color: ${(props) => props.theme.palette.primary};
+    left: 0;
+    top: 0px;
+  }
 `;
 
 export const Menu = styled.div`
@@ -22,6 +36,13 @@ export const Menu = styled.div`
   gap: 20px;
   margin-top: 15px;
   margin-left: 16px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    gap: 48px;
+  }
 `;
 
 export const ItemMenu = styled(Link)`
@@ -32,8 +53,21 @@ export const ItemMenu = styled(Link)`
   font-weight: 500;
   gap: 11px;
   text-decoration: none;
-`;
 
+  @media (min-width: 768px) {
+    font-size: 25px;
+  }
+`;
+export const ItemMenuDesktop = styled(Link)`
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
+    text-decoration: none;
+    font-size: 25px;
+    color: ${(props) => props.theme.palette.text.light.primary};
+    font-weight: 500;
+  }
+`;
 export const Button = styled.button`
   display: flex;
   justify-content: center;
@@ -47,24 +81,34 @@ export const Button = styled.button`
   font-weight: 700;
   border-style: none;
   margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const Overlay = styled.div`
-  position: fixed;
-  opacity: 0;
-  pointer-events: none;
-  background-color: ${(props) => props.theme.palette.background.modal};
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  transition: opacity 0.5s;
+  @media (max-width: 768px) {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    background-color: ${(props) => props.theme.palette.background.modal};
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    transition: opacity 0.5s;
 
-  ${(props) =>
-    props.show &&
-    css`
-      opacity: 1;
-      pointer-events: auto;
-    `};
+    ${(props) =>
+      props.show &&
+      css`
+        opacity: 1;
+        pointer-events: auto;
+      `};
+  }
 `;
 
-export const Imagem = styled.img``;
+export const Imagem = styled.img`
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;

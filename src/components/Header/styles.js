@@ -5,8 +5,11 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  min-height: 114px;
+  height: 114px;
   box-sizing: border-box;
+  @media (min-width: 768px) {
+    height: 200px;
+  }
 `;
 export const ContentHeader = styled.div`
   display: flex;
@@ -18,4 +21,13 @@ export const ContentHeader = styled.div`
 export const ContainerMenu = styled.div`
   margin-right: 20px;
 `;
-export const Imagem = styled.img``;
+export const ImagemLogo = styled.img`
+  @media (min-width: 768px) {
+    width: 340px;
+  }
+`;
+export const Imagem = styled.img`
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
