@@ -21,7 +21,6 @@ const SideMenu = ({ show, onClose }) => {
             <S.Imagem src={I.add} alt="Icone adicionar ong" />
             Área da ONG
           </S.ItemMenu>
-          {/* ------------------------- */}
         </S.Menu>
       </S.Container>
     </S.Overlay>

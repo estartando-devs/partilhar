@@ -14,7 +14,6 @@ export const Container = styled.div`
   transform: translateX(${(props) => (props.show ? "-100%" : "0")});
   transition: transform 0.8s;
   box-sizing: border-box;
-
   @media (min-width: 768px) {
     display: flex;
     position: unset;
@@ -36,7 +35,6 @@ export const Menu = styled.div`
   gap: 20px;
   padding-top: 15px;
   padding-left: 16px;
-
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
@@ -54,7 +52,6 @@ export const ItemMenu = styled(Link)`
   font-weight: 500;
   gap: 11px;
   text-decoration: none;
-
   @media (min-width: 768px) {
     font-size: 1.2rem;
   }
@@ -83,7 +80,6 @@ export const Button = styled.button`
   font-weight: 700;
   border-style: none;
   margin-bottom: 20px;
-
   @media (min-width: 768px) {
     display: none;
   }

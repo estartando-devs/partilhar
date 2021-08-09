@@ -49,7 +49,6 @@ export const Imagem = styled.img`
 
 export const ContainerSearch = styled.div`
   display: flex;
-
   @media (min-width: 768px) {
     display: initial;
   }

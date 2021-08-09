@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-content: space-around;
 `;
+
 const Content = styled.div`
   flex: 1 0 auto;
 `;
