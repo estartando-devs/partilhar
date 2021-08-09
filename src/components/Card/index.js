@@ -1,9 +1,16 @@
+import { useHistory } from "react-router-dom";
 import * as S from "./styles";
 import * as I from "../../assets/img";
 
 const Card = () => {
+  const history = useHistory();
+
+  function handleClick() {
+    history.push("/ongdetails");
+  }
+
   return (
-    <S.ContainerCard>
+    <S.ContainerCard onClick={handleClick}>
       <img src={I.ongcard} alt="Ong Wonder" />
       <S.ContainerOngInfor>
         <S.TextTitle>Ong Wonder</S.TextTitle>

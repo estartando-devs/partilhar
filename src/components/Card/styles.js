@@ -34,7 +34,6 @@ export const TextContents = styled.div`
   margin-bottom: 8px;
 
   width: 206px;
-  text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
