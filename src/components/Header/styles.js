@@ -19,7 +19,6 @@ export const ContentHeader = styled.div`
   justify-content: space-around;
   width: 100%;
   padding: 24px 0 0 18px;
-
   @media (min-width: 768px) {
     padding: 35px;
     flex-direction: row;
