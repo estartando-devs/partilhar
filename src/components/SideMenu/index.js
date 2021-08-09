@@ -11,10 +11,12 @@ const SideMenu = ({ show, onClose }) => {
             <S.Imagem src={I.home} alt="Icone home" />
             Home
           </S.ItemMenu>
+          <S.ItemMenuDesktop to="/">ONGs</S.ItemMenuDesktop>
           <S.ItemMenu to="/">
             <S.Imagem src={I.about} alt="Icone informação" />
             Sobre Nós
           </S.ItemMenu>
+          <S.ItemMenuDesktop to="/">Contato</S.ItemMenuDesktop>
           <S.ItemMenu to="/login">
             <S.Imagem src={I.add} alt="Icone adicionar ong" />
             Área da ONG

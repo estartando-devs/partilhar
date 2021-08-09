@@ -7,6 +7,7 @@ const Container = styled.div`
   flex-direction: column;
   align-content: space-around;
 `;
+
 const Content = styled.div`
   flex: 1 0 auto;
 `;

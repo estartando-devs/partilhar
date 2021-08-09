@@ -4,13 +4,11 @@ import {
   FilterCard,
   Highlights,
   LayoutComponent,
-  Search,
 } from "../../components";
 
 const Home = () => {
   return (
     <LayoutComponent>
-      <Search />
       <FilterCard />
       <Highlights />
       <Donors />

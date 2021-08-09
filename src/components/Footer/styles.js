@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const ContainerFooter = styled.footer`
+export const ContainerFooter = styled.footer`
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -9,7 +9,7 @@ const ContainerFooter = styled.footer`
   background-color: ${({ theme }) => theme.palette.primary};
 `;
 
-const Container = styled.div`
+export const Container = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -17,21 +17,21 @@ const Container = styled.div`
   padding-top: 10px;
 `;
 
-const ContainerLogo = styled.img`
+export const ContainerLogo = styled.img`
   display: flex;
   align-items: center;
   padding-left: 16px;
   height: auto;
 `;
 
-const ContainerMenu = styled.div`
+export const ContainerMenu = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 4px 15px 0 0;
 `;
 
-const TitleMenu = styled(Link)`
+export const TitleMenu = styled(Link)`
   margin-left: 15px;
   font-weight: 400;
   font-size: 12px;
@@ -39,7 +39,7 @@ const TitleMenu = styled(Link)`
   text-decoration: none;
 `;
 
-const ContainerInformation = styled.div`
+export const ContainerInformation = styled.div`
   width: 100%;
   margin: 10px;
   display: flex;
@@ -47,13 +47,13 @@ const ContainerInformation = styled.div`
   justify-content: space-between;
 `;
 
-const ContainerImg = styled.div`
+export const ContainerImg = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
 `;
 
-const TitleInformation = styled.p`
+export const TitleInformation = styled.p`
   color: ${({ theme }) => theme.palette.text.light.primary};
   font-size: 12px;
   font-style: normal;
@@ -61,17 +61,6 @@ const TitleInformation = styled.p`
   padding-left: 16px;
 `;
 
-const BoxImg = styled.img`
+export const BoxImg = styled.img`
   padding-right: 16.95px;
 `;
-export {
-  BoxImg,
-  Container,
-  ContainerFooter,
-  ContainerLogo,
-  ContainerInformation,
-  ContainerImg,
-  ContainerMenu,
-  TitleInformation,
-  TitleMenu,
-};

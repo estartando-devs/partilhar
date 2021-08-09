@@ -1,9 +1,12 @@
 import React from "react";
-
-import { Highlights } from "../../components";
+import { FilterCard } from "../../components";
 
 const Dandara = () => {
-  return <Highlights />;
+  return (
+    <>
+      <FilterCard />
+    </>
+  );
 };
 
 export default Dandara;

@@ -3,6 +3,7 @@ import * as S from "./styles";
 import * as I from "../../assets/img";
 import SideMenu from "../SideMenu";
 import Button from "../Button";
+import Search from "../Search";
 import theme from "../../styles/theme";
 
 const Header = () => {
@@ -15,7 +16,10 @@ const Header = () => {
   return (
     <S.Container>
       <S.ContentHeader>
-        <S.Imagem src={I.logo} alt="Logo" />
+        <S.ImagemLogo src={I.logo} alt="Logo" />
+        <S.ContainerSearch>
+          <Search />
+        </S.ContainerSearch>
       </S.ContentHeader>
       <S.ContainerMenu>
         <Button

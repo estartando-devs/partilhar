@@ -10,7 +10,7 @@ const InputStyles = styled.input`
   background-image: url(${(props) => props.image});
   background-repeat: no-repeat;
   background-position: left center;
-  background-position-x: 17px;
+  background-position-x: 8px;
   box-sizing: border-box;
   padding-left: ${(props) => props.paddingLeft};
   outline: none;
