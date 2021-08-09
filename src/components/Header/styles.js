@@ -5,19 +5,21 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  box-sizing: border-box;
   @media (min-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
   }
 `;
+
 export const ContentHeader = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 24px 0 0 18px;
-  box-sizing: border-box;
   width: 100%;
+  padding: 24px 0 0 18px;
+
   @media (min-width: 768px) {
     padding: 35px;
     flex-direction: row;

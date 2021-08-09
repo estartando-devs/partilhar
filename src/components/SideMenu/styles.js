@@ -12,8 +12,8 @@ export const Container = styled.div`
   border-radius: 6px;
   right: -176px;
   transform: translateX(${(props) => (props.show ? "-100%" : "0")});
-  box-sizing: border-box;
   transition: transform 0.8s;
+  box-sizing: border-box;
 
   @media (min-width: 768px) {
     display: flex;
@@ -21,9 +21,11 @@ export const Container = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     height: 42px;
     border-radius: 0px;
+    top: 0;
+    right: 0;
     background-color: ${(props) => props.theme.palette.primary};
   }
 `;
@@ -32,13 +34,14 @@ export const Menu = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-top: 15px;
-  margin-left: 16px;
+  padding-top: 15px;
+  padding-left: 16px;
 
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
-    margin: 0;
+    justify-content: center;
+    padding: 0;
     gap: 48px;
   }
 `;
@@ -87,6 +90,7 @@ export const Button = styled.button`
 `;
 
 export const Overlay = styled.div`
+  width: 100%;
   @media (max-width: 767px) {
     position: fixed;
     opacity: 0;
