@@ -12,7 +12,7 @@ const Search = () => {
   const history = useHistory();
 
   const handleClick = () => {
-    history.push(`/busca?q=${search}`);
+    if (search) history.push(`/busca?q=${search}`);
   };
 
   return (

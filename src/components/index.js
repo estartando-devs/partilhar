@@ -10,6 +10,7 @@ import Donors from "./Donors";
 import Border from "./Border";
 import Highlights from "./Highlights";
 import Card from "./Card";
+import Tag from "./Tag";
 
 export {
   Header,
@@ -24,4 +25,5 @@ export {
   Border,
   Highlights,
   Card,
+  Tag,
 };
