@@ -43,7 +43,6 @@ export const Content = styled.div`
   align-items: center;
   gap: 3px;
   width: 100%;
-
   @media (min-width: 768px) {
     gap: 0;
     justify-content: space-between;
@@ -54,6 +53,11 @@ export const Content = styled.div`
 export const Card = styled.div`
   display: flex;
   flex-direction: column;
+  @media (min-width: 768px) {
+    :hover {
+      filter: opacity(70%);
+    }
+  }
 `;
 export const Img = styled.img`
   width: 118px;

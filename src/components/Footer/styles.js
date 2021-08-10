@@ -14,7 +14,10 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: start;
-  padding-top: 10px;
+  padding-top: 14px;
+  @media (min-width: 768px) {
+    padding-right: 15px;
+  }
 `;
 
 export const ContainerLogo = styled.img`
@@ -31,10 +34,7 @@ export const ContainerMenu = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4px 15px 0 0;
-  @media (min-width: 768px) {
-    gap: 15px;
-  }
+  padding-right: 15px;
 `;
 
 export const TitleMenu = styled(Link)`
@@ -45,6 +45,11 @@ export const TitleMenu = styled(Link)`
   text-decoration: none;
   @media (min-width: 768px) {
     font-size: 1.2rem;
+    padding: 5px;
+    :hover {
+      background-color: ${({ theme }) =>
+        theme.palette.text.placeholder.secondary}60;
+    }
   }
 `;
 
@@ -67,6 +72,7 @@ export const ContainerImg = styled.div`
   padding-right: 15px;
   @media (min-width: 768px) {
     gap: 26px;
+    padding-right: 30px;
   }
 `;
 
