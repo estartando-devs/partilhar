@@ -11,6 +11,9 @@ const ButtonStyled = styled.button`
   border-radius: 3px;
   font-weight: 700;
   margin-left: 7px;
+  @media (min-width: 768px) {
+    cursor: pointer;
+  }
 `;
 
 export { ButtonStyled };
