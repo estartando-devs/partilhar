@@ -47,8 +47,8 @@ export const Filter = styled.div`
   background-color: ${(props) => props.bgColor};
   border-radius: 7px;
   @media (min-width: 768px) {
-    height: 131px;
-    width: 133px;
+    width: 132px;
+    height: 125px;
     font-size: 1.23rem;
     cursor: pointer;
     :hover {
