@@ -9,6 +9,7 @@ import LayoutComponent from "./LayoutComponent";
 import Donors from "./Donors";
 import Border from "./Border";
 import Highlights from "./Highlights";
+import Card from "./Card";
 import Tag from "./Tag";
 
 export {
@@ -23,5 +24,6 @@ export {
   Donors,
   Border,
   Highlights,
+  Card,
   Tag,
 };
