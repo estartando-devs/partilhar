@@ -1,5 +1,5 @@
 import * as S from "./styles";
-import { filters } from "../../monk/filterData";
+import { filters } from "../../mocks/filterData";
 
 const Tag = () => {
   const query = new URLSearchParams(window.location.search).get("q");
