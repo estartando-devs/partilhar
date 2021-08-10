@@ -9,6 +9,7 @@ import LayoutComponent from "./LayoutComponent";
 import Donors from "./Donors";
 import Border from "./Border";
 import Highlights from "./Highlights";
+import Tag from "./Tag";
 
 export {
   Header,
@@ -22,4 +23,5 @@ export {
   Donors,
   Border,
   Highlights,
+  Tag,
 };

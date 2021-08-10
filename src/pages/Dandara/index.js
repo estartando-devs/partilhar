@@ -1,12 +1,8 @@
 import React from "react";
-import { FilterCard } from "../../components";
+// import { Tag } from "../../components";
 
 const Dandara = () => {
-  return (
-    <>
-      <FilterCard />
-    </>
-  );
+  return <>{/* <Tag /> */}</>;
 };
 
 export default Dandara;
