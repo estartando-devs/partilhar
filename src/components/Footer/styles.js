@@ -73,6 +73,7 @@ export const ContainerImg = styled.div`
   @media (min-width: 768px) {
     gap: 26px;
     padding-right: 30px;
+    cursor: pointer;
   }
 `;
 
