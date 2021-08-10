@@ -89,7 +89,7 @@ export const TitleInformation = styled.p`
 
 export const BoxImg = styled.img`
   @media (min-width: 768px) {
-    height: 28px;
-    width: 28px;
+    height: 25px;
+    width: 25px;
   }
 `;
