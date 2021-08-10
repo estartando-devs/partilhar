@@ -22,6 +22,9 @@ export const ContainerLogo = styled.img`
   align-items: center;
   padding-left: 16px;
   height: auto;
+  @media (min-width: 768px) {
+    width: 204px;
+  }
 `;
 
 export const ContainerMenu = styled.div`
@@ -29,6 +32,9 @@ export const ContainerMenu = styled.div`
   justify-content: center;
   align-items: center;
   padding: 4px 15px 0 0;
+  @media (min-width: 768px) {
+    gap: 15px;
+  }
 `;
 
 export const TitleMenu = styled(Link)`
@@ -37,6 +43,9 @@ export const TitleMenu = styled(Link)`
   font-size: 12px;
   color: ${({ theme }) => theme.palette.text.light.primary};
   text-decoration: none;
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const ContainerInformation = styled.div`
@@ -45,12 +54,20 @@ export const ContainerInformation = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (min-width: 768px) {
+    padding: 8px 0;
+  }
 `;
 
 export const ContainerImg = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 15px;
+  padding-right: 15px;
+  @media (min-width: 768px) {
+    gap: 26px;
+  }
 `;
 
 export const TitleInformation = styled.p`
@@ -59,8 +76,14 @@ export const TitleInformation = styled.p`
   font-style: normal;
   font-weight: 400;
   padding-left: 16px;
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const BoxImg = styled.img`
-  padding-right: 16.95px;
+  @media (min-width: 768px) {
+    height: 28px;
+    width: 28px;
+  }
 `;
