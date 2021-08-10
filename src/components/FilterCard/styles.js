@@ -7,12 +7,18 @@ export const Container = styled.div`
   justify-content: center;
   height: 248px;
   width: 100%;
+  @media (min-width: 768px) {
+    height: auto;
+  }
 `;
 
 export const Titulo = styled.p`
   font-size: 18px;
   padding-top: 30px;
   padding-bottom: 20px;
+  @media (min-width: 768px) {
+    font-size: 1.4rem;
+  }
 `;
 
 export const ContainerCausa = styled.div`
@@ -23,6 +29,11 @@ export const ContainerCausa = styled.div`
   width: 350px;
   height: 175px;
   gap: 10px;
+  @media (min-width: 768px) {
+    width: 591px;
+    height: auto;
+    justify-content: space-between;
+  }
 `;
 
 export const Filter = styled.div`
@@ -35,8 +46,22 @@ export const Filter = styled.div`
   text-align: center;
   background-color: ${(props) => props.bgColor};
   border-radius: 7px;
+  @media (min-width: 768px) {
+    height: 131px;
+    width: 133px;
+    font-size: 1.23rem;
+    cursor: pointer;
+    :hover {
+      filter: opacity(70%);
+    }
+  }
 `;
-export const Imagem = styled.img``;
+export const Imagem = styled.img`
+  @media (min-width: 768px) {
+    height: 46px;
+    width: 46px;
+  }
+`;
 
 export const TextFilter = styled.p`
   font-weight: 500;

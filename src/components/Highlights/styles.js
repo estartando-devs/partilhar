@@ -47,6 +47,7 @@ export const Content = styled.div`
   @media (min-width: 768px) {
     gap: 0;
     justify-content: space-between;
+    cursor: pointer;
   }
 `;
 
