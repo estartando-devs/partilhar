@@ -6,7 +6,7 @@ import * as I from "../../assets/img";
 const Highlights = () => {
   const history = useHistory();
 
-  const handleCkick = (valor) => {
+  const handleClick = (valor) => {
     history.push(`/busca?q=${valor}`);
   };
   const ongs = [
@@ -41,7 +41,7 @@ const Highlights = () => {
         <Border>
           <S.Content>
             {ongs.map((ong) => (
-              <S.Card key={ong.value} onClick={() => handleCkick(ong.typeOng)}>
+              <S.Card key={ong.value} onClick={() => handleClick(ong.typeOng)}>
                 <S.Img src={ong.img} alt={ong.text} />
                 <S.CardSubtitle>
                   <S.ImgSubtitle src={ong.ImgSubtitle} alt={ong.text} />

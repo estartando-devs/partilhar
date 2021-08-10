@@ -8,6 +8,11 @@ export const Container = styled.div`
   margin-top: 30px;
   box-sizing: border-box;
   margin-bottom: 30px;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    height: auto;
+  }
 `;
 export const ContainerContent = styled.div`
   display: flex;
@@ -16,10 +21,19 @@ export const ContainerContent = styled.div`
   align-items: center;
   width: 360px;
   padding-top: 5px;
+  @media (min-width: 768px) {
+    gap: 18px;
+    width: 591px;
+    height: 100%;
+  }
 `;
 export const Title = styled.p`
   font-size: 18px;
   margin-bottom: 19px;
+  @media (min-width: 768px) {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+  }
 `;
 export const TextStrong = styled.strong``;
 
@@ -28,6 +42,12 @@ export const Content = styled.div`
   justify-content: center;
   align-items: center;
   gap: 3px;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    gap: 0;
+    justify-content: space-between;
+  }
 `;
 
 export const Card = styled.div`
@@ -36,6 +56,11 @@ export const Card = styled.div`
 `;
 export const Img = styled.img`
   width: 118px;
+
+  @media (min-width: 768px) {
+    width: 100%;
+    height: 280px;
+  }
 `;
 
 export const CardSubtitle = styled.div`
@@ -47,11 +72,23 @@ export const CardSubtitle = styled.div`
   color: ${(props) => props.theme.palette.text.light.primary};
   gap: 4px;
   margin-top: -32px;
+
+  @media (min-width: 768px) {
+    height: 50px;
+    margin-top: -50px;
+  }
 `;
 export const ImgSubtitle = styled.img`
   background-image: url ${(props) => props.image};
+  @media (min-width: 768px) {
+    width: 28px;
+    height: 29px;
+  }
 `;
 
 export const Text = styled.p`
   font-size: 12px;
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
 `;

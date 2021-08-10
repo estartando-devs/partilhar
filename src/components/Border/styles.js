@@ -9,6 +9,9 @@ export const ContainerBorder = styled.div`
   flex-direction: row;
   height: 11px;
   width: 100%;
+  @media (min-width: 768px) {
+    height: 16px;
+  }
 `;
 export const Card = styled.div`
   background-color: ${(props) => props.backgroundColor};
