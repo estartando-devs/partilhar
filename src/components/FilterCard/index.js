@@ -1,6 +1,6 @@
 import { useHistory } from "react-router-dom";
 import * as S from "./styles";
-import { filters } from "../../monk/filterData";
+import { filters } from "../../mocks/filterData";
 
 const FilterCard = () => {
   const history = useHistory();
