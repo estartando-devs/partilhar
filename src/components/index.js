@@ -11,6 +11,7 @@ import Border from "./Border";
 import Highlights from "./Highlights";
 import Card from "./Card";
 import Tag from "./Tag";
+import Description from "./Description";
 
 export {
   Header,
@@ -26,4 +27,5 @@ export {
   Highlights,
   Card,
   Tag,
+  Description,
 };
