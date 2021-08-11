@@ -1,7 +1,13 @@
 import React from "react";
+import { Card, LayoutComponent, Tag } from "../../components";
 
 const Search = () => {
-  return <div></div>;
+  return (
+    <LayoutComponent>
+      <Tag />
+      <Card />
+    </LayoutComponent>
+  );
 };
 
 export default Search;
