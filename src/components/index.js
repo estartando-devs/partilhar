@@ -11,6 +11,7 @@ import Border from "./Border";
 import Highlights from "./Highlights";
 import Card from "./Card";
 import Tag from "./Tag";
+import SearchScreen from "./SearchScreen";
 
 export {
   Header,
@@ -26,4 +27,5 @@ export {
   Highlights,
   Card,
   Tag,
+  SearchScreen,
 };
