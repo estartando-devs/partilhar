@@ -1,11 +1,13 @@
 import React from "react";
-import { Tag } from "../../components";
+import { LayoutComponent, Card, Tag } from "../../components";
 
 const Search = () => {
   return (
     <div>
-      <h1>Busca works</h1>
-      <Tag />
+      <LayoutComponent>
+        <Tag />
+        <Card />
+      </LayoutComponent>
     </div>
   );
 };

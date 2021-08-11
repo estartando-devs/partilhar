@@ -1,7 +1,8 @@
 import { useHistory } from "react-router-dom";
 import * as S from "./styles";
+import { ongs } from "../../mocks/ongsData";
 
-const Card = ({ title, text, img }) => {
+const Card = () => {
   const history = useHistory();
 
   function handleClick() {
@@ -10,12 +11,19 @@ const Card = ({ title, text, img }) => {
 
   return (
     <S.ContainerCard onClick={handleClick}>
-      <img src={img} alt={title} />
-      <S.ContainerOngInfor>
-        <S.TextTitle>{title} </S.TextTitle>
-        <S.TextContents>{text}</S.TextContents>
-        <S.TextLink>Ver mais...</S.TextLink>
-      </S.ContainerOngInfor>
+      <>
+        {ongs.map((ong) => (
+          <S.ContainerCardInfor key={ong.value}>
+            <S.ImgCard src={ong.img} alt={ong.title} />
+
+            <S.ContainerOngInfor>
+              <S.TextTitle>{ong.title} </S.TextTitle>
+              <S.TextContents>{ong.text}</S.TextContents>
+              <S.TextLink>Ver mais...</S.TextLink>
+            </S.ContainerOngInfor>
+          </S.ContainerCardInfor>
+        ))}
+      </>
     </S.ContainerCard>
   );
 };

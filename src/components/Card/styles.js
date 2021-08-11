@@ -5,8 +5,8 @@ export const ContainerCard = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: start;
-  gap: 14px;
+  align-items: center;
+  flex-direction: column;
 `;
 
 export const ContainerOngInfor = styled.div`
@@ -30,7 +30,7 @@ export const TextContents = styled.div`
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
-  color: ${({ theme }) => theme.palette.text.light.secondary};
+  color: ${({ theme }) => theme.palette.text.primary};
   margin-bottom: 8px;
 
   width: 206px;
@@ -46,4 +46,14 @@ export const TextLink = styled(Link)`
   font-size: 14px;
   line-height: 17px;
   color: ${({ theme }) => theme.palette.text.light.secondary};
+`;
+
+export const ImgCard = styled.img``;
+
+export const ContainerCardInfor = styled.div`
+  width: 342px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin: 30px 0;
 `;
