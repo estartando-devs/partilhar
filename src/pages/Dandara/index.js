@@ -1,5 +1,5 @@
 import * as S from "./styles";
-import { Slide } from "../../components";
+import { Slide, Banner } from "../../components";
 import * as I from "../../assets/img";
 
 const Dandara = () => {
@@ -9,6 +9,8 @@ const Dandara = () => {
         <S.Imagem src={I.photoone} />
         <S.Imagem src={I.phototwo} />
       </Slide>
+
+      <Banner titulo="Ong Wonder" img={I.banner} />
     </>
   );
 };
