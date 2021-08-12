@@ -11,7 +11,7 @@ import magnifier from "./magnifier.svg";
 import instagram from "./instagram.svg";
 import facebook from "./facebook.svg";
 import whatsapp from "./wpp.svg";
-import whitelogo from "./whitelogo.png";
+import whitelogo from "./whitelogo.svg";
 import woman from "./woman.svg";
 import cheers from "./cheers.svg";
 import oldman from "./oldman.svg";
@@ -32,6 +32,7 @@ import ongcard from "./ongwonder.png";
 import ongladies from "./ongladies.png";
 import ongmaria from "./ongmaria.png";
 import ongmuitas from "./ongmuitas.png";
+import banner from "./banner.svg";
 
 export {
   about,
@@ -68,4 +69,5 @@ export {
   ongladies,
   ongmaria,
   ongmuitas,
+  banner,
 };

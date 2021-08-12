@@ -40,7 +40,8 @@ export const Menu = styled.div`
     flex-direction: row;
     justify-content: center;
     padding: 0;
-    gap: 48px;
+    gap: 0;
+    height: 100%;
   }
 `;
 
@@ -52,8 +53,16 @@ export const ItemMenu = styled(Link)`
   font-weight: 500;
   gap: 11px;
   text-decoration: none;
+
   @media (min-width: 768px) {
     font-size: 1.2rem;
+    height: 100%;
+    width: 130px;
+    gap: 0;
+    justify-content: center;
+    :hover {
+      background-color: ${(props) => props.theme.palette.text.light.primary}30;
+    }
   }
 `;
 export const ItemMenuDesktop = styled(Link)`
@@ -61,10 +70,18 @@ export const ItemMenuDesktop = styled(Link)`
   @media (min-width: 768px) {
     display: flex;
     text-decoration: none;
+    justify-content: center;
+    align-items: center;
     font-size: 25px;
     color: ${(props) => props.theme.palette.text.light.primary};
     font-weight: 500;
     font-size: 1.2rem;
+    height: 100%;
+    width: 160px;
+
+    :hover {
+      background-color: ${(props) => props.theme.palette.text.light.primary}30;
+    }
   }
 `;
 export const Button = styled.button`

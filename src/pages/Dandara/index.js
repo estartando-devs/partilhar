@@ -1,10 +1,12 @@
 import React from "react";
-import { Tag } from "../../components";
+import { Description, Banner} from "../../components";
+
 
 const Dandara = () => {
   return (
     <>
-      <Tag />
+      <Description />
+      <Banner />
     </>
   );
 };
