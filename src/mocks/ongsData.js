@@ -23,6 +23,6 @@ export const ongs = [
     value: 3,
     img: I.ongmaria,
     title: "Ong Maria&Maria",
-    text: " A Maria&eMaria ensina a arte da culinária de forma terapêutica...",
+    text: " A Maria&Maria ensina a arte da culinária de forma terapêutica...",
   },
 ];
