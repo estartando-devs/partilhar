@@ -29,6 +29,9 @@ import animallight from "./animallight.svg";
 import oldlight from "./oldlight.svg";
 import kidlight from "./kidlight.svg";
 import ongcard from "./ongwonder.png";
+import ongladies from "./ongladies.png";
+import ongmaria from "./ongmaria.png";
+import ongmuitas from "./ongmuitas.png";
 import banner from "./banner.svg";
 
 export {
@@ -63,5 +66,8 @@ export {
   oldlight,
   kidlight,
   ongcard,
+  ongladies,
+  ongmaria,
+  ongmuitas,
   banner,
 };

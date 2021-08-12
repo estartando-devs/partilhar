@@ -1,12 +1,15 @@
 import React from "react";
-import { Tag } from "../../components";
+import { Card, LayoutComponent, Tag } from "../../components";
+import { ongs } from "../../mocks/ongsData";
 
 const Search = () => {
   return (
-    <div>
-      <h1>Busca works</h1>
+    <LayoutComponent>
       <Tag />
-    </div>
+      {ongs.map((ong) => (
+        <Card key={ong.value} img={ong.img} title={ong.title} text={ong.text} />
+      ))}
+    </LayoutComponent>
   );
 };
 
