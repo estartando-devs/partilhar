@@ -11,9 +11,10 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: space-between;
 `;
-export const Title = styled.p`
+export const Title = styled.h1`
   font-size: 24px;
   padding-top: 10px;
+  font-weight: 700;
   color: ${({ theme }) => theme.palette.text.primary};
 `;
 export const Img = styled.img`

@@ -9,7 +9,7 @@ export const Container = styled.div`
 
 export const Title = styled.h2`
   padding: 10px 18px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   color: ${({ theme }) => theme.palette.text.primary};
 `;

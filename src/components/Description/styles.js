@@ -7,7 +7,7 @@ export const Container = styled.div`
 
 export const Title = styled.h2`
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 700;
   color: ${({ theme }) => theme.palette.text.primary};
   padding-bottom: 10px;
 `;
