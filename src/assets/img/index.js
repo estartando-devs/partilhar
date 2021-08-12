@@ -30,6 +30,8 @@ import oldlight from "./oldlight.svg";
 import kidlight from "./kidlight.svg";
 import ongcard from "./ongwonder.png";
 import banner from "./banner.svg";
+import photoone from "./photoone.svg";
+import phototwo from "./phototwo.svg";
 
 export {
   about,
@@ -64,4 +66,6 @@ export {
   kidlight,
   ongcard,
   banner,
+  photoone,
+  phototwo,
 };

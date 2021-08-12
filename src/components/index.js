@@ -12,6 +12,7 @@ import Highlights from "./Highlights";
 import Card from "./Card";
 import Tag from "./Tag";
 import Banner from "./Banner";
+import Slide from "./Slide";
 
 export {
   Header,
@@ -28,4 +29,5 @@ export {
   Card,
   Tag,
   Banner,
+  Slide,
 };
