@@ -7,6 +7,7 @@ export const ContainerCard = styled.div`
   justify-content: center;
   align-items: start;
   gap: 14px;
+  margin: 30px 0;
 `;
 
 export const ContainerOngInfor = styled.div`
@@ -17,11 +18,10 @@ export const ContainerOngInfor = styled.div`
 `;
 
 export const TextTitle = styled.h2`
-  font-family: "Lato", sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  color: ${({ theme }) => theme.palette.text.light.secondary};
+  color: ${({ theme }) => theme.palette.text.primary};
   margin-bottom: 14px;
 `;
 
@@ -30,7 +30,7 @@ export const TextContents = styled.div`
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
-  color: ${({ theme }) => theme.palette.text.light.secondary};
+  color: ${({ theme }) => theme.palette.text.primary};
   margin-bottom: 8px;
 
   width: 206px;
@@ -41,9 +41,10 @@ export const TextContents = styled.div`
 `;
 
 export const TextLink = styled(Link)`
-  font-family: "Lato", sans-serif;
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
-  color: ${({ theme }) => theme.palette.text.light.secondary};
+  color: ${({ theme }) => theme.palette.text.primary};
 `;
+
+export const ImgCard = styled.img``;

@@ -10,7 +10,7 @@ const Card = ({ title, text, img }) => {
 
   return (
     <S.ContainerCard onClick={handleClick}>
-      <img src={img} alt={title} />
+      <S.ImgCard src={img} alt={title} />
       <S.ContainerOngInfor>
         <S.TextTitle>{title} </S.TextTitle>
         <S.TextContents>{text}</S.TextContents>
