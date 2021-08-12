@@ -1,16 +1,12 @@
 import React from "react";
-import { Description } from "../../components";
-import { Banner } from "../../components";
+import { Description, Banner} from "../../components";
 
 
 const Dandara = () => {
   return (
     <>
-
       <Description />
-
       <Banner />
-
     </>
   );
 };
