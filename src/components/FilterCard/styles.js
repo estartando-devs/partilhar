@@ -16,6 +16,7 @@ export const Titulo = styled.p`
   font-size: 18px;
   padding-top: 30px;
   padding-bottom: 20px;
+  color: ${({ theme }) => theme.palette.text.primary};
   @media (min-width: 768px) {
     font-size: 1.4rem;
   }
@@ -65,5 +66,11 @@ export const Imagem = styled.img`
 
 export const TextFilter = styled.p`
   font-weight: 500;
+  font-size: 14px;
+  color: ${({ theme }) => theme.palette.text.primary};
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+    padding: 2px;
+  }
 `;
 export const TextStrong = styled.strong``;

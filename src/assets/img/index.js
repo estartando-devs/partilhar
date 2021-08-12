@@ -33,6 +33,8 @@ import ongladies from "./ongladies.png";
 import ongmaria from "./ongmaria.png";
 import ongmuitas from "./ongmuitas.png";
 import banner from "./banner.svg";
+import photoone from "./photoone.svg";
+import phototwo from "./phototwo.svg";
 
 export {
   about,
@@ -70,4 +72,6 @@ export {
   ongmaria,
   ongmuitas,
   banner,
+  photoone,
+  phototwo,
 };

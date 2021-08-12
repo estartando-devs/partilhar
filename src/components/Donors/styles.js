@@ -55,7 +55,7 @@ export const ContainerTextInfo = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 10px;
-
+  color: ${({ theme }) => theme.palette.text.primary};
   @media (min-width: 768px) {
   }
 `;
