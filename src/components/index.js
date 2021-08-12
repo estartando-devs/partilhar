@@ -13,6 +13,7 @@ import Card from "./Card";
 import Tag from "./Tag";
 import Description from "./Description";
 import Banner from "./Banner";
+import Slide from "./Slide";
 
 
 export {
@@ -31,4 +32,5 @@ export {
   Tag,
   Description,
   Banner,
+  Slide,
 };
