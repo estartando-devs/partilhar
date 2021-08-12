@@ -21,4 +21,5 @@ export const Imagem = styled.img``;
 export const Text = styled.p`
   font-size: 16px;
   font-weight: 500;
+  color: ${({ theme }) => theme.palette.text.primary};
 `;

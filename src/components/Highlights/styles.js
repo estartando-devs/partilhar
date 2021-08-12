@@ -30,6 +30,7 @@ export const ContainerContent = styled.div`
 export const Title = styled.p`
   font-size: 18px;
   margin-bottom: 19px;
+  color: ${({ theme }) => theme.palette.text.primary};
   @media (min-width: 768px) {
     font-size: 1.4rem;
     margin-bottom: 0;
