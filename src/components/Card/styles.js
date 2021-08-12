@@ -5,8 +5,9 @@ export const ContainerCard = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  align-items: start;
+  gap: 14px;
+  margin: 30px 0;
 `;
 
 export const ContainerOngInfor = styled.div`
@@ -47,11 +48,3 @@ export const TextLink = styled(Link)`
 `;
 
 export const ImgCard = styled.img``;
-
-export const ContainerCardInfor = styled.div`
-  width: 342px;
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  margin: 30px 0;
-`;
