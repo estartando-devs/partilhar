@@ -10,7 +10,7 @@ export const Text = styled.p`
   color: ${({ theme }) => theme.palette.text.primary};
   font-family: "Lato", sans-serif;
   font-weight: 400;
-
+`;
 export const Imagem = styled.img`
   width: 211px;
   height: 271px;
