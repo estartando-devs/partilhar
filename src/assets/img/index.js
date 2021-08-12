@@ -29,6 +29,7 @@ import animallight from "./animallight.svg";
 import oldlight from "./oldlight.svg";
 import kidlight from "./kidlight.svg";
 import ongcard from "./ongwonder.png";
+import banner from "./banner.svg";
 
 export {
   about,
@@ -62,4 +63,5 @@ export {
   oldlight,
   kidlight,
   ongcard,
+  banner,
 };
