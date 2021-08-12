@@ -1,6 +1,6 @@
 import * as S from "./styles";
-import { addressData } from "../../mocks/addressData";
 import { Slide, Banner, Description , CardData } from "../../components";
+import { addressData } from "../../mocks/addressData";
 import * as I from "../../assets/img";
 
 
@@ -29,7 +29,7 @@ const Dandara = () => {
         psicológicosm onde de forma cultural e dinâmica as mesmas encaram seus
         medos e adquirem novas metas e desejos para o futuro. Um lugar
         construído com apoio e amor."
-      />{" "}
+      />
       <Slide>
         <S.Imagem src={I.photoone} />
         <S.Imagem src={I.phototwo} />
