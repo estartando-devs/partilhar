@@ -14,7 +14,7 @@ const Card = ({ title, text, img }) => {
       <S.ContainerOngInfor>
         <S.TextTitle>{title} </S.TextTitle>
         <S.TextContents>{text}</S.TextContents>
-        <S.TextLink>Ver mais...</S.TextLink>
+        <S.TextLink to="/">Ver mais...</S.TextLink>
       </S.ContainerOngInfor>
     </S.ContainerCard>
   );

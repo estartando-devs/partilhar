@@ -12,8 +12,8 @@ const Tag = () => {
     <S.Container>
       {causa && (
         <S.Content backgroundColor={causa.bgColor} key={causa.value}>
-          <S.Imagem src={causa.icon} alt="Mulher" />
-          <S.Text>{causa.title}</S.Text>
+          <S.Imagem src={causa.icon} alt={causa.niche} />
+          <S.Text>{causa.niche}</S.Text>
         </S.Content>
       )}
     </S.Container>

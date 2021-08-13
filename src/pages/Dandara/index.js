@@ -1,13 +1,12 @@
-import * as S from "./styles";
-import { Slide, Banner, Description , CardData } from "../../components";
-import { addressData } from "../../mocks/addressData";
+// import * as S from "./styles";
+import { Banner } from "../../components";
+// import { addressData } from "../../mocks/addressData";
 import * as I from "../../assets/img";
-
 
 const Dandara = () => {
   return (
     <>
-    <S.Container>
+      {/* <S.Container>
       {addressData.map((data) => (
         <CardData
           key={data.index}
@@ -20,10 +19,10 @@ const Dandara = () => {
           <S.Text>{data.networks}</S.Text>
         </CardData>
       ))}
-    </S.Container>
+    </S.Container> */}
 
-      <Banner titulo="Ong Wonder" img={I.banner} />
-      <Description
+      <Banner title="Ong Wonder" img={I.banner} />
+      {/* <Description
         title="Nossa história"
         text="Somos uma ong especializada em cuidados com mulheres vítimas de abusos
         psicológicosm onde de forma cultural e dinâmica as mesmas encaram seus
@@ -33,7 +32,7 @@ const Dandara = () => {
       <Slide>
         <S.Imagem src={I.photoone} />
         <S.Imagem src={I.phototwo} />
-      </Slide>
+      </Slide> */}
     </>
   );
 };

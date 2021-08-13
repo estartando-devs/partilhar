@@ -4,10 +4,12 @@ import * as S from "./styles";
 const Slide = ({ children }) => {
   return (
     <S.Container>
-      <S.Title>Fotos do projeto</S.Title>
-      <Carousel itemsToShow={1.5} pagination={false} showArrows={false}>
-        {children}
-      </Carousel>
+      <S.Content>
+        <S.Title>Fotos do projeto</S.Title>
+        <Carousel itemsToShow={1.5} pagination={false} showArrows={false}>
+          {children}
+        </Carousel>
+      </S.Content>
     </S.Container>
   );
 };

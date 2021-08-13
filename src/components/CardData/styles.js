@@ -6,6 +6,7 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
+  margin-bottom: 25px;
 `;
 export const Content = styled.div`
   display: flex;
@@ -22,9 +23,4 @@ export const Title = styled.div`
   font-size: 20px;
   font-weight: 700;
   color: ${({ theme }) => theme.palette.text.primary};
-`;
-export const ContainerData = styled.div`
-  padding: 14px 13px;
-  border: 1px solid ${({ theme }) => theme.palette.text.light.primary};
-  border-radius: 7px;
 `;

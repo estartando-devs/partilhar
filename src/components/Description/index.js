@@ -1,10 +1,10 @@
 import * as S from "./styles";
 
-const Description = ({ title, text }) => {
+const Description = ({ text }) => {
   return (
     <S.Container>
       <S.Content>
-        <S.Title>{title}</S.Title>
+        <S.Title>Nossa história</S.Title>
         <S.Text>{text}</S.Text>
       </S.Content>
     </S.Container>

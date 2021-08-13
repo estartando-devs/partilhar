@@ -8,12 +8,13 @@ export const Container = styled.div`
 `;
 export const Content = styled.div`
   width: 341px;
-  height: 148px;
+  height: 100%;
+  margin: 30px 0;
 `;
 export const Title = styled.h2`
   font-size: 20px;
   font-weight: 700;
-  color: ${({ theme }) => theme.palette.text.primary};
+  color: ${({ theme }) => theme.palette.text.light.secondary};
   padding-bottom: 10px;
 `;
 export const Text = styled.p`
