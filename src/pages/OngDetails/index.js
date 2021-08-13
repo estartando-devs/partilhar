@@ -14,10 +14,6 @@ const OngDetails = () => {
   const location = useLocation();
   const ong = location.state;
 
-  // const color = ong.find((ong) => {
-  //   return ong.niche ===
-  // })
-
   return (
     <>
       <LayoutComponent>
@@ -31,7 +27,7 @@ const OngDetails = () => {
           <S.Image src={I.phototwo} alt="foto 2" />
         </Slide>
 
-        <CardData title="Seja um doador!" bgColor="#6829">
+        <CardData title="Seja um doador!" bgColor={ong.bgColor}>
           <S.Border>
             <S.SubTitle>{ong.bank}</S.SubTitle>
             <S.ContentData>
@@ -59,12 +55,14 @@ const OngDetails = () => {
           </S.Border>
         </CardData>
 
-        <CardData title="Seja voluntário" bgColor="red">
+        <CardData title="Seja voluntário" bgColor={ong.bgColor}>
           <S.Border>
-            <S.ContentData>
+            <S.ContentData gap="10px">
               <S.Data>
                 <S.TextHeader>Endereço:</S.TextHeader>
-                <S.TextHeader>Horário de funcionamento:</S.TextHeader>
+                <S.TextHeader width="80px">
+                  Horário de funcionamento:
+                </S.TextHeader>
                 <S.TextHeader>Telefone:</S.TextHeader>
                 <S.TextHeader>Redes sociais:</S.TextHeader>
               </S.Data>

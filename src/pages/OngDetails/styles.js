@@ -7,7 +7,7 @@ export const Image = styled.img`
 export const ContentData = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: ${(props) => props.gap || "5px"};
 `;
 export const Border = styled.div`
   padding: 14px 13px;
@@ -25,14 +25,19 @@ export const SubTitle = styled.h3`
 export const Data = styled.div``;
 
 export const TextHeader = styled.p`
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: ${(props) => props.width};
   font-size: 14px;
-  padding: 5px 0;
   font-weight: 500;
   color: ${({ theme }) => theme.palette.text.primary};
 `;
 export const Text = styled.p`
+  display: flex;
+  align-items: center;
   font-size: 14px;
-  padding: 5px 0;
-
+  height: 30px;
+  padding-left: 10px;
   color: ${({ theme }) => theme.palette.text.primary};
 `;
