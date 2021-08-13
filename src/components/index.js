@@ -14,7 +14,7 @@ import Tag from "./Tag";
 import Description from "./Description";
 import Banner from "./Banner";
 import Slide from "./Slide";
-
+import CardData from "./CardData";
 
 export {
   Header,
@@ -33,4 +33,5 @@ export {
   Description,
   Banner,
   Slide,
+  CardData,
 };
