@@ -5,8 +5,8 @@ import { filters } from "../../mocks/filterData";
 const FilterCard = () => {
   const history = useHistory();
 
-  const handleClick = (valor) => {
-    history.push(`/busca?q=${valor}`);
+  const handleClick = (filter) => {
+    history.push("/busca", filter);
   };
 
   return (
@@ -20,7 +20,7 @@ const FilterCard = () => {
             type="submit"
             key={filter.value}
             bgColor={filter.bgColor}
-            onClick={() => handleClick(filter.title)}
+            onClick={() => handleClick(filter)}
           >
             <S.Imagem src={filter.icon} alt={filter.title} />
             <S.TextFilter>{filter.title}</S.TextFilter>

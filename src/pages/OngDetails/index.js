@@ -17,7 +17,7 @@ const OngDetails = () => {
   return (
     <>
       <LayoutComponent>
-        <Tag />
+        <Tag bgColor={ong.bgColor} niche={ong.niche} icon={ong.icon} />
         <Banner title={ong.title} img={ong.img} />
 
         <Description text={ong.text} />

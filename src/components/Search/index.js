@@ -6,11 +6,9 @@ import * as I from "../../assets/img";
 import Button from "../Button";
 import theme from "../../styles/theme";
 
-const Search = () => {
-  const [search, setSearch] = useState("");
-
+const Search = ({ value }) => {
+  const [search, setSearch] = useState(value || "");
   const history = useHistory();
-
   const handleClick = () => {
     if (search) history.push(`/busca?q=${search}`);
   };
