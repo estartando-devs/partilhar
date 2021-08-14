@@ -17,7 +17,7 @@ const OngDetails = () => {
   return (
     <>
       <LayoutComponent>
-        <Tag bgColor={ong.bgColor} niche={ong.niche} icon={ong.icon} />
+        <Tag bgColor={ong.bgColor} niche={ong.cause} icon={ong.icon} />
         <Banner title={ong.title} img={ong.img} />
 
         <Description text={ong.text} />
@@ -55,7 +55,7 @@ const OngDetails = () => {
           </S.Border>
         </CardData>
 
-        <CardData title="Seja voluntário" bgColor={ong.bgColor}>
+        <CardData title="Seja voluntário!" bgColor={ong.bgColor}>
           <S.Border>
             <S.ContentData gap="10px">
               <S.Data>

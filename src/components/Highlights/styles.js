@@ -9,9 +9,7 @@ export const Container = styled.div`
   box-sizing: border-box;
   margin-bottom: 30px;
   width: 100%;
-
   @media (min-width: 768px) {
-    height: auto;
   }
 `;
 export const ContainerContent = styled.div`
@@ -45,9 +43,9 @@ export const Content = styled.div`
   gap: 3px;
   width: 100%;
   @media (min-width: 768px) {
-    gap: 0;
+    /* gap: 0;
     justify-content: space-between;
-    cursor: pointer;
+    cursor: pointer; */
   }
 `;
 
@@ -61,11 +59,13 @@ export const Card = styled.div`
   }
 `;
 export const Img = styled.img`
+  height: 177px;
   width: 118px;
+  object-fit: cover;
 
   @media (min-width: 768px) {
-    width: 100%;
-    height: 280px;
+    height: 177px;
+    width: 118px;
   }
 `;
 
@@ -95,6 +95,6 @@ export const ImgSubtitle = styled.img`
 export const Text = styled.p`
   font-size: 12px;
   @media (min-width: 768px) {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
   }
 `;

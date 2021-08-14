@@ -1,4 +1,3 @@
-import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import * as S from "./styles";
 import * as I from "../../assets/img";
@@ -9,9 +8,6 @@ import theme from "../../styles/theme";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const location = useLocation();
-  const query = new URLSearchParams(location.search).get("q");
-  console.log(query);
 
   const toggleSideMenu = (e) => {
     e.preventDefault();
@@ -22,7 +18,7 @@ const Header = () => {
       <S.ContentHeader>
         <S.ImagemLogo src={I.logo} alt="Logo" />
         <S.ContainerSearch>
-          <Search value={query} />
+          <Search />
         </S.ContainerSearch>
       </S.ContentHeader>
       <S.ContainerMenu>

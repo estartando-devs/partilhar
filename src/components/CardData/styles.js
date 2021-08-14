@@ -17,10 +17,16 @@ export const Content = styled.div`
   padding: 21px;
   background-color: ${(props) => props.bgColor};
   color: ${({ theme }) => theme.palette.text.primary};
+  @media (min-width: 768px) {
+    width: 768px;
+  }
 `;
 export const Title = styled.div`
   text-align: center;
   font-size: 20px;
   font-weight: 700;
   color: ${({ theme }) => theme.palette.text.primary};
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+  }
 `;

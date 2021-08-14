@@ -21,6 +21,9 @@ export const SubTitle = styled.h3`
   font-size: 16px;
   font-weight: 700;
   color: ${({ theme }) => theme.palette.text.primary};
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
 `;
 export const Data = styled.div``;
 
@@ -32,6 +35,9 @@ export const TextHeader = styled.p`
   font-size: 14px;
   font-weight: 500;
   color: ${({ theme }) => theme.palette.text.primary};
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
+  }
 `;
 export const Text = styled.p`
   display: flex;
@@ -40,4 +46,7 @@ export const Text = styled.p`
   height: 30px;
   padding-left: 10px;
   color: ${({ theme }) => theme.palette.text.primary};
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
+  }
 `;

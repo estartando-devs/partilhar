@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 export const ContainerCard = styled.div`
   width: 100%;
@@ -40,11 +39,12 @@ export const TextContents = styled.div`
   overflow: hidden;
 `;
 
-export const TextLink = styled(Link)`
+export const TextLink = styled.p`
   font-family: "Lato", sans-serif;
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
+  text-decoration: underline;
   color: ${({ theme }) => theme.palette.text.light.secondary};
 `;
 
