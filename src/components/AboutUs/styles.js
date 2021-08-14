@@ -56,7 +56,7 @@ export const BoxBackgroundSecond = styled.div`
 export const Title = styled.h2`
   text-align: center;
   font-family: "Lato", sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 27px;
   color: ${({ theme }) => theme.palette.tertiary.tertiary_9};
   padding-top: 28px;

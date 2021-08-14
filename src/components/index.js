@@ -15,7 +15,7 @@ import Description from "./Description";
 import Banner from "./Banner";
 import Slide from "./Slide";
 import CardData from "./CardData";
-import About from "./About";
+import AboutUs from "./AboutUs";
 
 export {
   Header,
@@ -35,5 +35,5 @@ export {
   Banner,
   Slide,
   CardData,
-  About,
+  AboutUs,
 };

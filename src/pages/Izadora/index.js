@@ -1,10 +1,10 @@
 import React from "react";
-import { About, LayoutComponent } from "../../components";
+import { AboutUs, LayoutComponent } from "../../components";
 
 const Izadora = () => {
   return (
     <LayoutComponent>
-      <About />
+      <AboutUs />
     </LayoutComponent>
   );
 };

@@ -35,6 +35,7 @@ import ongmuitas from "./ongmuitas.png";
 import banner from "./banner.svg";
 import photoone from "./photoone.svg";
 import phototwo from "./phototwo.svg";
+import childs from "./childs.png";
 
 export {
   about,
@@ -74,4 +75,5 @@ export {
   banner,
   photoone,
   phototwo,
+  childs,
 };
