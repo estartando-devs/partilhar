@@ -12,15 +12,44 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
+  @media (min-width: 768px) {
+    margin-top: 10px;
+  }
 `;
+export const ContainerTitle = styled.div`
+  @media (min-width: 768px) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+`;
+export const ContainerIcon = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+    width: 100%;
+    margin-top: -45px;
+  }
+`;
+export const Icon = styled.img`
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
+    width: 22px;
+    cursor: pointer;
+  }
+`;
+
 export const Title = styled.h1`
   font-size: 24px;
-  padding-top: 5px;
   font-weight: 700;
   color: ${({ theme }) => theme.palette.text.light.secondary};
   @media (min-width: 768px) {
     font-size: 1.6rem;
-    padding-top: 10px;
   }
 `;
 export const Img = styled.img`

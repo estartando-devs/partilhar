@@ -43,9 +43,9 @@ import photo5 from "./photo5.png";
 import photo6 from "./photo6.png";
 import iconInstagram from "./iconInstagram.svg";
 import iconFacebook from "./iconFacebook.svg";
-import instagramGreen from "./instagramGreen";
-import facebookGreen from "./facebookGreen";
-import whatsappGreen from "./whatsappGreen";
+import instagramGreen from "./instagramGreen.svg";
+import facebookGreen from "./facebookGreen.svg";
+import whatsappGreen from "./whatsappGreen.svg";
 
 export {
   about,
