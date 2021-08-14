@@ -1,6 +1,5 @@
 import { useLocation } from "react-router-dom";
 import * as S from "./styles";
-import * as I from "../../assets/img";
 import {
   LayoutComponent,
   Banner,
@@ -21,11 +20,7 @@ const OngDetails = () => {
         <Banner title={ong.title} img={ong.img} />
 
         <Description text={ong.text} />
-
-        <Slide>
-          <S.Image src={I.photoone} alt="foto 1" />
-          <S.Image src={I.phototwo} alt="foto 2" />
-        </Slide>
+        <Slide />
 
         <CardData title="Seja um doador!" bgColor={ong.bgColor}>
           <S.Border>
@@ -70,7 +65,10 @@ const OngDetails = () => {
                 <S.Text>{ong.address}</S.Text>
                 <S.Text>{ong.time}</S.Text>
                 <S.Text>{ong.phone}</S.Text>
-                <S.Text>{ong.networks}</S.Text>
+                <S.Text>
+                  <S.Icon src={ong.iconNetworks} alt="icone rede social" />
+                  {ong.networks}
+                </S.Text>
               </S.Data>
             </S.ContentData>
           </S.Border>

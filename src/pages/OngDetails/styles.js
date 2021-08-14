@@ -1,9 +1,5 @@
 import styled from "styled-components";
 
-export const Image = styled.img`
-  height: 271px;
-  width: 211px;
-`;
 export const ContentData = styled.div`
   display: flex;
   flex-direction: row;
@@ -49,4 +45,8 @@ export const Text = styled.p`
   @media (min-width: 768px) {
     font-size: 1.1rem;
   }
+`;
+export const Icon = styled.img`
+  height: 20px;
+  padding-right: 5px;
 `;

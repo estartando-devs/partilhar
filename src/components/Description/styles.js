@@ -9,7 +9,7 @@ export const Container = styled.div`
 export const Content = styled.div`
   width: 341px;
   height: 100%;
-  padding: 30px 0;
+  padding: 30px 0 20px;
   @media (min-width: 768px) {
     width: 768px;
     padding: 40px 20px;

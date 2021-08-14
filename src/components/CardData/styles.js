@@ -27,6 +27,6 @@ export const Title = styled.div`
   font-weight: 700;
   color: ${({ theme }) => theme.palette.text.primary};
   @media (min-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 `;
