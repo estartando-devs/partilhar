@@ -26,6 +26,7 @@ export const ContainerTitle = styled.div`
   }
 `;
 export const ContainerIcon = styled.div`
+  display: none;
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
@@ -33,6 +34,7 @@ export const ContainerIcon = styled.div`
     gap: 20px;
     width: 100%;
     margin-top: -45px;
+    padding-right: 5px;
   }
 `;
 export const Icon = styled.img`

@@ -22,7 +22,7 @@ import animal from "./animal.svg";
 import ambience from "./ambience.svg";
 import donorsone from "./donors1.svg";
 import donorstwo from "./donors2.svg";
-import care from "./care.svg";
+import care from "./care.png";
 import cats from "./cats.svg";
 import kids from "./kids.svg";
 import animallight from "./animallight.svg";
