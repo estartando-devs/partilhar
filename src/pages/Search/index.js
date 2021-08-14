@@ -23,7 +23,7 @@ const Search = () => {
   const history = useHistory();
 
   function handleClick(ong) {
-    history.push("/ongdetails", ong);
+    history.push("/ong", ong);
   }
 
   return (

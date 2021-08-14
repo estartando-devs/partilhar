@@ -61,5 +61,6 @@ export const Img = styled.img`
   @media (min-width: 768px) {
     height: 342px;
     width: 768px;
+    padding-top: 5px;
   }
 `;

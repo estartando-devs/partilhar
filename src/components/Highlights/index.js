@@ -7,7 +7,7 @@ const Highlights = () => {
   const history = useHistory();
 
   const handleClick = (ong) => {
-    history.push("/ongdetails", ong);
+    history.push("/ong", ong);
   };
 
   return (
