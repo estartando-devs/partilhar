@@ -1,9 +1,9 @@
-import { Slide } from "../../components/Slide/styles";
+import Step from "../../components/Step";
 
 const Dandara = () => {
   return (
     <>
-      <Slide />
+      <Step />
     </>
   );
 };
