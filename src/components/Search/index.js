@@ -10,7 +10,6 @@ const Search = () => {
   const [search, setSearch] = useState("");
 
   const history = useHistory();
-
   const handleClick = () => {
     if (search) history.push(`/busca?q=${search}`);
   };
