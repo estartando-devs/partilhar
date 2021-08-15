@@ -6,6 +6,7 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
+  margin-bottom: 25px;
 `;
 export const Content = styled.div`
   display: flex;
@@ -16,15 +17,16 @@ export const Content = styled.div`
   padding: 21px;
   background-color: ${(props) => props.bgColor};
   color: ${({ theme }) => theme.palette.text.primary};
+  @media (min-width: 768px) {
+    width: 768px;
+  }
 `;
 export const Title = styled.div`
   text-align: center;
   font-size: 20px;
   font-weight: 700;
   color: ${({ theme }) => theme.palette.text.primary};
-`;
-export const ContainerData = styled.div`
-  padding: 14px 13px;
-  border: 1px solid ${({ theme }) => theme.palette.text.light.primary};
-  border-radius: 7px;
+  @media (min-width: 768px) {
+    font-size: 1.4rem;
+  }
 `;

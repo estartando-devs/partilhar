@@ -34,7 +34,7 @@ export const ContainerMenu = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 15px;
+  padding-right: 10px;
 `;
 
 export const TitleMenu = styled(Link)`
@@ -69,7 +69,7 @@ export const ContainerImg = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 15px;
-  padding-right: 15px;
+  padding-right: 10px;
   @media (min-width: 768px) {
     gap: 26px;
     padding-right: 30px;

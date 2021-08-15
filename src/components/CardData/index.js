@@ -1,11 +1,11 @@
 import * as S from "./styles";
 
-const CardBank = ({ title, children, bgColor }) => {
+const CardBank = ({ title, bgColor, children }) => {
   return (
     <S.Container>
       <S.Content bgColor={bgColor}>
         <S.Title>{title}</S.Title>
-        <S.ContainerData>{children}</S.ContainerData>
+        {children}
       </S.Content>
     </S.Container>
   );
