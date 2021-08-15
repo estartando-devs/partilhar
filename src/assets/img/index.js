@@ -35,9 +35,7 @@ import ongmuitas from "./ongmuitas.png";
 import banner from "./banner.svg";
 import photoone from "./photoone.svg";
 import phototwo from "./phototwo.svg";
-<<<<<<< HEAD
 import childs from "./childs.png";
-=======
 import photo1 from "./photo1.png";
 import photo2 from "./photo2.png";
 import photo3 from "./photo3.png";
@@ -49,7 +47,6 @@ import iconFacebook from "./iconFacebook.svg";
 import instagramGreen from "./instagramGreen.svg";
 import facebookGreen from "./facebookGreen.svg";
 import whatsappGreen from "./whatsappGreen.svg";
->>>>>>> develop
 
 export {
   about,
@@ -89,9 +86,7 @@ export {
   banner,
   photoone,
   phototwo,
-<<<<<<< HEAD
   childs,
-=======
   photo1,
   photo2,
   photo3,
@@ -103,5 +98,4 @@ export {
   instagramGreen,
   facebookGreen,
   whatsappGreen,
->>>>>>> develop
 };
