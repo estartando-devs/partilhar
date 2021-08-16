@@ -1,20 +1,22 @@
 import { Fragment, useState } from "react";
+import { useHistory } from "react-router-dom";
 import * as S from "./styles";
 import { steps } from "../../mocks/stepsData";
 import Button from "../Button";
 import * as I from "../../assets/img";
 import Theme from "../../styles/theme";
 
-// import StepWizard from "react-step-wizard";// <StepWizard></StepWizard>
-
 const Steps = ({ profile, cause, bank, photo, networks, bgColor }) => {
   const [currentStep, setCurrentStep] = useState(0);
+  const isLastStep = steps.length - 1 === currentStep;
 
+  const history = useHistory();
   function handleNextStep() {
+    if (currentStep === 4) {
+      history.push("/perfil");
+      return;
+    }
     setCurrentStep((prevState) => prevState + 1);
-  }
-  function handlePreviousStep() {
-    setCurrentStep((prevState) => prevState - 1);
   }
 
   return (
@@ -35,7 +37,7 @@ const Steps = ({ profile, cause, bank, photo, networks, bgColor }) => {
 
           return (
             <Fragment key={step.value}>
-              <S.Step bgColor={color}>
+              <S.Step bgColor={color} onClick={() => setCurrentStep(index)}>
                 <S.Img src={source} alt="step" />
               </S.Step>
               {!isLast && <S.Hr bgColor={colorHr} />}
@@ -69,24 +71,15 @@ const Steps = ({ profile, cause, bank, photo, networks, bgColor }) => {
         )}
       </S.ContainerStep>
 
-      <S.Teste>
-        <Button
-          onClick={handlePreviousStep}
-          backgroundColor={bgColor}
-          width="100px"
-          height="30px"
-        >
-          ANTERIOR
-        </Button>
-        <Button
-          onClick={handleNextStep}
-          backgroundColor={bgColor}
-          width="100px"
-          height="30px"
-        >
-          PRÓXIMO
-        </Button>
-      </S.Teste>
+      <Button
+        onClick={handleNextStep}
+        backgroundColor={bgColor}
+        color={Theme.palette.text.light.primary}
+        width="229px"
+        height="38px"
+      >
+        {isLastStep ? "CONCLUIR" : "PRÓXIMO"}
+      </Button>
     </S.Container>
   );
 };
