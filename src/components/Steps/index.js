@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import * as S from "./styles";
 import { steps } from "../../mocks/stepsData";
 import Button from "../Button";
 import * as I from "../../assets/img";
+import Theme from "../../styles/theme";
 
 // import StepWizard from "react-step-wizard";// <StepWizard></StepWizard>
 
@@ -12,21 +13,33 @@ const Steps = ({ profile, cause, bank, photo, networks, bgColor }) => {
   function handleNextStep() {
     setCurrentStep((prevState) => prevState + 1);
   }
+  function handlePreviousStep() {
+    setCurrentStep((prevState) => prevState - 1);
+  }
+
   return (
     <S.Container>
       <S.ContainerButton>
         {steps.map((step, index, array) => {
-          const isActive = index === currentStep;
+          const isActive = index <= currentStep;
           const source = isActive ? I.ok : I.x;
+          const color = isActive
+            ? Theme.palette.step.primary
+            : Theme.palette.step.secondary;
           const isLast = array.length - 1 === index;
 
+          const colorHr =
+            index < currentStep
+              ? Theme.palette.step.primary
+              : Theme.palette.step.secondary;
+
           return (
-            <>
-              <S.Step>
+            <Fragment key={step.value}>
+              <S.Step bgColor={color}>
                 <S.Img src={source} alt="step" />
               </S.Step>
-              {!isLast && <S.Hr />}
-            </>
+              {!isLast && <S.Hr bgColor={colorHr} />}
+            </Fragment>
           );
         })}
       </S.ContainerButton>
@@ -55,14 +68,25 @@ const Steps = ({ profile, cause, bank, photo, networks, bgColor }) => {
           <S.ContentStep>{networks}</S.ContentStep>
         )}
       </S.ContainerStep>
-      <Button
-        onClick={handleNextStep}
-        width="229px"
-        height="38px"
-        backgroundColor={bgColor}
-      >
-        PRÓXIMO
-      </Button>
+
+      <S.Teste>
+        <Button
+          onClick={handlePreviousStep}
+          backgroundColor={bgColor}
+          width="100px"
+          height="30px"
+        >
+          ANTERIOR
+        </Button>
+        <Button
+          onClick={handleNextStep}
+          backgroundColor={bgColor}
+          width="100px"
+          height="30px"
+        >
+          PRÓXIMO
+        </Button>
+      </S.Teste>
     </S.Container>
   );
 };
