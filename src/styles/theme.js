@@ -11,6 +11,7 @@ const Theme = {
       tertiary_6: "#88C2F8",
       tertiary_7: "#8C98FE",
       tertiary_8: "#B898FA",
+      tertiary_9: "#FFCA64",
     },
     warning: "",
     success: "",
@@ -37,6 +38,10 @@ const Theme = {
     background: {
       default: "#fff",
       modal: "#c4c4c4a3",
+    },
+    step: {
+      primary: "#84A59D",
+      secondary: "#C4C4C4",
     },
   },
 };

@@ -1,9 +1,16 @@
-import Step from "../../components/Step";
+import { Steps } from "../../components";
 
 const Dandara = () => {
   return (
     <>
-      <Step />
+      <Steps
+        // profile={<Footer />}
+        profile="Dados do Perfil"
+        cause="Causas"
+        bank="Dados Bancários"
+        photo="Fotos"
+        networks="Redes Sociais"
+      />
     </>
   );
 };
