@@ -74,15 +74,3 @@ export const ContainerStep = styled.div`
   height: 100%;
   margin-bottom: 30px;
 `;
-export const ContentStep = styled.div``;
-
-export const Teste = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-`;
-export const Result = styled.div`
-  width: 100%;
-  height: 100%;
-`;

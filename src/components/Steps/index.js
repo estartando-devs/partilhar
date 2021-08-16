@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { useHistory } from "react-router-dom";
 import * as S from "./styles";
 import { steps } from "../../mocks/stepsData";
@@ -6,8 +6,7 @@ import Button from "../Button";
 import * as I from "../../assets/img";
 import Theme from "../../styles/theme";
 
-const Steps = ({ profile, cause, bank, photo, networks, bgColor }) => {
-  const [currentStep, setCurrentStep] = useState(0);
+const Steps = ({ children, currentStep, setCurrentStep }) => {
   const isLastStep = steps.length - 1 === currentStep;
 
   const history = useHistory();
@@ -53,27 +52,11 @@ const Steps = ({ profile, cause, bank, photo, networks, bgColor }) => {
         <S.Text>Redes Sociais</S.Text>
       </S.ContainerText>
 
-      <S.ContainerStep>
-        {steps[currentStep].id === "Perfil" && (
-          <S.ContentStep>{profile}</S.ContentStep>
-        )}
-        {steps[currentStep].id === "Causas" && (
-          <S.ContentStep>{cause}</S.ContentStep>
-        )}
-        {steps[currentStep].id === "Dados Bancários" && (
-          <S.ContentStep>{bank}</S.ContentStep>
-        )}
-        {steps[currentStep].id === "Fotos" && (
-          <S.ContentStep>{photo}</S.ContentStep>
-        )}
-        {steps[currentStep].id === "Redes Sociais" && (
-          <S.ContentStep>{networks}</S.ContentStep>
-        )}
-      </S.ContainerStep>
+      <S.ContainerStep>{children}</S.ContainerStep>
 
       <Button
         onClick={handleNextStep}
-        backgroundColor={bgColor}
+        backgroundColor={Theme.palette.primary}
         color={Theme.palette.text.light.primary}
         width="229px"
         height="38px"
