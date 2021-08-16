@@ -1,9 +1,14 @@
-import { Slide } from "../../components/Slide/styles";
+import { useState } from "react";
+import { Steps } from "../../components";
 
 const Dandara = () => {
+  const [currentStep, setCurrentStep] = useState(0);
+
   return (
     <>
-      <Slide />
+      <Steps currentStep={currentStep} setCurrentStep={setCurrentStep}>
+        <div>oi</div>
+      </Steps>
     </>
   );
 };

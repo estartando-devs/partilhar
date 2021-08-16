@@ -47,6 +47,8 @@ import iconFacebook from "./iconFacebook.svg";
 import instagramGreen from "./instagramGreen.svg";
 import facebookGreen from "./facebookGreen.svg";
 import whatsappGreen from "./whatsappGreen.svg";
+import ok from "./ok.svg";
+import x from "./x.svg";
 
 export {
   about,
@@ -98,4 +100,6 @@ export {
   instagramGreen,
   facebookGreen,
   whatsappGreen,
+  ok,
+  x,
 };
