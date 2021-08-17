@@ -27,10 +27,15 @@ const Upload = () => {
     <S.Container>
       <S.ContainerInput>
         <S.Label img={image} onChange={removeBackgroundImage}>
-          <S.Input type="file" id="file" onChange={(e) => saveFile(e)} />
+          <S.Input
+            type="file"
+            id="file"
+            onChange={(e) => saveFile(e)}
+            accept="image/png,image/jpg,image/jpeg"
+          />
           <S.Img src={background} alt="" />
         </S.Label>
-        <S.Text>UPLOAD DA LOGO (máx...)</S.Text>
+        <S.Text>UPLOAD DA LOGO (máx: 3MB)</S.Text>
       </S.ContainerInput>
     </S.Container>
   );

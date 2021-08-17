@@ -10,15 +10,17 @@ export const Container = styled.div`
 `;
 export const ContainerCard = styled.div`
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: start;
   gap: 14px;
   margin: 30px 0;
   @media (min-width: 768px) {
-    width: 750px;
+    width: 768px;
     justify-content: center;
     cursor: pointer;
+    gap: 20px;
   }
 `;
 
@@ -29,7 +31,7 @@ export const ContainerOngInfor = styled.div`
   justify-content: start;
   @media (min-width: 768px) {
     width: 100%;
-    align-items: center;
+    gap: 20px;
   }
 `;
 
@@ -43,6 +45,8 @@ export const TextTitle = styled.h2`
 
   @media (min-width: 768px) {
     font-size: 1.5rem;
+    margin: 0;
+    padding-top: 10px;
   }
 `;
 
@@ -78,10 +82,8 @@ export const TextLink = styled.p`
   color: ${({ theme }) => theme.palette.text.light.secondary};
 
   @media (min-width: 768px) {
-    display: flex;
-    justify-content: center;
     font-size: 1.2rem;
-    padding-top: 20px;
+    line-height: 0;
   }
 `;
 
