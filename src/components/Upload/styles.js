@@ -21,10 +21,9 @@ export const Label = styled.label`
   border-radius: 10px;
   background-color: ${(props) => props.theme.palette.step.primary}43;
   background: ${(props) => props.img};
-  background-size: 250px 110px;
+  background-size: 250px 200px;
   @media (min-width: 768px) {
     width: 375px;
-    height: 165px;
     cursor: pointer;
     background-size: 375px auto;
   }
