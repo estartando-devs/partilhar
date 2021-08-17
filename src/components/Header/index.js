@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import * as S from "./styles";
 import * as I from "../../assets/img";
 import SideMenu from "../SideMenu";
@@ -16,7 +17,10 @@ const Header = () => {
   return (
     <S.Container>
       <S.ContentHeader>
-        <S.ImagemLogo src={I.logo} alt="Logo" />
+        <Link to="/">
+          <S.ImagemLogo src={I.logo} alt="Logo" />
+        </Link>
+
         <S.ContainerSearch>
           <Search />
         </S.ContainerSearch>
