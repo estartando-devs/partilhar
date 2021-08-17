@@ -31,7 +31,7 @@ const TeamDetails = () => {
           ))}
         </S.ContainerImg>
         <S.Titles>Apoio</S.Titles>
-        <S.PhotoImg
+        <S.PhotoImgs
           src={I.estartando}
           alt="Estartando Devs"
           onClick={() => linkUrl("https://estartandodevs.com.br/")}
@@ -42,12 +42,12 @@ const TeamDetails = () => {
           Estartando Devs
         </S.TitleCompany>
         <S.BoxSocialMedias>
-          <S.PhotoImg
+          <S.PhotoImgSocial
             src={I.facebookGreen}
             alt="Facebook"
             onClick={() => linkUrl("https://www.facebook.com/estartandoDevs")}
           />
-          <S.PhotoImg
+          <S.PhotoImgSocial
             src={I.instagramGreen}
             alt="Instagram"
             onClick={() => linkUrl("https://www.instagram.com/estartandodevs/")}
