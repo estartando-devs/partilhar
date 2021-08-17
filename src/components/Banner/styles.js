@@ -51,7 +51,10 @@ export const Title = styled.h1`
   font-weight: 700;
   color: ${({ theme }) => theme.palette.text.light.secondary};
   @media (min-width: 768px) {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+  }
+  @media (min-width: 1130px) {
+    font-size: 1.7rem;
   }
 `;
 export const Img = styled.img`
@@ -61,6 +64,8 @@ export const Img = styled.img`
   @media (min-width: 768px) {
     height: 342px;
     width: 768px;
-    padding-top: 5px;
+  }
+  @media (min-width: 1130px) {
+    width: 854px;
   }
 `;

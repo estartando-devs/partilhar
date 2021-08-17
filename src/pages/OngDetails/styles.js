@@ -20,8 +20,22 @@ export const SubTitle = styled.h3`
   @media (min-width: 768px) {
     font-size: 1.2rem;
   }
+  @media (min-width: 1130px) {
+    font-size: 1.4rem;
+  }
 `;
-export const Data = styled.div``;
+export const Data = styled.div`
+  @media (min-width: 768px) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  @media (min-width: 1130px) {
+    font-size: 1.3rem;
+    gap: 8px;
+  }
+`;
 
 export const TextHeader = styled.p`
   display: flex;
@@ -34,6 +48,9 @@ export const TextHeader = styled.p`
   @media (min-width: 768px) {
     font-size: 1.1rem;
   }
+  @media (min-width: 1130px) {
+    font-size: 1.3rem;
+  }
 `;
 export const Text = styled.p`
   display: flex;
@@ -44,6 +61,9 @@ export const Text = styled.p`
   color: ${({ theme }) => theme.palette.text.primary};
   @media (min-width: 768px) {
     font-size: 1.1rem;
+  }
+  @media (min-width: 1130px) {
+    font-size: 1.3rem;
   }
 `;
 export const Icon = styled.img`

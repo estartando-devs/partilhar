@@ -6,6 +6,10 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   margin-bottom: 25px;
+
+  @media (min-width: 1130px) {
+    margin-bottom: 0;
+  }
 `;
 export const Content = styled.div`
   display: flex;
@@ -25,6 +29,9 @@ export const Title = styled.h2`
   color: ${({ theme }) => theme.palette.text.light.secondary};
   @media (min-width: 768px) {
     font-size: 1.5rem;
+  }
+  @media (min-width: 1130px) {
+    font-size: 1.7rem;
   }
 `;
 export const Slide = styled.div`
@@ -48,10 +55,18 @@ export const ArrayPhotos = styled.div`
     width: 768px;
     height: auto;
   }
+  @media (min-width: 1130px) {
+    width: 1130px;
+    gap: 20px;
+    padding-bottom: 30px;
+  }
 `;
 
 export const ContainerArray = styled.div``;
 
 export const ImageArray = styled.img`
   width: 250px;
+  @media (min-width: 1130px) {
+    width: 360px;
+  }
 `;

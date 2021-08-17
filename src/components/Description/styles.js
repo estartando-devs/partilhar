@@ -14,6 +14,10 @@ export const Content = styled.div`
     width: 768px;
     padding: 40px 20px;
   }
+  @media (min-width: 1130px) {
+    width: 854px;
+    padding: 40px 0;
+  }
 `;
 export const Title = styled.h2`
   font-size: 20px;
@@ -25,6 +29,9 @@ export const Title = styled.h2`
     justify-content: center;
     font-size: 1.5rem;
   }
+  @media (min-width: 1130px) {
+    font-size: 1.7rem;
+  }
 `;
 export const Text = styled.p`
   font-size: 16px;
@@ -33,5 +40,8 @@ export const Text = styled.p`
   @media (min-width: 768px) {
     font-size: 1.3rem;
     text-align: justify;
+  }
+  @media (min-width: 1130px) {
+    font-size: 1.5rem;
   }
 `;

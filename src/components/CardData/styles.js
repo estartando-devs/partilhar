@@ -20,6 +20,9 @@ export const Content = styled.div`
   @media (min-width: 768px) {
     width: 768px;
   }
+  @media (min-width: 1130px) {
+    width: 1130px;
+  }
 `;
 export const Title = styled.div`
   text-align: center;
@@ -28,5 +31,8 @@ export const Title = styled.div`
   color: ${({ theme }) => theme.palette.text.primary};
   @media (min-width: 768px) {
     font-size: 1.4rem;
+  }
+  @media (min-width: 1130px) {
+    font-size: 1.6rem;
   }
 `;
