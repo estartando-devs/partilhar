@@ -17,6 +17,7 @@ import Slide from "./Slide";
 import CardData from "./CardData";
 import AboutUs from "./AboutUs";
 import Steps from "./Steps";
+import Upload from "./Upload";
 
 export {
   Header,
@@ -38,4 +39,5 @@ export {
   CardData,
   AboutUs,
   Steps,
+  Upload,
 };
