@@ -47,7 +47,7 @@ import iconFacebook from "./iconFacebook.svg";
 import instagramGreen from "./instagramGreen.svg";
 import facebookGreen from "./facebookGreen.svg";
 import whatsappGreen from "./whatsappGreen.svg";
-import designerOne from "./lorena.png";
+import designerOne from "./lorrana.png";
 import designerTwo from "./sara.png";
 import designerThree from "./patricia.png";
 import designerFour from "./tamara.png";
