@@ -7,13 +7,14 @@ import Button from "../Button";
 import Search from "../Search";
 import theme from "../../styles/theme";
 
-const Header = () => {
+const Header = ({ dontShowSearch }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleSideMenu = (e) => {
     e.preventDefault();
     setShowMenu((prev) => !prev);
   };
+
   return (
     <S.Container>
       <S.ContentHeader>
@@ -21,9 +22,7 @@ const Header = () => {
           <S.ImagemLogo src={I.logo} alt="Logo" />
         </Link>
 
-        <S.ContainerSearch>
-          <Search />
-        </S.ContainerSearch>
+        <S.ContainerSearch>{!dontShowSearch && <Search />}</S.ContainerSearch>
       </S.ContentHeader>
       <S.ContainerMenu>
         <Button

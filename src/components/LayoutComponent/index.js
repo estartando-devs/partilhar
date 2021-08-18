@@ -2,10 +2,10 @@ import Footer from "../Footer";
 import Header from "../Header";
 import * as S from "./styles";
 
-const LayoutComponent = ({ children }) => {
+const LayoutComponent = ({ children, dontShowSearch }) => {
   return (
     <S.Container>
-      <Header />
+      <Header dontShowSearch={dontShowSearch} />
 
       <S.Content>{children}</S.Content>
 

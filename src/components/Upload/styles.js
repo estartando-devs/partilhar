@@ -6,7 +6,8 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 `;
 
 export const Input = styled.input`
@@ -21,9 +22,6 @@ export const Label = styled.label`
   height: 110px;
   border-radius: 10px;
   background-color: ${(props) => props.theme.palette.step.primary}43;
-  background: ${(props) => props.img};
-  background-size: 250px cover;
-  background-position: top;
   @media (min-width: 768px) {
     width: 375px;
     height: 165px;
@@ -32,7 +30,14 @@ export const Label = styled.label`
   }
 `;
 
-export const Img = styled.img``;
+export const Img = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 10px;
+`;
+export const Icon = styled.img``;
 
 export const ContainerInput = styled.div`
   display: flex;
@@ -54,6 +59,13 @@ export const Alert = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 300px;
+  font-size: 12px;
+  width: 230px;
   position: absolute;
+  font-weight: 900;
+  color: ${(props) => props.theme.palette.text.tertiary};
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+    width: 350px;
+  }
 `;
