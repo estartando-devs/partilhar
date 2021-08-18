@@ -6,5 +6,16 @@ import Search from "./Search";
 import Dandara from "./Dandara";
 import Izadora from "./Izadora";
 import OngDetails from "./OngDetails";
+import About from "./About";
 
-export { Home, Login, Register, Profile, Search, Dandara, Izadora, OngDetails };
+export {
+  Home,
+  Login,
+  Register,
+  Profile,
+  Search,
+  Dandara,
+  Izadora,
+  OngDetails,
+  About,
+};
