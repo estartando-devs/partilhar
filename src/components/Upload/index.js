@@ -8,6 +8,11 @@ const Upload = () => {
 
   function saveFile(e) {
     const file = e.target.files[0];
+    if (file.size > 2668799) {
+      alert("Seu arquivo é muito grande. Selecione um arquivo menor!");
+      return;
+    }
+
     const reader = new FileReader();
     reader.onloadend = () => {
       const base64String = reader.result
@@ -18,7 +23,6 @@ const Upload = () => {
     };
     reader.readAsDataURL(file);
   }
-
   function removeBackgroundImage() {
     setBackground("");
   }
