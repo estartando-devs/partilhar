@@ -5,6 +5,7 @@ const ProfileData = () => {
     <S.Container>
       <S.Content>
         <S.Title>Cadastre-se</S.Title>
+
         <S.Text>
           Você fazendo o seu cadastro torna ainda mais fácil a sua comunicação
           com o doador.
