@@ -23,7 +23,7 @@ export const Label = styled.label`
   background-color: ${(props) => props.theme.palette.step.primary}43;
   background: ${(props) => props.img};
   background-size: 250px cover;
-  background-position: center;
+  background-position: top;
   @media (min-width: 768px) {
     width: 375px;
     height: 165px;
