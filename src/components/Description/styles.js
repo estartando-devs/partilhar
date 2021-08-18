@@ -12,7 +12,7 @@ export const Content = styled.div`
   padding: 30px 0 20px;
   @media (min-width: 768px) {
     width: 768px;
-    padding: 50px 0;
+    padding: 40px 0 30px;
   }
 `;
 export const Title = styled.h2`
