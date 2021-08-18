@@ -48,3 +48,12 @@ export const Text = styled.p`
     font-size: 16px;
   }
 `;
+
+export const Alert = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 300px;
+  position: absolute;
+`;

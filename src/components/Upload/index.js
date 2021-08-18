@@ -4,15 +4,18 @@ import * as I from "../../assets/img";
 
 const Upload = () => {
   const [image, setImage] = useState("");
+  const [text, setText] = useState("");
   const [background, setBackground] = useState(I.upload);
 
   function saveFile(e) {
+    setImage("");
     const file = e.target.files[0];
     if (file.size > 2668799) {
-      alert("Seu arquivo é muito grande. Selecione um arquivo menor!");
+      setText(
+        "Seu arquivo é muito grande. Selecione um arquivo menor(máximo 3MB)!"
+      );
       return;
     }
-
     const reader = new FileReader();
     reader.onloadend = () => {
       const base64String = reader.result
@@ -20,6 +23,7 @@ const Upload = () => {
         .replace(/^.+,/, "");
       localStorage.setItem("wallpaper", base64String);
       setImage(`url(data:image/png;base64,${base64String})`);
+      setText("");
     };
     reader.readAsDataURL(file);
   }
@@ -31,6 +35,7 @@ const Upload = () => {
     <S.Container>
       <S.ContainerInput>
         <S.Label img={image} onChange={removeBackgroundImage}>
+          <S.Alert>{text}</S.Alert>
           <S.Input
             type="file"
             id="file"
