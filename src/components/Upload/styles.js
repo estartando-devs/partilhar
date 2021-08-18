@@ -22,7 +22,6 @@ export const Label = styled.label`
   height: 110px;
   border-radius: 10px;
   background-color: ${(props) => props.theme.palette.step.primary}43;
-
   @media (min-width: 768px) {
     width: 375px;
     height: 165px;
@@ -60,6 +59,13 @@ export const Alert = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 200px;
+  font-size: 12px;
+  width: 230px;
   position: absolute;
+  font-weight: 900;
+  color: ${(props) => props.theme.palette.text.tertiary};
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+    width: 350px;
+  }
 `;

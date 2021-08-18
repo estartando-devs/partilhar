@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import { useHistory } from "react-router-dom";
 import * as S from "./styles";
 import { steps } from "../../mocks/stepsData";
-import Button from "../Button";
+
 import * as I from "../../assets/img";
 import Theme from "../../styles/theme";
 
@@ -66,15 +66,9 @@ const Steps = ({
 
       <S.ContainerStep>{children}</S.ContainerStep>
 
-      <Button
-        onClick={handleNextStep}
-        backgroundColor={Theme.palette.primary}
-        color={Theme.palette.text.light.primary}
-        width="229px"
-        height="38px"
-      >
+      <S.Button onClick={handleNextStep} width="229px" height="38px">
         {isLastStep ? "CONCLUIR" : "PRÓXIMO"}
-      </Button>
+      </S.Button>
     </S.Container>
   );
 };

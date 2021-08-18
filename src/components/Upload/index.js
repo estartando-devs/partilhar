@@ -11,7 +11,7 @@ const Upload = ({ onUpload, image }) => {
     const file = e.target.files[0];
     if (file.size > 2668799) {
       setText(
-        "Seu arquivo é muito grande. Selecione um arquivo menor (máx 3MB)!"
+        "O arquivo selecionado é muito grande. Selecione um menor (máx 3MB)!"
       );
       return;
     }
@@ -39,7 +39,7 @@ const Upload = ({ onUpload, image }) => {
             onChange={(e) => saveFile(e)}
             accept="image/png,image/jpg,image/jpeg"
           />
-          {showImage && <S.Img src={preview || image} alt="Image" />}
+          {showImage && !text && <S.Img src={preview || image} alt="Image" />}
           {!showImage && !text && <S.Icon src={I.upload} alt="" />}
         </S.Label>
         <S.Text>UPLOAD DA LOGO (máx: 3MB)</S.Text>

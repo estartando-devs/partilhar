@@ -7,6 +7,10 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   margin-bottom: 40px;
+
+  @media (min-width: 768px) {
+    margin-top: 45px;
+  }
 `;
 
 export const ContainerButton = styled.div`
@@ -73,4 +77,22 @@ export const ContainerStep = styled.div`
   width: 100%;
   height: 100%;
   margin-bottom: 30px;
+`;
+export const Button = styled.button`
+  background-color: ${(props) => props.theme.palette.primary};
+  color: ${(props) => props.theme.palette.text.primary};
+  width: 229px;
+  height: 38px;
+  border-style: none;
+  border-radius: 3px;
+  font-weight: 700;
+  margin-left: 7px;
+  font-size: 14px;
+  @media (min-width: 768px) {
+    cursor: pointer;
+    width: 315px;
+    height: 52px;
+    font-size: 1.1rem;
+    color: ${(props) => props.theme.palette.text.light.primary};
+  }
 `;
