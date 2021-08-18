@@ -40,6 +40,10 @@ const Theme = {
       default: "#fff",
       modal: "#c4c4c4a3",
     },
+    step: {
+      primary: "#84A59D",
+      secondary: "#C4C4C4",
+    },
   },
 };
 

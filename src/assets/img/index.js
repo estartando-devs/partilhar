@@ -55,6 +55,9 @@ import devOne from "./gaby.png";
 import devTwo from "./izadora.png";
 import devThree from "./dandara.png";
 import estartando from "./estartandologo.svg";
+import ok from "./ok.svg";
+import x from "./x.svg";
+import upload from "./upload.svg";
 
 export {
   about,
@@ -114,4 +117,7 @@ export {
   devTwo,
   devThree,
   estartando,
+  ok,
+  x,
+  upload,
 };
