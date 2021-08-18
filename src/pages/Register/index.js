@@ -20,7 +20,7 @@ const Register = () => {
   };
 
   return (
-    <LayoutComponent>
+    <LayoutComponent dontShowSearch>
       <Steps
         currentStep={currentStep}
         setCurrentStep={setCurrentStep}
