@@ -49,6 +49,7 @@ import facebookGreen from "./facebookGreen.svg";
 import whatsappGreen from "./whatsappGreen.svg";
 import ok from "./ok.svg";
 import x from "./x.svg";
+import upload from "./upload.svg";
 
 export {
   about,
@@ -102,4 +103,5 @@ export {
   whatsappGreen,
   ok,
   x,
+  upload,
 };

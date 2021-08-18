@@ -12,19 +12,22 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: flex-start;
   width: 360px;
-
   @media (min-width: 768px) {
+    width: 768px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
 `;
 export const Title = styled.h2`
+  font-family: "Lato", sans-serif;
   padding: 10px 18px 15px;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 900;
   color: ${({ theme }) => theme.palette.text.light.secondary};
   @media (min-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    padding-bottom: 30px;
+    padding-left: 0;
   }
 `;
 export const Slide = styled.div`
