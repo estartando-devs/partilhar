@@ -12,6 +12,7 @@ const Theme = {
       tertiary_7: "#8C98FE",
       tertiary_8: "#B898FA",
       tertiary_9: "#FFCA64",
+      tertiary_10: "#364642",
     },
     warning: "",
     success: "",

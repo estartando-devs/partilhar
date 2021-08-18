@@ -16,6 +16,7 @@ import Banner from "./Banner";
 import Slide from "./Slide";
 import CardData from "./CardData";
 import AboutUs from "./AboutUs";
+import TeamDetails from "./TeamDetails";
 import Steps from "./Steps";
 import Upload from "./Upload";
 
@@ -38,6 +39,7 @@ export {
   Slide,
   CardData,
   AboutUs,
+  TeamDetails,
   Steps,
   Upload,
 };

@@ -47,6 +47,14 @@ import iconFacebook from "./iconFacebook.svg";
 import instagramGreen from "./instagramGreen.svg";
 import facebookGreen from "./facebookGreen.svg";
 import whatsappGreen from "./whatsappGreen.svg";
+import designerOne from "./lorrana.png";
+import designerTwo from "./sara.png";
+import designerThree from "./patricia.png";
+import designerFour from "./tamara.png";
+import devOne from "./gaby.png";
+import devTwo from "./izadora.png";
+import devThree from "./dandara.png";
+import estartando from "./estartandologo.svg";
 import ok from "./ok.svg";
 import x from "./x.svg";
 import upload from "./upload.svg";
@@ -101,6 +109,14 @@ export {
   instagramGreen,
   facebookGreen,
   whatsappGreen,
+  designerOne,
+  designerTwo,
+  designerThree,
+  designerFour,
+  devOne,
+  devTwo,
+  devThree,
+  estartando,
   ok,
   x,
   upload,
