@@ -12,7 +12,7 @@ const Upload = () => {
     const file = e.target.files[0];
     if (file.size > 2668799) {
       setText(
-        "Seu arquivo é muito grande. Selecione um arquivo menor(máximo 3MB)!"
+        "Seu arquivo é muito grande. Selecione um arquivo menor (máx 3MB)!"
       );
       return;
     }
