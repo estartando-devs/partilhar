@@ -25,6 +25,12 @@ export const Title = styled.h1`
 
 export const Text = styled.p``;
 
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+`;
+
 export const SubTitle = styled.h2`
   font-family: "Lato", sans-serif;
   font-weight: 900;
@@ -34,7 +40,7 @@ export const Label = styled.label`
   color: ${(props) => props.theme.palette.text.dark.tertiary};
 `;
 export const Input = styled.input`
-  margin-top: 3px;
+  margin-top: 2px;
   width: 340px;
   height: 38px;
   border-radius: 3px;

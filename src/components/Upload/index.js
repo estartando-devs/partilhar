@@ -2,13 +2,12 @@ import { useState } from "react";
 import * as S from "./styles";
 import * as I from "../../assets/img";
 
-const Upload = () => {
-  const [image, setImage] = useState("");
+const Upload = ({ onUpload, image }) => {
+  const [preview, setPreview] = useState("");
   const [text, setText] = useState("");
-  const [background, setBackground] = useState(I.upload);
 
   function saveFile(e) {
-    setImage("");
+    setPreview("");
     const file = e.target.files[0];
     if (file.size > 2668799) {
       setText(
@@ -21,20 +20,18 @@ const Upload = () => {
       const base64String = reader.result
         .replace("data:", "")
         .replace(/^.+,/, "");
-      localStorage.setItem("wallpaper", base64String);
-      setImage(`url(data:image/png;base64,${base64String})`);
+      setPreview(`data:image/png;base64,${base64String}`);
+      onUpload(`data:image/png;base64,${base64String}`);
       setText("");
     };
     reader.readAsDataURL(file);
   }
-  function removeBackgroundImage() {
-    setBackground("");
-  }
+  const showImage = preview || image;
 
   return (
     <S.Container>
       <S.ContainerInput>
-        <S.Label img={image} onChange={removeBackgroundImage}>
+        <S.Label>
           <S.Alert>{text}</S.Alert>
           <S.Input
             type="file"
@@ -42,7 +39,8 @@ const Upload = () => {
             onChange={(e) => saveFile(e)}
             accept="image/png,image/jpg,image/jpeg"
           />
-          <S.Img src={background} alt="" />
+          {showImage && <S.Img src={preview || image} alt="Image" />}
+          {!showImage && !text && <S.Icon src={I.upload} alt="" />}
         </S.Label>
         <S.Text>UPLOAD DA LOGO (máx: 3MB)</S.Text>
       </S.ContainerInput>
