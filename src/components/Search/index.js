@@ -26,6 +26,7 @@ const Search = () => {
         paddingLeft="32px"
         value={search}
         event={(ev) => setSearch(ev.target.value)}
+        onKeyUp={(e) => e.key === "Enter" && handleClick()}
       />
 
       <Button

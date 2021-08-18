@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import * as S from "./styles";
 import * as I from "../../assets/img";
 
@@ -5,8 +6,9 @@ const Footer = () => {
   return (
     <S.ContainerFooter>
       <S.Container>
-        <S.ContainerLogo alt="White Logo" src={I.whitelogo} />
-
+        <Link to="/">
+          <S.ContainerLogo alt="White Logo" src={I.whitelogo} />
+        </Link>
         <S.ContainerMenu>
           <S.TitleMenu to="/">Home</S.TitleMenu>
           <S.TitleMenu to="/">Contato</S.TitleMenu>

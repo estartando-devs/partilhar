@@ -10,6 +10,7 @@ const Input = ({
   colorPlaceholder,
   image,
   paddingLeft,
+  onKeyUp,
 }) => {
   return (
     <S.InputStyles
@@ -22,6 +23,7 @@ const Input = ({
       colorPlaceholder={colorPlaceholder}
       image={image}
       paddingLeft={paddingLeft}
+      onKeyUp={onKeyUp}
     />
   );
 };
