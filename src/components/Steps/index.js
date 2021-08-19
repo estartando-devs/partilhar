@@ -11,6 +11,7 @@ const Steps = ({
   currentStep,
   setCurrentStep,
   setDatasLocalStorage,
+  colorBottom,
 }) => {
   const isLastStep = steps.length - 1 === currentStep;
 
@@ -66,7 +67,12 @@ const Steps = ({
 
       <S.ContainerStep>{children}</S.ContainerStep>
 
-      <S.Button onClick={handleNextStep} width="229px" height="38px">
+      <S.Button
+        onClick={handleNextStep}
+        width="229px"
+        height="38px"
+        bgColor={colorBottom}
+      >
         {isLastStep ? "CONCLUIR" : "PRÓXIMO"}
       </S.Button>
     </S.Container>
