@@ -59,25 +59,7 @@ export const Label = styled.label`
   font-size: 16px;
   width: 100%;
 `;
-/* }&::after {
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    box-sizing: border-box;
-    border: 2px solid ${(props) => props.bgColorBorder};
-    border: 2px solid #000; */
-/* background-color: ${(props) => props.bgColor}; */
-/* -webkit-box-shadow: 0 0 0 4px
-      ${(props) => props.theme.palette.text.light.primary} inset;
-  } */
 
-// margin: 10px 0 2px;
-//     font-size: 16px;
-//     font-family: "Lato", sans-serif;
-//     font-weight: 400;
-//     color: ${(props) => props.theme.palette.text.dark.primary};
-//     width: 26px;
-//     height: 26px;
 export const Input = styled.input`
   appearance: none;
   border: 2px solid ${(props) => props.bgColor};
@@ -102,34 +84,14 @@ export const Input = styled.input`
     transition: all 200ms ease-in-out;
     -webkit-box-shadow: 0 0 0 4px
       ${(props) => props.theme.palette.text.light.primary} inset;
-    
-    }
-   &:checked::before{
-        opacity: 1;
-      }
-    
   }
-
-  /* background-color: ${(props) => props.bgColor};
-  -webkit-box-shadow: 0 0 0 4px
-      ${(props) => props.theme.palette.text.light.primary} inset;
-  }  */
-  /* opacity: 1; */
-  /* display: none; */
+  &:checked::before {
+    opacity: 1;
+  }
 `;
-// export const Radio = styled.div`
-//   width: 26px;
-//   height: 26px;
-//   border-radius: 50%;
-//   box-sizing: border-box;
-//   border: 2px solid ${(props) => props.bgColorBorder};
-//   background-color: ${(props) => props.bgColor};
-//   -webkit-box-shadow: 0 0 0 4px
-//     ${(props) => props.theme.palette.text.light.primary} inset;
-// `;
 
-// ---------------------
 export const LabelText = styled.label``;
+
 export const TextArea = styled.textarea`
   border: 1px solid ${(props) => props.theme.palette.text.light.tertiary};
   width: 335px;

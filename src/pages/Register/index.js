@@ -5,6 +5,7 @@ import * as Step from "./Steps";
 const Register = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [values, setValues] = useState([]);
+  const [color, setColor] = useState("");
 
   function setDatasLocalStorage() {
     const datas = JSON.stringify(values);
@@ -13,7 +14,7 @@ const Register = () => {
 
   const renderStep = {
     0: <Step.ProfileData values={values} setValues={setValues} />,
-    1: <Step.Cause />,
+    1: <Step.Cause setColor={setColor} />,
     2: <Step.BankData />,
     3: <Step.Photos />,
     4: <Step.SocialNetworks />,
@@ -25,6 +26,7 @@ const Register = () => {
         currentStep={currentStep}
         setCurrentStep={setCurrentStep}
         setDatasLocalStorage={setDatasLocalStorage}
+        colorBottom={color}
       >
         {renderStep[currentStep]}
       </Steps>

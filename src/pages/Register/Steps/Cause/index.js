@@ -1,13 +1,9 @@
-import { useState } from "react";
 import * as S from "./styles";
 import { filters } from "../../../../mocks/filterData";
 
-const Cause = () => {
-  const [color, setColor] = useState("");
-
+const Cause = ({ setColor }) => {
   function onClick(bgColor) {
     setColor(bgColor);
-    console.log("cliquei", color);
   }
 
   return (
@@ -27,7 +23,6 @@ const Cause = () => {
                   bgColor={cause.bgColor}
                   onClick={() => onClick(cause.bgColor)}
                 />
-                {/* <S.Radio  bgColor={color} /> */}
               </S.Label>
             </S.Item>
           ))}
