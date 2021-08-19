@@ -1,9 +1,16 @@
+import { useState } from "react";
 import * as S from "./styles";
 import { filters } from "../../../../mocks/filterData";
 
 const Cause = ({ setColor }) => {
+  const [valueTextArea, setvalueTextArea] = useState("");
+  const [counter, setCounter] = useState(0);
   function colorBottom(bgColor) {
     setColor(bgColor);
+  }
+  function limiterCaracter(e) {
+    setCounter(e.target.value.length);
+    setvalueTextArea(e.target.value);
   }
 
   return (
@@ -28,8 +35,13 @@ const Cause = ({ setColor }) => {
           ))}
         </S.ContentCause>
         <S.LabelText>Faça um texto descritivo sobre a sua ONG</S.LabelText>
-        <S.TextArea placeholder="Ex: data de fundação, objetivo, meta, histórico..." />
-        <S.Counter>0/400</S.Counter>
+        <S.TextArea
+          placeholder="Ex: data de fundação, objetivo, meta, histórico..."
+          value={valueTextArea}
+          onChange={(e) => limiterCaracter(e)}
+          maxLength={400}
+        />
+        <S.Counter>{counter}/400</S.Counter>
       </S.Content>
     </S.Container>
   );
