@@ -40,7 +40,7 @@ export const ContentCause = styled.div`
   border: 1px solid ${(props) => props.theme.palette.text.light.tertiary};
   box-sizing: border-box;
   padding: 13px 20px;
-  border-radius: 7px;
+  border-radius: 5px;
 `;
 export const Item = styled.div`
   display: flex;
@@ -59,37 +59,91 @@ export const Label = styled.label`
   font-size: 16px;
   width: 100%;
 `;
+/* }&::after {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 2px solid ${(props) => props.bgColorBorder};
+    border: 2px solid #000; */
+/* background-color: ${(props) => props.bgColor}; */
+/* -webkit-box-shadow: 0 0 0 4px
+      ${(props) => props.theme.palette.text.light.primary} inset;
+  } */
 
-export const Radio = styled.label`
+// margin: 10px 0 2px;
+//     font-size: 16px;
+//     font-family: "Lato", sans-serif;
+//     font-weight: 400;
+//     color: ${(props) => props.theme.palette.text.dark.primary};
+//     width: 26px;
+//     height: 26px;
+export const Input = styled.input`
+  appearance: none;
+  border: 2px solid ${(props) => props.bgColor};
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  box-sizing: border-box;
-  border: 2px solid ${(props) => props.bgColorBorder};
-  background-color: ${(props) => props.bgColor};
-  -webkit-box-shadow: 0 0 0 4px
-    ${(props) => props.theme.palette.text.light.primary} inset;
-`;
+  outline: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 2px solid ${(props) => props.bgColor};
+    background-color: ${(props) => props.bgColor};
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+    -webkit-box-shadow: 0 0 0 4px
+      ${(props) => props.theme.palette.text.light.primary} inset;
+    
+    }
+   &:checked::before{
+        opacity: 1;
+      }
+    
+  }
 
-export const Input = styled.input`
-  width: 26px;
-  height: 26px;
-  right: 33px;
-  /* opacity: 0; */
+  /* background-color: ${(props) => props.bgColor};
+  -webkit-box-shadow: 0 0 0 4px
+      ${(props) => props.theme.palette.text.light.primary} inset;
+  }  */
+  /* opacity: 1; */
   /* display: none; */
-  position: absolute;
 `;
-export const LabelText = styled.label`
-  margin: 10px 0 2px;
-  font-size: 16px;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  color: ${(props) => props.theme.palette.text.dark.primary};
-`;
-export const InputText = styled.textarea`
+// export const Radio = styled.div`
+//   width: 26px;
+//   height: 26px;
+//   border-radius: 50%;
+//   box-sizing: border-box;
+//   border: 2px solid ${(props) => props.bgColorBorder};
+//   background-color: ${(props) => props.bgColor};
+//   -webkit-box-shadow: 0 0 0 4px
+//     ${(props) => props.theme.palette.text.light.primary} inset;
+// `;
+
+// ---------------------
+export const LabelText = styled.label``;
+export const TextArea = styled.textarea`
   border: 1px solid ${(props) => props.theme.palette.text.light.tertiary};
   width: 335px;
   height: 100px;
-  border-radius: 7px;
+  border-radius: 5px;
   padding: 5px;
+  resize: none;
+`;
+export const Counter = styled.p`
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: -10px;
+  padding-right: 5px;
+  font-size: 12px;
+  color: ${(props) => props.theme.palette.text.placeholder.secondary};
 `;
