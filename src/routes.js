@@ -9,6 +9,7 @@ import {
   Dandara,
   Izadora,
   OngDetails,
+  About,
 } from "./pages";
 
 export default function Routes() {
@@ -23,6 +24,7 @@ export default function Routes() {
         <Route exact path="/dandara" component={Dandara} />
         <Route exact path="/izadora" component={Izadora} />
         <Route exact path="/ong" component={OngDetails} />
+        <Route exact path="/sobre" component={About} />
         <Route path="*">
           <h1>404. That’s an error.</h1>
         </Route>
