@@ -10,14 +10,14 @@ const Steps = ({
   children,
   currentStep,
   setCurrentStep,
-  setDatasLocalStorage,
-  colorBottom,
+  addDataLocalStorage,
+  colorButtom,
 }) => {
   const isLastStep = steps.length - 1 === currentStep;
 
   const history = useHistory();
   function handleNextStep() {
-    setDatasLocalStorage();
+    addDataLocalStorage();
     if (currentStep === 4) {
       history.push("/perfil");
       return;
@@ -47,7 +47,7 @@ const Steps = ({
                 bgColor={color}
                 onClick={() => {
                   setCurrentStep(index);
-                  setDatasLocalStorage();
+                  addDataLocalStorage();
                 }}
               >
                 <S.Img src={source} alt="step" />
@@ -71,7 +71,7 @@ const Steps = ({
         onClick={handleNextStep}
         width="229px"
         height="38px"
-        bgColor={colorBottom}
+        bgColor={colorButtom}
       >
         {isLastStep ? "CONCLUIR" : "PRÓXIMO"}
       </S.Button>
