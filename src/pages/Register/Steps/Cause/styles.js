@@ -28,7 +28,7 @@ export const Title = styled.h1`
   font-weight: 900;
   @media (min-width: 768px) {
     font-size: 1.7rem;
-    margin: 10px 0;
+    margin: 10px 0 0;
   }
 `;
 export const Text = styled.p`
@@ -36,10 +36,11 @@ export const Text = styled.p`
   font-family: "Lato", sans-serif;
   font-weight: 400;
   color: ${(props) => props.theme.palette.text.primary};
-  padding: 5px 0;
+  padding: 5px 0 0;
   @media (min-width: 768px) {
     display: flex;
     font-size: 1.4rem;
+    margin: 10px 0 0;
   }
 `;
 
