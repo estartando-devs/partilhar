@@ -5,9 +5,9 @@ import { filters } from "../../../../mocks/filterData";
 const Cause = ({ setColor, values, setValues }) => {
   const [counter, setCounter] = useState(0);
 
-  function registerDatas(bgColor, title) {
+  function registerDatas(bgColor, nicho, title) {
     setColor(bgColor);
-    setValues({ ...values, nicho: title });
+    setValues({ ...values, nicho, title });
   }
 
   function getDatasLocalStorage() {
@@ -41,7 +41,10 @@ const Cause = ({ setColor, values, setValues }) => {
                   id={filter.niche}
                   name="radio"
                   bgColor={filter.bgColor}
-                  onClick={() => registerDatas(filter.bgColor, filter.title)}
+                  onClick={() => {
+                    registerDatas(filter.bgColor, filter.niche, filter.title);
+                  }}
+                  checked={filter.niche === values.nicho}
                 />
               </S.Label>
             </S.Item>

@@ -12,12 +12,6 @@ const Register = () => {
     localStorage.setItem("datas", datas);
   }
 
-  // function getDataLocalStorage() {
-  //   const datasString = localStorage.getItem("datas");
-  //   const datas = JSON.parse(datasString);
-  //   if (!datas) return [];
-  //   return datas;
-  // }
   const renderStep = {
     0: <Step.ProfileData values={values} setValues={setValues} />,
     1: <Step.Cause values={values} setValues={setValues} setColor={setColor} />,
@@ -25,7 +19,7 @@ const Register = () => {
     3: <Step.Photos />,
     4: <Step.SocialNetworks />,
   };
-  // 1: <Step.Cause setColor={setColor} cause={setCause} />,
+
   return (
     <LayoutComponent dontShowSearch>
       <Steps
