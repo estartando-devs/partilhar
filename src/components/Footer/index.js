@@ -12,7 +12,7 @@ const Footer = () => {
         <S.ContainerMenu>
           <S.TitleMenu to="/">Home</S.TitleMenu>
           <S.TitleMenu to="/">Contato</S.TitleMenu>
-          <S.TitleMenu to="/">Sobre</S.TitleMenu>
+          <S.TitleMenu to="/sobre">Sobre</S.TitleMenu>
         </S.ContainerMenu>
       </S.Container>
 

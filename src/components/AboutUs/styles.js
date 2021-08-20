@@ -6,8 +6,11 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 93px 0 49px;
-  position: relative;
+  padding: 80px 0 49px;
+  /* position: relative; */
+  @media (max-width: 360px) {
+    padding: 25px 0 49px;
+  }
 `;
 
 export const Content = styled.div`
@@ -16,25 +19,26 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  @media (max-width: 375px) {
-    width: 375px;
+
+  /* position: relative; */
+  @media (max-width: 360px) {
+    width: 100%;
   }
 `;
 
 export const BoxContent = styled.div`
-  position: relative;
+  /* position: relative; */
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 export const Image = styled.img`
-  position: absolute;
+  margin-top: -132px;
 
-  @media (max-width: 375px) {
+  @media (max-width: 360px) {
     width: 305px;
     height: 223px;
-    margin-top: 50px;
+    margin-top: -96px;
   }
 `;
 
@@ -50,7 +54,11 @@ export const BoxBackgroundSecond = styled.div`
   height: 372px;
   display: flex;
   justify-content: center;
+  margin-top: -132px;
   background-color: ${({ theme }) => theme.palette.tertiary.tertiary_9};
+  @media (max-width: 360px) {
+    height: 288px;
+  }
 `;
 
 export const Title = styled.h2`
@@ -70,7 +78,7 @@ export const TextContent = styled.div`
   font-size: 20px;
   color: ${({ theme }) => theme.palette.text.light.primary};
 
-  @media (max-width: 375px) {
+  @media (max-width: 360px) {
     width: 298px;
   }
 `;
@@ -82,5 +90,8 @@ export const QuoteText = styled.div`
   font-weight: 700;
   font-size: 20px;
   color: ${({ theme }) => theme.palette.text.dark.secondary};
-  margin-top: 220px;
+  margin-top: 200px;
+  @media (max-width: 360px) {
+    margin-top: 180px;
+  }
 `;
