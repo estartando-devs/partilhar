@@ -17,7 +17,8 @@ const Cause = ({ setColor }) => {
     <S.Container>
       <S.Content>
         <S.Title>2.Causas</S.Title>
-        <S.SubTitle>Qual causa a sua ong pertence?</S.SubTitle>
+        <S.Text>Qual causa a sua ong pertence? Selecione uma opção:</S.Text>
+
         <S.ContentCause>
           {filters.map((cause) => (
             <S.Item key={cause.value}>
@@ -34,7 +35,7 @@ const Cause = ({ setColor }) => {
             </S.Item>
           ))}
         </S.ContentCause>
-        <S.LabelText>Faça um texto descritivo sobre a sua ONG</S.LabelText>
+        <S.Text>Faça um texto descritivo sobre a sua ONG:</S.Text>
         <S.TextArea
           placeholder="Ex: data de fundação, objetivo, meta, histórico..."
           value={valueTextArea}
