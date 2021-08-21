@@ -7,7 +7,7 @@ const AboutUs = () => {
     <S.Container>
       <S.Content>
         <Border>
-          <S.BoxBackgroundOne>
+          <S.Box>
             <S.Title>Sobre Nós</S.Title>
             <S.TextContent>
               Partilhar nasceu com o objetivo de ser uma ponte entre as ONGs e
@@ -15,15 +15,11 @@ const AboutUs = () => {
               idôneas e pessoas físicas ou jurídicas que buscam fazer o seu
               papel social.
             </S.TextContent>
-          </S.BoxBackgroundOne>
-          <S.BoxContent>
             <S.Image src={I.childs} />
-          </S.BoxContent>
-          <S.BoxBackgroundSecond>
             <S.QuoteText>
               “Você não pode mudar o mundo, mas pode mudar o mundo de alguém.”
             </S.QuoteText>
-          </S.BoxBackgroundSecond>
+          </S.Box>
         </Border>
       </S.Content>
     </S.Container>

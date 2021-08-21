@@ -8,6 +8,14 @@ export const Container = styled.div`
   align-items: center;
 `;
 
+export const Content = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const Title = styled.h2`
   text-align: center;
   font-family: "Lato", sans-serif;
@@ -15,7 +23,7 @@ export const Title = styled.h2`
   font-size: 25px;
   color: ${({ theme }) => theme.palette.primary};
 
-  @media (max-width: 375px) {
+  @media (max-width: 360px) {
     font-size: 22px;
   }
 `;
@@ -26,7 +34,7 @@ export const Titles = styled.h2`
   font-size: 25px;
   color: ${({ theme }) => theme.palette.secondary};
   margin-bottom: 32px;
-  @media (max-width: 375px) {
+  @media (max-width: 360px) {
     font-size: 18px;
     margin-bottom: 25px;
   }
@@ -38,7 +46,7 @@ export const SubTitle = styled.h2`
   font-size: 24px;
   color: ${({ theme }) => theme.palette.text.tertiary};
   margin-top: 8px;
-  @media (max-width: 375px) {
+  @media (max-width: 360px) {
     font-size: 18px;
   }
 `;
@@ -51,19 +59,21 @@ export const TitleCompany = styled.h2`
   color: ${({ theme }) => theme.palette.tertiary.tertiary_10};
   margin: 20px 0;
   cursor: pointer;
-  @media (max-width: 375px) {
+  @media (max-width: 360px) {
     font-size: 18px;
   }
 `;
 
 export const ContainerImg = styled.div`
-  width: 550px;
+  width: 100%;
   display: flex;
   justify-content: center;
-  gap: 35px;
+  gap: 0px 35px;
+  flex-wrap: wrap;
+  padding-bottom: 60px;
 
-  @media (max-width: 375px) {
-    width: 375px;
+  @media (max-width: 360px) {
+    width: 100%;
     gap: 22px;
   }
 `;
@@ -73,23 +83,23 @@ export const BoxImg = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 32px 0 69px;
-  @media (max-width: 375px) {
+  padding: 32px 0 0px;
+  @media (max-width: 360px) {
     padding: 23px 0 48px;
   }
 `;
 
 export const PhotoImg = styled.img`
   cursor: pointer;
-  @media (max-width: 375px) {
-    width: 70px;
-    height: 70px;
+  @media (max-width: 360px) {
+    width: 60px;
+    height: 60px;
   }
 `;
 
 export const PhotoImgs = styled.img`
   cursor: pointer;
-  @media (max-width: 375px) {
+  @media (max-width: 360px) {
     width: 89px;
     height: 96px;
   }
@@ -97,7 +107,7 @@ export const PhotoImgs = styled.img`
 
 export const PhotoImgSocial = styled.img`
   cursor: pointer;
-  @media (max-width: 375px) {
+  @media (max-width: 360px) {
     width: 18px;
     height: 18px;
   }
@@ -111,7 +121,7 @@ export const TitleImg = styled.p`
   color: ${({ theme }) => theme.palette.text.secondary};
   margin-top: 5px;
   cursor: pointer;
-  @media (max-width: 375px) {
+  @media (max-width: 360px) {
     font-size: 14px;
   }
 `;
@@ -121,7 +131,7 @@ export const BoxSocialMedias = styled.div`
   gap: 20px;
   padding-bottom: 128px;
   cursor: pointer;
-  @media (max-width: 375px) {
+  @media (max-width: 360px) {
     padding-bottom: 25px;
   }
 `;

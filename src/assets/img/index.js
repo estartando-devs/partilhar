@@ -58,6 +58,7 @@ import estartando from "./estartandologo.svg";
 import ok from "./ok.svg";
 import x from "./x.svg";
 import upload from "./upload.svg";
+import backgroundAbout from "./backgroundAbout.png";
 
 export {
   about,
@@ -120,4 +121,5 @@ export {
   ok,
   x,
   upload,
+  backgroundAbout,
 };
