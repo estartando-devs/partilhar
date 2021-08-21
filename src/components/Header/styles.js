@@ -8,8 +8,7 @@ export const Container = styled.div`
   box-sizing: border-box;
   @media (min-width: 768px) {
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
+    align-items: center;
   }
 `;
 
@@ -20,6 +19,10 @@ export const ContentHeader = styled.div`
   width: 100%;
   padding: 24px 0 0 18px;
   @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    min-width: 768px;
+    max-width: 1200px;
     padding: 35px;
     flex-direction: row;
     align-items: center;

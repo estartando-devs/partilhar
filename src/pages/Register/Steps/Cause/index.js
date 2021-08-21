@@ -1,45 +1,65 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import * as S from "./styles";
 import { filters } from "../../../../mocks/filterData";
 
-const Cause = ({ setColor }) => {
-  const [valueTextArea, setvalueTextArea] = useState("");
+const Cause = ({ setColor, values, setValues }) => {
   const [counter, setCounter] = useState(0);
-  function colorBottom(bgColor) {
+
+  function registerDatas(bgColor, nicho, title) {
     setColor(bgColor);
+    setValues({ ...values, nicho, title });
+  }
+
+  function getDatasLocalStorage() {
+    const datas = localStorage.getItem("datas");
+    setValues(JSON.parse(datas) || []);
   }
   function limiterCaracter(e) {
     setCounter(e.target.value.length);
-    setvalueTextArea(e.target.value);
   }
+  function onChange(value) {
+    setValues({ ...values, textArea: value });
+  }
+
+  useEffect(() => {
+    getDatasLocalStorage();
+  }, []);
 
   return (
     <S.Container>
       <S.Content>
         <S.Title>2.Causas</S.Title>
-        <S.SubTitle>Qual causa a sua ong pertence?</S.SubTitle>
+        <S.Text>Qual causa a sua ong pertence? Selecione uma opção:</S.Text>
+
         <S.ContentCause>
-          {filters.map((cause) => (
-            <S.Item key={cause.value}>
-              <S.Label htmlFor={cause.niche}>
-                {cause.title}
+          {filters.map((filter) => (
+            <S.Item key={filter.value}>
+              <S.Label htmlFor={filter.niche}>
+                {filter.title}
                 <S.Input
                   type="radio"
-                  id={cause.niche}
+                  id={filter.niche}
                   name="radio"
-                  bgColor={cause.bgColor}
-                  onClick={() => colorBottom(cause.bgColor)}
+                  bgColor={filter.bgColor}
+                  onClick={() => {
+                    registerDatas(filter.bgColor, filter.niche, filter.title);
+                  }}
+                  checked={filter.niche === values.nicho}
                 />
               </S.Label>
             </S.Item>
           ))}
         </S.ContentCause>
-        <S.LabelText>Faça um texto descritivo sobre a sua ONG</S.LabelText>
+        <S.Text>Faça um texto descritivo sobre a sua ONG:</S.Text>
         <S.TextArea
           placeholder="Ex: data de fundação, objetivo, meta, histórico..."
-          value={valueTextArea}
-          onChange={(e) => limiterCaracter(e)}
+          onChange={(e) => {
+            limiterCaracter(e);
+            onChange(e.target.value);
+          }}
           maxLength={400}
+          name="textArea"
+          value={values.textArea}
         />
         <S.Counter>{counter}/400</S.Counter>
       </S.Content>

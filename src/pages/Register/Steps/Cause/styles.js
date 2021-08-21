@@ -16,18 +16,32 @@ export const Content = styled.div`
   width: 335px;
   height: 100%;
   border-radius: 7px;
+  @media (min-width: 768px) {
+    width: 760px;
+  }
 `;
 export const Title = styled.h1`
+  display: flex;
+  justify-content: center;
   font-family: "Lato", sans-serif;
   font-size: 24px;
   font-weight: 900;
+  @media (min-width: 768px) {
+    font-size: 1.7rem;
+    margin: 10px 0 0;
+  }
 `;
-export const SubTitle = styled.h2`
+export const Text = styled.p`
   font-size: 16px;
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  color: ${(props) => props.theme.palette.text.dark.primary};
-  padding: 5px 0;
+  color: ${(props) => props.theme.palette.text.primary};
+  padding: 5px 0 0;
+  @media (min-width: 768px) {
+    display: flex;
+    font-size: 1.4rem;
+    margin: 10px 0 0;
+  }
 `;
 
 export const ContentCause = styled.div`
@@ -41,6 +55,10 @@ export const ContentCause = styled.div`
   box-sizing: border-box;
   padding: 13px 20px;
   border-radius: 5px;
+  @media (min-width: 768px) {
+    width: 760px;
+    margin-bottom: 15px;
+  }
 `;
 export const Item = styled.div`
   display: flex;
@@ -58,6 +76,9 @@ export const Label = styled.label`
   justify-content: space-between;
   font-size: 16px;
   width: 100%;
+  @media (min-width: 768px) {
+    font-size: 1.3rem;
+  }
 `;
 
 export const Input = styled.input`
@@ -90,15 +111,23 @@ export const Input = styled.input`
   }
 `;
 
-export const LabelText = styled.label``;
-
 export const TextArea = styled.textarea`
   border: 1px solid ${(props) => props.theme.palette.text.light.tertiary};
   width: 335px;
+  font-family: "Roboto", sans-serif;
   height: 100px;
   border-radius: 5px;
+  font-size: 16px;
   padding: 5px;
   resize: none;
+  ::placeholder {
+    color: ${(props) => props.theme.palette.text.placeholder.secondary}80;
+  }
+  @media (min-width: 768px) {
+    width: 760px;
+    height: 126px;
+    font-size: 1.3rem;
+  }
 `;
 export const Counter = styled.p`
   display: flex;
@@ -108,4 +137,8 @@ export const Counter = styled.p`
   padding-right: 5px;
   font-size: 12px;
   color: ${(props) => props.theme.palette.text.placeholder.secondary};
+  @media (min-width: 768px) {
+    font-size: 14px;
+    padding-right: 15px;
+  }
 `;

@@ -49,6 +49,7 @@ export const Card = styled.div`
     :hover {
       filter: opacity(70%);
     }
+    cursor: pointer;
   }
 `;
 export const Img = styled.img`
