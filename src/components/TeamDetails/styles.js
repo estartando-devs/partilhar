@@ -9,14 +9,11 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  width: 797px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media (max-width: 360px) {
-    width: 355px;
-  }
 `;
 
 export const Title = styled.h2`
@@ -68,13 +65,15 @@ export const TitleCompany = styled.h2`
 `;
 
 export const ContainerImg = styled.div`
-  width: 550px;
+  width: 100%;
   display: flex;
   justify-content: center;
-  gap: 35px;
+  gap: 0px 35px;
+  flex-wrap: wrap;
+  padding-bottom: 60px;
 
   @media (max-width: 360px) {
-    width: 360px;
+    width: 100%;
     gap: 22px;
   }
 `;
@@ -84,7 +83,7 @@ export const BoxImg = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 32px 0 69px;
+  padding: 32px 0 0px;
   @media (max-width: 360px) {
     padding: 23px 0 48px;
   }
