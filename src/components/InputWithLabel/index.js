@@ -1,7 +1,7 @@
 import * as S from "./styles";
 
 const InputWithLabel = ({
-  label,
+  textLabel,
   htmlFor,
   placeholder,
   id,
@@ -14,7 +14,7 @@ const InputWithLabel = ({
   return (
     <S.Container>
       <S.Label htmlFor={htmlFor}>
-        {label}
+        {textLabel}
         <S.Input
           placeholder={placeholder}
           id={id}

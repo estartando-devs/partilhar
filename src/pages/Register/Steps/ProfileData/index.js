@@ -49,7 +49,7 @@ const ProfileData = ({ values, setValues }) => {
         <S.Form>
           <InputWithLabel
             type="text"
-            label="Nome da ONG"
+            textLabel="Nome da ONG"
             htmlFor="ong"
             placeholder="Ex: Ong Kids"
             id="ong"
@@ -60,7 +60,7 @@ const ProfileData = ({ values, setValues }) => {
           />
           <InputWithLabel
             type="text"
-            label="Razão Social"
+            textLabel="Razão Social"
             htmlFor="reason"
             placeholder="Ex: Associação de Assistência à criança"
             id="reason"
@@ -70,7 +70,7 @@ const ProfileData = ({ values, setValues }) => {
           />
           <InputWithLabel
             type="text"
-            label="CNPJ"
+            textLabel="CNPJ"
             htmlFor="cnpj"
             placeholder="11.111.111/0001-00"
             id="cnpj"
@@ -80,7 +80,7 @@ const ProfileData = ({ values, setValues }) => {
           />
           <InputWithLabel
             type="text"
-            label="Telefone"
+            textLabel="Telefone"
             htmlFor="phone"
             placeholder="(11)91111-1111"
             id="phone"
@@ -90,7 +90,7 @@ const ProfileData = ({ values, setValues }) => {
           />
           <InputWithLabel
             type="text"
-            label="Endereço"
+            textLabel="Endereço"
             htmlFor="address"
             placeholder="Ex: Rua: Um"
             id="address"
@@ -100,7 +100,7 @@ const ProfileData = ({ values, setValues }) => {
           />
           <InputWithLabel
             type="text"
-            label="Número"
+            textLabel="Número"
             htmlFor="number"
             placeholder="Ex: 1111"
             id="number"
@@ -110,7 +110,7 @@ const ProfileData = ({ values, setValues }) => {
           />
           <InputWithLabel
             type="text"
-            label="Bairro"
+            textLabel="Bairro"
             htmlFor="district"
             placeholder="Ex: Jardim Dois"
             id="district"
@@ -120,7 +120,7 @@ const ProfileData = ({ values, setValues }) => {
           />
           <InputWithLabel
             type="text"
-            label="Email"
+            textLabel="Email"
             htmlFor="email"
             placeholder="Ex: fulano@gmail.com"
             id="email"
@@ -130,7 +130,7 @@ const ProfileData = ({ values, setValues }) => {
           />
           <InputWithLabel
             type="password"
-            label="Senha"
+            textLabel="Senha"
             htmlFor="password"
             placeholder="**********"
             id="password"
@@ -140,7 +140,7 @@ const ProfileData = ({ values, setValues }) => {
           />
           <InputWithLabel
             type="password"
-            label="Confirmar Senha"
+            textLabel="Confirmar Senha"
             htmlFor="confirmPassword"
             placeholder="**********"
             id="confirmPassword"
