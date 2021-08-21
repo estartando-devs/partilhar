@@ -7,16 +7,12 @@ export const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   margin-top: 10px;
-<<<<<<< HEAD
-=======
   margin-bottom: 10px;
-
   ${({ inlineUpload }) =>
     inlineUpload &&
     css`
       margin: 0;
     `};
->>>>>>> develop
 `;
 
 export const Input = styled.input`
