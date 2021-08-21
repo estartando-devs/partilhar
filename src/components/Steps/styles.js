@@ -96,3 +96,8 @@ export const Button = styled.button`
     color: ${(props) => props.theme.palette.text.light.primary};
   }
 `;
+
+export const TagContainer = styled.div`
+  margin-bottom: 30px;
+  max-width: 500px;
+`;

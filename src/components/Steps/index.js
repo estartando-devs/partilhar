@@ -2,16 +2,17 @@ import { Fragment } from "react";
 import { useHistory } from "react-router-dom";
 import * as S from "./styles";
 import { steps } from "../../mocks/stepsData";
-
+import { filters } from "../../mocks/filterData";
 import * as I from "../../assets/img";
 import Theme from "../../styles/theme";
+import Tag from "../Tag";
 
 const Steps = ({
   children,
   currentStep,
   setCurrentStep,
   addDataLocalStorage,
-  colorButtom,
+  niche,
 }) => {
   const isLastStep = steps.length - 1 === currentStep;
 
@@ -25,8 +26,19 @@ const Steps = ({
     setCurrentStep((prevState) => prevState + 1);
   }
 
+  const findCause = niche && filters.find((filter) => filter.niche === niche);
+
   return (
     <S.Container>
+      {niche && (
+        <S.TagContainer>
+          <Tag
+            bgColor={findCause.bgColor}
+            niche={findCause.niche}
+            icon={findCause.icon}
+          />
+        </S.TagContainer>
+      )}
       <S.ContainerButton>
         {steps.map((step, index, array) => {
           const isActive = index <= currentStep;
@@ -71,7 +83,7 @@ const Steps = ({
         onClick={handleNextStep}
         width="229px"
         height="38px"
-        bgColor={colorButtom}
+        bgColor={findCause.bgColor}
       >
         {isLastStep ? "CONCLUIR" : "PRÓXIMO"}
       </S.Button>
