@@ -62,6 +62,7 @@ import backgroundAbout from "./backgroundAbout.png";
 import uploadCloud from "./uploadCloud.svg";
 import uploadCloudChecked from "./uploadCloudChecked.svg";
 import uploadCloudLoading from "./uploadCloudLoading.svg";
+import register from "./register.svg";
 
 export {
   about,
@@ -128,4 +129,5 @@ export {
   uploadCloud,
   uploadCloudChecked,
   uploadCloudLoading,
+  register,
 };

@@ -5,7 +5,7 @@ export const filters = [
   {
     value: 0,
     icon: I.woman,
-    title: "Apoio ás Mulheres",
+    title: "Apoio às Mulheres",
     niche: "mulheres",
     bgColor: theme.palette.tertiary.tertiary_1,
   },

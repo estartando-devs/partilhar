@@ -8,7 +8,6 @@ export const Container = styled.div`
   flex-direction: column;
   margin-top: 10px;
   margin-bottom: 10px;
-
   ${({ inlineUpload }) =>
     inlineUpload &&
     css`
