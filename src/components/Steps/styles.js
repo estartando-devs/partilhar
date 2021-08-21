@@ -46,8 +46,6 @@ export const Step = styled.div`
   border-style: none;
   color: ${(props) => props.theme.palette.text.tertiary};
   @media (min-width: 768px) {
-    /* height: 38px;
-    width: 38px; */
     height: 43px;
     width: 43px;
   }
