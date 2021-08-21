@@ -19,6 +19,7 @@ import AboutUs from "./AboutUs";
 import TeamDetails from "./TeamDetails";
 import Steps from "./Steps";
 import Upload from "./Upload";
+import InputWithLabel from "./InputWithLabel";
 
 export {
   Header,
@@ -42,4 +43,5 @@ export {
   TeamDetails,
   Steps,
   Upload,
+  InputWithLabel,
 };

@@ -75,7 +75,7 @@ export const Input = styled.input`
   color: ${(props) => props.theme.palette.text.tertiary};
   padding-left: 10px;
   ::placeholder {
-    color: ${(props) => props.theme.palette.text.placeholder.secondary}75;
+    color: ${(props) => props.theme.palette.text.placeholder.secondary};
     font-style: italic;
     @media (min-width: 768px) {
       font-size: 1.2rem;

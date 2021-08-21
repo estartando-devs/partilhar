@@ -80,7 +80,7 @@ export const ContainerImg = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 15px;
-  padding-right: 10px;
+  padding-right: 15px;
   @media (min-width: 768px) {
     gap: 26px;
     padding-right: 20px;
