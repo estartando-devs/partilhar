@@ -8,7 +8,14 @@ export const ContainerFooter = styled.footer`
   width: 100%;
   background-color: ${({ theme }) => theme.palette.primary};
 `;
-
+export const Content = styled.div`
+  width: 100%;
+  height: 100%;
+  @media (min-width: 768px) {
+    min-width: 768px;
+    max-width: 1200px;
+  }
+`;
 export const Container = styled.div`
   width: 100%;
   display: flex;
@@ -16,7 +23,7 @@ export const Container = styled.div`
   align-items: start;
   padding-top: 14px;
   @media (min-width: 768px) {
-    padding-right: 15px;
+    padding-right: 0;
   }
 `;
 
@@ -27,6 +34,7 @@ export const ContainerLogo = styled.img`
   height: auto;
   @media (min-width: 768px) {
     width: 204px;
+    padding-left: 26px;
   }
 `;
 
@@ -35,6 +43,9 @@ export const ContainerMenu = styled.div`
   justify-content: center;
   align-items: center;
   padding-right: 10px;
+  @media (min-width: 768px) {
+    padding-right: 5px;
+  }
 `;
 
 export const TitleMenu = styled(Link)`
@@ -72,7 +83,7 @@ export const ContainerImg = styled.div`
   padding-right: 10px;
   @media (min-width: 768px) {
     gap: 26px;
-    padding-right: 30px;
+    padding-right: 20px;
     cursor: pointer;
   }
 `;

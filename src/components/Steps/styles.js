@@ -79,7 +79,7 @@ export const ContainerStep = styled.div`
   margin-bottom: 30px;
 `;
 export const Button = styled.button`
-  background-color: ${(props) => props.theme.palette.primary};
+  background-color: ${(props) => props.bgColor || props.theme.palette.primary};
   color: ${(props) => props.theme.palette.text.primary};
   width: 229px;
   height: 38px;

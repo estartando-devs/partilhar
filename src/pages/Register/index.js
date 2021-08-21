@@ -5,15 +5,16 @@ import * as Step from "./Steps";
 const Register = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [values, setValues] = useState([]);
+  const [color, setColor] = useState("");
 
-  function setDatasLocalStorage() {
+  function addDataLocalStorage() {
     const datas = JSON.stringify(values);
     localStorage.setItem("datas", datas);
   }
 
   const renderStep = {
     0: <Step.ProfileData values={values} setValues={setValues} />,
-    1: <Step.Cause />,
+    1: <Step.Cause values={values} setValues={setValues} setColor={setColor} />,
     2: <Step.BankData />,
     3: <Step.Photos />,
     4: <Step.SocialNetworks />,
@@ -24,7 +25,8 @@ const Register = () => {
       <Steps
         currentStep={currentStep}
         setCurrentStep={setCurrentStep}
-        setDatasLocalStorage={setDatasLocalStorage}
+        addDataLocalStorage={addDataLocalStorage}
+        colorButtom={color}
       >
         {renderStep[currentStep]}
       </Steps>

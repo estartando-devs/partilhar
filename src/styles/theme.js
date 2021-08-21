@@ -27,6 +27,7 @@ const Theme = {
       light: {
         primary: "#FFFFFF",
         secondary: "#6A8376",
+        tertiary: "#C0C0C0",
       },
       dark: {
         primary: "#373737",
