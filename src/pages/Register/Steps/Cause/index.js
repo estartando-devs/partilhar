@@ -1,30 +1,22 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import * as S from "./styles";
 import { filters } from "../../../../mocks/filterData";
 import { TextArea } from "../../../../components/TextArea/styles";
 
-const Cause = ({ setColor, values, setValues }) => {
+const Cause = ({ setNiche, values, setValues }) => {
   const [counter, setCounter] = useState(0);
 
-  function registerDatas(bgColor, nicho, title) {
-    setColor(bgColor);
+  function registerDatas(nicho, title) {
+    setNiche(nicho);
     setValues({ ...values, nicho, title });
   }
 
-  function getDatasLocalStorage() {
-    const datas = localStorage.getItem("datas");
-    setValues(JSON.parse(datas) || []);
-  }
   function limiterCaracter(e) {
     setCounter(e.target.value.length);
   }
   function onChange(value) {
     setValues({ ...values, textArea: value });
   }
-
-  useEffect(() => {
-    getDatasLocalStorage();
-  }, []);
 
   return (
     <S.Container>
@@ -43,7 +35,7 @@ const Cause = ({ setColor, values, setValues }) => {
                   name="radio"
                   bgColor={filter.bgColor}
                   onClick={() => {
-                    registerDatas(filter.bgColor, filter.niche, filter.title);
+                    registerDatas(filter.niche, filter.title);
                   }}
                   checked={filter.niche === values.nicho}
                 />
