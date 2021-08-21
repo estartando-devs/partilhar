@@ -68,7 +68,7 @@ export const TitleMenu = styled(Link)`
 
 export const ContainerInformation = styled.div`
   width: 100%;
-  margin: 10px;
+  margin: 10px 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;

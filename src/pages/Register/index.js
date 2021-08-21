@@ -13,11 +13,12 @@ const Register = () => {
   }
 
   const renderStep = {
-    0: <Step.ProfileData values={values} setValues={setValues} />,
-    1: <Step.Cause values={values} setValues={setValues} setColor={setColor} />,
-    2: <Step.BankData values={values} setValues={setValues} />,
-    3: <Step.Photos />,
-    4: <Step.SocialNetworks />,
+    <Step.ProfileData values={values} setValues={setValues} />,
+    <Step.Cause values={values} setValues={setValues} setColor={setColor} />,
+<   <Step.BankData values={values} setValues={setValues} />,
+    <Step.Photos values={values} setValues={setValues} />,
+
+    <Step.SocialNetworks />,
   };
 
   return (

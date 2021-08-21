@@ -58,7 +58,12 @@ import estartando from "./estartandologo.svg";
 import ok from "./ok.svg";
 import x from "./x.svg";
 import upload from "./upload.svg";
+import backgroundAbout from "./backgroundAbout.png";
+import uploadCloud from "./uploadCloud.svg";
+import uploadCloudChecked from "./uploadCloudChecked.svg";
+import uploadCloudLoading from "./uploadCloudLoading.svg";
 import register from "./register.svg";
+
 
 export {
   about,
@@ -121,5 +126,10 @@ export {
   ok,
   x,
   upload,
+  backgroundAbout,
+  uploadCloud,
+  uploadCloudChecked,
+  uploadCloudLoading, 
   register,
+
 };

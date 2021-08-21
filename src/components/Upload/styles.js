@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
@@ -7,6 +7,13 @@ export const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   margin-top: 10px;
+  margin-bottom: 10px;
+  ${({ inlineUpload }) =>
+    inlineUpload &&
+    css`
+      margin: 0;
+    `};
+
 `;
 
 export const Input = styled.input`
@@ -27,6 +34,18 @@ export const Label = styled.label`
     cursor: pointer;
     background-size: 375px auto;
   }
+
+  ${({ inlineUpload }) =>
+    inlineUpload &&
+    css`
+      width: 100%;
+      height: unset;
+      background: none;
+      @media (min-width: 768px) {
+        width: 100%;
+        height: unset;
+      }
+    `};
 `;
 
 export const Img = styled.img`
@@ -36,7 +55,51 @@ export const Img = styled.img`
   object-position: top;
   border-radius: 10px;
 `;
-export const Icon = styled.img``;
+export const Icon = styled.img`
+  ${({ inlineUpload }) =>
+    inlineUpload &&
+    css`
+      width: 30px;
+      height: auto;
+      @media (min-width: 768px) {
+        width: 40px;
+      }
+    `};
+`;
+
+export const Message = styled.p`
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: ${({ theme }) => theme.palette.text.dark.tertiary};
+`;
+
+export const MessageBox = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid ${({ theme }) => theme.palette.text.placeholder.primary};
+  padding: 12px 15px;
+  margin-left: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    padding: 0 15px;
+    margin-left: 10px;
+  }
+`;
+
+export const UploadStatus = styled.img`
+  width: 20px;
+  height: 20px;
+
+  @media (min-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
+`;
 
 export const ContainerInput = styled.div`
   display: flex;
