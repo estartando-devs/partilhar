@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import * as S from "./styles";
 import { filters } from "../../../../mocks/filterData";
+import { TextArea } from "../../../../components/TextArea/styles";
 
 const Cause = ({ setColor, values, setValues }) => {
   const [counter, setCounter] = useState(0);
@@ -51,7 +52,7 @@ const Cause = ({ setColor, values, setValues }) => {
           ))}
         </S.ContentCause>
         <S.Text>Faça um texto descritivo sobre a sua ONG:</S.Text>
-        <S.TextArea
+        <TextArea
           placeholder="Ex: data de fundação, objetivo, meta, histórico..."
           onChange={(e) => {
             limiterCaracter(e);

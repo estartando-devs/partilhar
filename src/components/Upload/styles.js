@@ -7,7 +7,6 @@ export const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   margin-top: 10px;
-  margin-bottom: 10px;
 `;
 
 export const Input = styled.input`

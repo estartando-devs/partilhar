@@ -7,6 +7,7 @@ export const Container = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
 `;
 export const Content = styled.div`
   display: flex;
@@ -14,7 +15,7 @@ export const Content = styled.div`
   justify-content: center;
   gap: 10px;
   width: 335px;
-  height: 100%;
+  /* height: 100%; */
   border-radius: 7px;
   @media (min-width: 768px) {
     width: 760px;
@@ -27,25 +28,25 @@ export const Title = styled.h1`
   font-size: 24px;
   font-weight: 900;
   @media (min-width: 768px) {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     margin: 10px 0 0;
   }
 `;
 export const Text = styled.p`
   font-size: 16px;
-  font-family: "Lato", sans-serif;
   font-weight: 400;
   color: ${(props) => props.theme.palette.text.primary};
   padding: 5px 0 0;
   @media (min-width: 768px) {
     display: flex;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin: 10px 0 0;
   }
 `;
 
 export const ContentCause = styled.div`
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
   gap: 18px;
@@ -77,7 +78,7 @@ export const Label = styled.label`
   font-size: 16px;
   width: 100%;
   @media (min-width: 768px) {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
 `;
 
@@ -111,29 +112,11 @@ export const Input = styled.input`
   }
 `;
 
-export const TextArea = styled.textarea`
-  border: 1px solid ${(props) => props.theme.palette.text.light.tertiary};
-  width: 335px;
-  font-family: "Roboto", sans-serif;
-  height: 100px;
-  border-radius: 5px;
-  font-size: 16px;
-  padding: 5px;
-  resize: none;
-  ::placeholder {
-    color: ${(props) => props.theme.palette.text.placeholder.secondary}80;
-  }
-  @media (min-width: 768px) {
-    width: 760px;
-    height: 126px;
-    font-size: 1.3rem;
-  }
-`;
 export const Counter = styled.p`
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  margin-top: -10px;
+  margin-top: -5px;
   padding-right: 5px;
   font-size: 12px;
   color: ${(props) => props.theme.palette.text.placeholder.secondary};

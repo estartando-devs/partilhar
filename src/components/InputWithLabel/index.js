@@ -10,6 +10,8 @@ const InputWithLabel = ({
   name,
   value,
   type,
+  width,
+  height,
 }) => {
   return (
     <S.Container>
@@ -23,6 +25,8 @@ const InputWithLabel = ({
           name={name}
           value={value}
           type={type}
+          width={width}
+          height={height}
         />
       </S.Label>
     </S.Container>

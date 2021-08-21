@@ -6,7 +6,7 @@ export const Container = styled.div`
 `;
 export const Label = styled.label`
   font-size: 16px;
-  color: ${(props) => props.theme.palette.text.dark.primary};
+  color: ${(props) => props.theme.palette.text.primary};
   @media (min-width: 768px) {
     font-size: 1.3rem;
   }
@@ -14,11 +14,11 @@ export const Label = styled.label`
 export const Input = styled.input`
   margin-top: 2px;
   font-size: 14px;
-  width: 340px;
-  height: 38px;
+  width: ${(props) => props.width || "340px"};
+  height: ${(props) => props.height || "38px"};
   border-radius: 3px;
   border: 1px solid ${(props) => props.theme.palette.text.placeholder.primary};
-  color: ${(props) => props.theme.palette.text.tertiary};
+  color: ${(props) => props.theme.palette.text.primary};
   padding-left: 10px;
   ::placeholder {
     color: ${(props) => props.theme.palette.text.placeholder.secondary}85;
@@ -28,7 +28,7 @@ export const Input = styled.input`
     }
   }
   @media (min-width: 768px) {
-    width: 740px;
+    width: 750px;
     height: 42px;
   }
 `;

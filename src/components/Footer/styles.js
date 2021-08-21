@@ -5,11 +5,13 @@ export const ContainerFooter = styled.footer`
   display: flex;
   align-items: center;
   flex-direction: column;
+
   width: 100%;
   background-color: ${({ theme }) => theme.palette.primary};
 `;
 export const Content = styled.div`
-  width: 100%;
+  width: 360px;
+  box-sizing: border-box;
   height: 100%;
   @media (min-width: 768px) {
     min-width: 768px;
