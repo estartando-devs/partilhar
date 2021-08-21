@@ -4,7 +4,7 @@ import { InputWithLabel, Upload } from "../../../../components";
 
 const ProfileData = ({ values, setValues }) => {
   function onUpload(image) {
-    setValues({ ...values, logo: image });
+    setValues({ ...values, logo: image.url });
   }
 
   function onChange(e) {

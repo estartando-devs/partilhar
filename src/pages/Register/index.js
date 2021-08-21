@@ -16,7 +16,7 @@ const Register = () => {
     0: <Step.ProfileData values={values} setValues={setValues} />,
     1: <Step.Cause values={values} setValues={setValues} setColor={setColor} />,
     2: <Step.BankData values={values} setValues={setValues} />,
-    3: <Step.Photos />,
+    3: <Step.Photos values={values} setValues={setValues} />,
     4: <Step.SocialNetworks />,
   };
 
