@@ -8,7 +8,7 @@ const Upload = ({ onUpload, image, inlineUpload, initialName }) => {
   const [fileName, setFileName] = useState(initialName || "");
   const [progress, setProgress] = useState("upload");
 
-  async function saveFile(e) {
+  function saveFile(e) {
     setFileName("");
     setPreview("");
     setProgress("loading");
