@@ -26,7 +26,7 @@ export const Title = styled.h1`
   font-weight: 900;
   margin-top: 5px;
   @media (min-width: 768px) {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     margin: 10px 0;
   }
 `;
@@ -34,14 +34,14 @@ export const Title = styled.h1`
 export const Text = styled.p`
   text-align: center;
   @media (min-width: 768px) {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 `;
 
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   @media (min-width: 768px) {
     align-items: center;
     gap: 20px;
@@ -54,7 +54,7 @@ export const SubTitle = styled.h2`
   font-size: 24px;
   @media (min-width: 768px) {
     margin: 15px 0;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     text-align: center;
   }
 `;
@@ -75,7 +75,7 @@ export const Input = styled.input`
   color: ${(props) => props.theme.palette.text.tertiary};
   padding-left: 10px;
   ::placeholder {
-    color: ${(props) => props.theme.palette.text.placeholder.secondary}75;
+    color: ${(props) => props.theme.palette.text.placeholder.secondary};
     font-style: italic;
     @media (min-width: 768px) {
       font-size: 1.2rem;

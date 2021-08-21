@@ -39,23 +39,28 @@ export const Step = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background-color: ${(props) => props.bgColor};
   border-style: none;
   color: ${(props) => props.theme.palette.text.tertiary};
   @media (min-width: 768px) {
-    height: 38px;
-    width: 38px;
+    height: 43px;
+    width: 43px;
   }
 `;
 
-export const Img = styled.img``;
+export const Img = styled.img`
+  @media (min-width: 768px) {
+    width: 24px;
+    height: 25px;
+  }
+`;
 
 export const Text = styled.p`
   text-align: center;
-  font-size: 10px;
+  font-size: 12px;
   width: 60px;
   color: ${(props) => props.theme.palette.text.dark.tertiary};
   @media (min-width: 768px) {
@@ -63,10 +68,10 @@ export const Text = styled.p`
   }
 `;
 export const Hr = styled.hr`
-  width: 50px;
+  width: 45px;
   border: 1px solid ${(props) => props.bgColor};
   @media (min-width: 768px) {
-    width: 75px;
+    width: 70px;
   }
 `;
 
