@@ -7,7 +7,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 `;
 export const ContentDonors = styled.div`
   @media (min-width: 768px) {

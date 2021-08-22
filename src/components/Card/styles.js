@@ -6,7 +6,6 @@ export const Container = styled.div`
     justify-content: center;
     width: 100%;
     height: 100%;
-    margin: 30px 0;
   }
 `;
 export const ContainerCard = styled.div`
