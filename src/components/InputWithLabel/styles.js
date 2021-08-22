@@ -5,6 +5,8 @@ export const Container = styled.div`
   height: 100%;
 `;
 export const Label = styled.label`
+  display: flex;
+  flex-direction: column;
   font-size: 16px;
   color: ${(props) => props.theme.palette.text.primary};
   @media (min-width: 768px) {
