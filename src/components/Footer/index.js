@@ -7,13 +7,19 @@ const Footer = () => {
     <S.ContainerFooter>
       <S.Content>
         <S.Container>
-          <Link to="/">
+          <Link to="/" onClick={() => window.scrollTo(0, 0)}>
             <S.ContainerLogo alt="White Logo" src={I.whitelogo} />
           </Link>
           <S.ContainerMenu>
-            <S.TitleMenu to="/">Home</S.TitleMenu>
-            <S.TitleMenu to="/busca">Ongs</S.TitleMenu>
-            <S.TitleMenu to="/sobre">Sobre</S.TitleMenu>
+            <S.TitleMenu to="/" onClick={() => window.scrollTo(0, 0)}>
+              Home
+            </S.TitleMenu>
+            <S.TitleMenu to="/busca" onClick={() => window.scrollTo(0, 0)}>
+              Ongs
+            </S.TitleMenu>
+            <S.TitleMenu to="/sobre" onClick={() => window.scrollTo(0, 0)}>
+              Sobre
+            </S.TitleMenu>
           </S.ContainerMenu>
         </S.Container>
 
