@@ -3,7 +3,10 @@ import * as S from "./styles";
 const Checkbox = () => {
   return (
     <S.Container>
-      <S.Checkbox type="checkbox" />
+      <S.Content>
+        <S.Checkbox id="checkbox" type="checkbox" />
+        <S.Label htmlFor="checkbox">Lembre-me</S.Label>
+      </S.Content>
     </S.Container>
   );
 };

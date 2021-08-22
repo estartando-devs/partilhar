@@ -5,7 +5,17 @@ export const Container = styled.div`
   height: 100%;
 `;
 
+export const Content = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+`;
+
 export const Checkbox = styled.input`
-  /* width: 24px;
-  height: 24px; */
+  width: 16px;
+  height: 16px;
+`;
+
+export const Label = styled.label`
+  font-size: 14px;
 `;
