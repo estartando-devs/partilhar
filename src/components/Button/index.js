@@ -7,6 +7,8 @@ const Button = ({
   type,
   value,
   onClick,
+  widthMax,
+  minWidth,
   ...other
 }) => {
   return (
@@ -17,6 +19,8 @@ const Button = ({
       type={type}
       value={value}
       onClick={onClick}
+      widthMax={widthMax}
+      minWidth={minWidth}
       {...other}
     />
   );

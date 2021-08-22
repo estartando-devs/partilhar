@@ -29,6 +29,8 @@ const Header = ({ dontShowSearch }) => {
           type="submit"
           onClick={toggleSideMenu}
           backgroundColor={theme.palette.text.light.primary}
+          width="0"
+          minWidth="0"
         >
           <S.Imagem src={I.menu} alt="Menu" />
         </Button>

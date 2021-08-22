@@ -5,18 +5,16 @@ export const ContainerFooter = styled.footer`
   display: flex;
   align-items: center;
   flex-direction: column;
-
+  height: 100%;
   width: 100%;
   background-color: ${({ theme }) => theme.palette.primary};
 `;
 export const Content = styled.div`
-  width: 360px;
+  width: 100%;
+  min-width: 360px;
+  max-width: 1200px;
   box-sizing: border-box;
   height: 100%;
-  @media (min-width: 768px) {
-    min-width: 768px;
-    max-width: 1200px;
-  }
 `;
 export const Container = styled.div`
   width: 100%;
