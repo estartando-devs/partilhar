@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
 const InputStyles = styled.input`
-  width: ${(props) => props.width};
-  height: ${(props) => props.height};
+  height: ${(props) => props.height || "100%"};
   color: ${(props) => props.color};
   border: 1px solid;
+  width: ${(props) => props.width || "100%"};
+  min-width: ${(props) => props.width || "177px"};
+  width: 100%;
+  max-width: ${(props) => props.width || "265px"};
   border-color: ${(props) => props.borderColor};
   border-radius: 3px;
   background-image: url(${(props) => props.image});

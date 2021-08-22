@@ -28,28 +28,30 @@ const Search = () => {
 
   return (
     <LayoutComponent>
-      {searchByFilter && (
-        <Tag
-          bgColor={searchByFilter.bgColor}
-          niche={searchByFilter.title}
-          icon={searchByFilter.icon}
-        />
-      )}
-      {filteredOngs.length > 0 ? (
-        filteredOngs.map((ong) => (
-          <Card
-            onClick={() => handleClick(ong)}
-            key={ong.value}
-            img={ong.img}
-            title={ong.title}
-            text={ong.text}
+      <S.Container>
+        {searchByFilter && (
+          <Tag
+            bgColor={searchByFilter.bgColor}
+            niche={searchByFilter.title}
+            icon={searchByFilter.icon}
           />
-        ))
-      ) : (
-        <S.NotFound>
-          <S.Text>Nenhuma ong encontrada</S.Text>
-        </S.NotFound>
-      )}
+        )}
+        {filteredOngs.length > 0 ? (
+          filteredOngs.map((ong) => (
+            <Card
+              onClick={() => handleClick(ong)}
+              key={ong.value}
+              img={ong.img}
+              title={ong.title}
+              text={ong.text}
+            />
+          ))
+        ) : (
+          <S.NotFound>
+            <S.Text>Nenhuma ong encontrada</S.Text>
+          </S.NotFound>
+        )}
+      </S.Container>
     </LayoutComponent>
   );
 };
