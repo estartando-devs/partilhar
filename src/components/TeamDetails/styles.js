@@ -8,7 +8,7 @@ export const Container = styled.div`
   align-items: center;
   margin-bottom: 30px;
   @media (min-width: 768px) {
-    margin-bottom: 70px;
+    margin-bottom: 100px;
   }
 `;
 
