@@ -11,6 +11,7 @@ const Input = ({
   image,
   paddingLeft,
   onKeyUp,
+  ...other
 }) => {
   return (
     <S.InputStyles
@@ -24,6 +25,7 @@ const Input = ({
       image={image}
       paddingLeft={paddingLeft}
       onKeyUp={onKeyUp}
+      {...other}
     />
   );
 };

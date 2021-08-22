@@ -15,13 +15,13 @@ export const Container = styled.div`
 export const ContentHeader = styled.div`
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   justify-content: space-around;
   width: 100%;
   padding: 24px 0 0 18px;
   @media (min-width: 768px) {
     display: flex;
     justify-content: center;
-    min-width: 768px;
     max-width: 1200px;
     padding: 35px;
     flex-direction: row;
@@ -31,7 +31,7 @@ export const ContentHeader = styled.div`
 `;
 
 export const ContainerMenu = styled.div`
-  margin-right: 20px;
+  width: 60px;
   @media (min-width: 768px) {
     display: none;
   }

@@ -17,8 +17,6 @@ const Search = () => {
   return (
     <S.Container>
       <Input
-        width="68%"
-        height="100%"
         placeholder="Pesquisar..."
         borderColor={theme.palette.primary}
         colorPlaceholder="#84A59D"
