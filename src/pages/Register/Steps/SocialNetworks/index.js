@@ -40,7 +40,7 @@ const SocialNetworks = ({ values, setValues }) => {
     <S.Container>
       <S.Title>5. Redes Sociais</S.Title>
       {SocialNetworksData.map((item) => (
-        <S.InputContainer>
+        <S.InputContainer key={item.name}>
           <S.Icon src={item.img} />
           <InputWithLabel
             textLabel={item.textLabel}
