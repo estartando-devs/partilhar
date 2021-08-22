@@ -6,6 +6,10 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
+  @media (min-width: 768px) {
+    margin-bottom: 70px;
+  }
 `;
 
 export const Content = styled.div`
@@ -129,7 +133,6 @@ export const BoxSocialMedias = styled.div`
   display: flex;
   justify-content: center;
   gap: 20px;
-  padding-bottom: 128px;
   cursor: pointer;
   @media (max-width: 360px) {
     padding-bottom: 25px;
