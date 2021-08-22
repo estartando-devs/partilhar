@@ -63,6 +63,10 @@ import uploadCloud from "./uploadCloud.svg";
 import uploadCloudChecked from "./uploadCloudChecked.svg";
 import uploadCloudLoading from "./uploadCloudLoading.svg";
 import register from "./register.svg";
+import facebookBlack from "./facebookBlack.svg";
+import instagramBlack from "./instagramBlack.svg";
+import linkedIn from "./linkedIn.svg";
+import twitter from "./twitter.svg";
 
 export {
   about,
@@ -130,4 +134,8 @@ export {
   uploadCloudChecked,
   uploadCloudLoading,
   register,
+  facebookBlack,
+  instagramBlack,
+  linkedIn,
+  twitter,
 };
