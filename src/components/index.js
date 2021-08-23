@@ -21,6 +21,7 @@ import Steps from "./Steps";
 import Upload from "./Upload";
 import InputWithLabel from "./InputWithLabel";
 import TextArea from "./TextArea";
+import Checkbox from "./Checkbox";
 
 export {
   Header,
@@ -46,4 +47,5 @@ export {
   Upload,
   InputWithLabel,
   TextArea,
+  Checkbox,
 };
