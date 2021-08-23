@@ -2,9 +2,7 @@ import * as S from "./styles";
 
 const InputWithLabel = ({
   textLabel,
-  htmlFor,
   placeholder,
-  id,
   title,
   onChange,
   name,
@@ -12,19 +10,20 @@ const InputWithLabel = ({
   type,
   width,
   height,
+  id,
 }) => {
   return (
     <S.Container>
-      <S.Label htmlFor={htmlFor}>
+      <S.Label htmlFor={id || name}>
         {textLabel}
         <S.Input
           placeholder={placeholder}
-          id={id}
+          id={id || name}
           title={title}
           onChange={onChange}
           name={name}
           value={value}
-          type={type}
+          type={type || "text"}
           width={width}
           height={height}
         />

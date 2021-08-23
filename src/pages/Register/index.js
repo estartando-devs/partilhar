@@ -23,12 +23,14 @@ const Register = () => {
   }, []);
 
   const renderStep = {
-    0: <Step.ProfileData values={values} setValues={setValues} />,
-    1: <Step.Cause values={values} setValues={setValues} setNiche={setNiche} />,
-    2: <Step.BankData values={values} setValues={setValues} />,
-    3: <Step.Photos values={values} setValues={setValues} />,
-    4: <Step.SocialNetworks />,
+    0: Step.ProfileData,
+    1: Step.Cause,
+    2: Step.BankData,
+    3: Step.Photos,
+    4: Step.SocialNetworks,
   };
+
+  const StepElement = renderStep[currentStep];
 
   return (
     <LayoutComponent dontShowSearch>
@@ -38,7 +40,11 @@ const Register = () => {
         addDataLocalStorage={addDataLocalStorage}
         niche={niche}
       >
-        {renderStep[currentStep]}
+        <StepElement
+          values={values}
+          setValues={setValues}
+          setNiche={setNiche}
+        />
       </Steps>
     </LayoutComponent>
   );
