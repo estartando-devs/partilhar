@@ -63,6 +63,7 @@ import uploadCloud from "./uploadCloud.svg";
 import uploadCloudChecked from "./uploadCloudChecked.svg";
 import uploadCloudLoading from "./uploadCloudLoading.svg";
 import register from "./register.svg";
+import checkX from "./checkX.svg";
 
 export {
   about,
@@ -130,4 +131,5 @@ export {
   uploadCloudChecked,
   uploadCloudLoading,
   register,
+  checkX,
 };

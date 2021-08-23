@@ -7,7 +7,6 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   margin-bottom: 40px;
-
   @media (min-width: 768px) {
     margin-top: 45px;
   }
@@ -18,7 +17,6 @@ export const ContainerButton = styled.div`
   align-items: center;
   justify-content: center;
   width: 358px;
-
   @media (min-width: 768px) {
     width: 542px;
   }

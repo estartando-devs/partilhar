@@ -18,7 +18,7 @@ const Header = ({ dontShowSearch }) => {
   return (
     <S.Container>
       <S.ContentHeader>
-        <Link to="/">
+        <Link to="/" onClick={() => window.scrollTo(0, 0)}>
           <S.ImagemLogo src={I.logo} alt="Logo" />
         </Link>
 
