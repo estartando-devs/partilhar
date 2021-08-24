@@ -1,7 +1,19 @@
 import React from "react";
+import {
+  Donors,
+  FilterCard,
+  Highlights,
+  LayoutComponent,
+} from "../../components";
 
 const Home = () => {
-  return <div>home works</div>;
+  return (
+    <LayoutComponent>
+      <FilterCard />
+      <Highlights />
+      <Donors />
+    </LayoutComponent>
+  );
 };
 
 export default Home;

@@ -5,7 +5,8 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "airbnb"
+        "airbnb",
+        "prettier"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -24,6 +25,12 @@
           ],
           "quotes": ["error", "double"],
           "arrow-body-style": 0,
-          "import/prefer-default-export": "off"
+          "import/prefer-default-export": "off",
+          "react/prop-types": 0,
+          "react/react-in-jsx-scope": "off",
+          "linebreak-style":0,
+          "no-multiple-empty-lines": [2, {"max":2}],
+          "object-curly-newline": "off",
+          "react/jsx-props-no-spreading": 0
     }
 }

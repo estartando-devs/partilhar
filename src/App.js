@@ -1,10 +1,15 @@
 import React from "react";
+import { ThemeProvider } from "styled-components";
+
 import Routes from "./routes";
 
-import "./styles/global.scss";
-import "./styles/reset.scss";
-import "./styles/fonts.scss";
+import { Theme, GlobalStyle } from "./styles";
 
 export default function App() {
-  return <Routes />;
+  return (
+    <ThemeProvider theme={Theme}>
+      <GlobalStyle />
+      <Routes />
+    </ThemeProvider>
+  );
 }
