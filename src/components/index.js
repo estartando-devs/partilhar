@@ -22,6 +22,7 @@ import Upload from "./Upload";
 import InputWithLabel from "./InputWithLabel";
 import TextArea from "./TextArea";
 import Checkbox from "./Checkbox";
+import Loading from "./Loading";
 
 export {
   Header,
@@ -48,4 +49,5 @@ export {
   InputWithLabel,
   TextArea,
   Checkbox,
+  Loading,
 };
