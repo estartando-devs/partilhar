@@ -68,6 +68,7 @@ import facebookBlack from "./facebookBlack.svg";
 import instagramBlack from "./instagramBlack.svg";
 import linkedIn from "./linkedIn.svg";
 import twitter from "./twitter.svg";
+import google from "./google.svg";
 
 export {
   about,
@@ -140,4 +141,5 @@ export {
   linkedIn,
   twitter,
   checkX,
+  google,
 };

@@ -31,7 +31,6 @@ const Search = () => {
         width="32%"
         height="100%"
         fontSize="0.8rem"
-        type="submit"
         color={theme.palette.text.light.primary}
         backgroundColor={theme.palette.primary}
         onClick={handleClick}

@@ -11,10 +11,13 @@ const InputWithLabel = ({
   width,
   height,
   id,
+  fontSize,
+  fontWeight,
+  ...other
 }) => {
   return (
     <S.Container>
-      <S.Label htmlFor={id || name}>
+      <S.Label htmlFor={id || name} fontWeight={fontWeight}>
         {textLabel}
         <S.Input
           placeholder={placeholder}
@@ -26,6 +29,8 @@ const InputWithLabel = ({
           type={type || "text"}
           width={width}
           height={height}
+          fontSize={fontSize}
+          {...other}
         />
       </S.Label>
     </S.Container>

@@ -7,7 +7,8 @@ export const Container = styled.div`
 export const Label = styled.label`
   display: flex;
   flex-direction: column;
-  font-size: 16px;
+  font-weight: ${(props) => props.fontWeight};
+  font-size: ${(props) => props.fontSize || "16px"};
   color: ${(props) => props.theme.palette.text.primary};
   @media (min-width: 768px) {
     font-size: 1.3rem;
@@ -19,7 +20,9 @@ export const Input = styled.input`
   width: ${(props) => props.width || "340px"};
   height: ${(props) => props.height || "38px"};
   border-radius: 3px;
-  border: 1px solid ${(props) => props.theme.palette.text.placeholder.primary};
+  border: 1px solid
+    ${(props) =>
+      props.borderColor || props.theme.palette.text.placeholder.primary};
   color: ${(props) => props.theme.palette.text.primary};
   padding-left: 10px;
   ::placeholder {
@@ -32,5 +35,6 @@ export const Input = styled.input`
   @media (min-width: 768px) {
     width: 750px;
     height: 42px;
+    font-size: 1.2rem;
   }
 `;
