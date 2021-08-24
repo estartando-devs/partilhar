@@ -11,13 +11,21 @@ const ButtonStyled = styled.button`
   color: ${(props) => props.color};
   background-image: ${(props) => props.image};
   border-style: none;
+  border: ${(props) => props.border};
   border-radius: 3px;
   font-weight: 700;
   margin-left: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
   @media (min-width: 768px) {
     cursor: pointer;
     font-size: 1.1rem;
     width: 100%;
+    max-width: ${(props) => props.widthMaxMedia};
+    height: ${(props) => props.heightMedia};
+    font-weight: ${(props) => props.weightMedia || "700"};
   }
 `;
 
