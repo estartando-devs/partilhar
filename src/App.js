@@ -1,9 +1,8 @@
-import React from "react";
 import { ThemeProvider } from "styled-components";
+import { Theme, GlobalStyle } from "./styles";
 
 import Routes from "./routes";
-
-import { Theme, GlobalStyle } from "./styles";
+import "./config/firebase.config";
 
 export default function App() {
   return (
