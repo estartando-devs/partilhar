@@ -1,4 +1,5 @@
 import theme from "../../styles/theme";
+
 import {
   InputWithLabel,
   Checkbox,
@@ -6,10 +7,12 @@ import {
   LayoutComponent,
 } from "../../components";
 import { google } from "../../assets/img";
+
 import * as S from "./styles";
 
 const Login = () => {
   const borderColor = theme.palette.text.secondary;
+
   return (
     <LayoutComponent dontShowSearch>
       <S.Container>
