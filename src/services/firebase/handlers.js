@@ -1,7 +1,6 @@
 import { firebaseDatabase } from "./config";
 
 export const save = async (path, body) => {
-  console.log("body:", body);
   const query = await firebaseDatabase.collection(path).add(body);
 
   const newData = await query

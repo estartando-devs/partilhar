@@ -13,10 +13,7 @@ export const createOngs = async (body) => {
 };
 
 export const registerOng = async (body) => {
-  const projectImages = body.projectImages
-    .map((image) => image.url)
-    .filter((item) => item);
-  const newBody = { ...body, projectImages };
+  const newBody = { ...body, projectImages: [] };
   const response = await createOngs(newBody);
   return response;
 };
