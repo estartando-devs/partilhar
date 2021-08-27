@@ -17,6 +17,7 @@ export const Content = styled.div`
   align-items: center;
   flex-direction: column;
   width: 328px;
+  position: relative;
   @media (min-width: 768px) {
     width: 450px;
   }
@@ -92,4 +93,19 @@ export const ContainerNew = styled.div`
   @media (min-width: 768px) {
     gap: 7px;
   }
+`;
+
+export const ErrorText = styled.p`
+  text-align: center;
+  color: ${(props) => props.theme.palette.tertiary.tertiary_1};
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+`;
+
+export const ContainerLoading = styled.div`
+  min-height: 55vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

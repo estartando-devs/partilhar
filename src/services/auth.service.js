@@ -1,3 +1,6 @@
+import firebase from "firebase/app";
+import "firebase/auth";
+
 import {
   emailProviderLogin,
   emailProviderRegister,
@@ -87,6 +90,22 @@ export const loginWithEmailAndPassword = async (credentials) => {
 
 export const updateUserData = async (id, profileData) => {
   const response = await update(`${basePath}/users`, id, profileData);
+
+  return response;
+};
+
+export const onAuthStateChange = (callback) => {
+  return firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      callback({ loggedIn: true });
+    } else {
+      callback({ loggedIn: false });
+    }
+  });
+};
+
+export const logout = async () => {
+  const response = await firebase.auth().signOut();
 
   return response;
 };
