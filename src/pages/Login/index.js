@@ -27,8 +27,6 @@ const Login = () => {
   }
 
   async function onClick() {
-    console.log("senha=>", user.password, "email=>", user.email);
-
     const { success } = await login(user.email, user.password);
 
     if (success) history.push("/");
