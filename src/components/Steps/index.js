@@ -34,7 +34,7 @@ const Steps = ({
         <S.TagContainer>
           <Tag
             bgColor={findCause.bgColor}
-            niche={findCause.niche}
+            niche={findCause.title}
             icon={findCause.icon}
           />
         </S.TagContainer>
