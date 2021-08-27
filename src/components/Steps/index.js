@@ -55,6 +55,7 @@ const Steps = ({
         setLoading(true);
         const response = await registerOng(values);
         setLoading(false);
+        localStorage.setItem("datas", JSON.stringify({}));
         history.push("/perfil", { response });
       } catch (err) {
         setLoading(false);
@@ -115,7 +116,13 @@ const Steps = ({
         <S.Text>Redes Sociais</S.Text>
       </S.ContainerText>
 
-      {loading ? <Loading /> : <S.ContainerStep>{children}</S.ContainerStep>}
+      {loading ? (
+        <S.ContainerLoading>
+          <Loading />
+        </S.ContainerLoading>
+      ) : (
+        <S.ContainerStep>{children}</S.ContainerStep>
+      )}
 
       <S.Button
         onClick={handleNextStep}
