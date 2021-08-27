@@ -63,7 +63,7 @@ const Login = () => {
           </S.ContainerButtom>
           <S.ContainerNew>
             <S.Text>Você é novo por aqui?</S.Text>
-            <S.TextLink>Fazer Cadastro</S.TextLink>
+            <S.TextLink to="/cadastro">Fazer Cadastro</S.TextLink>
           </S.ContainerNew>
         </S.Content>
       </S.Container>

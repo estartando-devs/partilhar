@@ -1,3 +1,6 @@
+/* eslint-disable */
+import { useEffect, useState } from "react";
+
 import { InputWithLabel } from "../../../../components";
 import {
   facebookBlack,
@@ -31,10 +34,16 @@ const SocialNetworksData = [
 ];
 
 const SocialNetworks = ({ values, setValues }) => {
+  const [networks, setNetworks] = useState(values.networks || {});
+
   function onChange(e) {
     const { name, value } = e.target;
-    setValues({ ...values, [name]: value });
+    setNetworks({ ...networks, [name]: value });
   }
+
+  useEffect(() => {
+    setValues((prev) => ({ ...prev, networks: networks }));
+  }, [networks]);
 
   return (
     <S.Container>
@@ -47,7 +56,7 @@ const SocialNetworks = ({ values, setValues }) => {
             placeholder="Adicionar link"
             onChange={onChange}
             name={item.name}
-            value={values[item.name]}
+            value={values.networks ? values.networks[item.name] : ""}
             width=" 90%"
           />
         </S.InputContainer>

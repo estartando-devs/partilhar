@@ -6,6 +6,7 @@ const Register = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [values, setValues] = useState([]);
   const [niche, setNiche] = useState("");
+  const [errorText, setErrorText] = useState("");
 
   function addDataLocalStorage() {
     const datas = JSON.stringify(values);
@@ -39,11 +40,15 @@ const Register = () => {
         setCurrentStep={setCurrentStep}
         addDataLocalStorage={addDataLocalStorage}
         niche={niche}
+        values={values}
+        setValues={setValues}
+        setErrorText={setErrorText}
       >
         <StepElement
           values={values}
           setValues={setValues}
           setNiche={setNiche}
+          errorText={errorText}
         />
       </Steps>
     </LayoutComponent>

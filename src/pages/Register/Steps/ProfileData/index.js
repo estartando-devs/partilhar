@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import * as S from "./styles";
 import { InputWithLabel, Upload } from "../../../../components";
 
-const ProfileData = ({ values, setValues }) => {
+const ProfileData = ({ values, setValues, errorText }) => {
   function onUpload(image) {
     setValues({ ...values, logo: image.url });
   }
@@ -120,6 +120,7 @@ const ProfileData = ({ values, setValues }) => {
             name="confirmPassword"
             value={confirmPassword}
           />
+          {errorText && <S.Error>{errorText}</S.Error>}{" "}
         </S.Form>
       </S.Content>
     </S.Container>
