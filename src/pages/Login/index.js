@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 
 import theme from "../../styles/theme";
 
@@ -12,14 +12,12 @@ import {
 
 import { google } from "../../assets/img";
 
-import { login } from "../../services/auth.service";
-
 import * as S from "./styles";
 
 const Login = () => {
   const borderColor = theme.palette.text.secondary;
   const [user, setUser] = useState({});
-  const history = useHistory();
+  // const history = useHistory();
 
   function onChange(e) {
     const { name, value } = e.target;
@@ -27,9 +25,8 @@ const Login = () => {
   }
 
   async function onClick() {
-    const { success } = await login(user.email, user.password);
-
-    if (success) history.push("/");
+    // const { success } = await login(user.email, user.password);
+    // if (success) history.push("/");
   }
 
   return (
