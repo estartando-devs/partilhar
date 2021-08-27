@@ -6,16 +6,17 @@ import { TextArea } from "../../../../components/TextArea/styles";
 const Cause = ({ setNiche, values, setValues }) => {
   const [counter, setCounter] = useState(0);
 
-  function registerDatas(nicho, title) {
+  function registerDatas(nicho, title, bgColor) {
     setNiche(nicho);
-    setValues({ ...values, nicho, title });
+    setValues({ ...values, niche: { cause: nicho, title, bgColor } });
   }
 
   function limiterCaracter(e) {
     setCounter(e.target.value.length);
   }
+
   function onChange(value) {
-    setValues({ ...values, textArea: value });
+    setValues({ ...values, description: value });
   }
 
   return (
@@ -35,9 +36,9 @@ const Cause = ({ setNiche, values, setValues }) => {
                   name="radio"
                   bgColor={filter.bgColor}
                   onClick={() => {
-                    registerDatas(filter.niche, filter.title);
+                    registerDatas(filter.niche, filter.title, filter.bgColor);
                   }}
-                  checked={filter.niche === values.nicho}
+                  checked={filter.niche === values?.niche?.cause}
                 />
               </S.Label>
             </S.Item>
@@ -51,8 +52,8 @@ const Cause = ({ setNiche, values, setValues }) => {
             onChange(e.target.value);
           }}
           maxLength={400}
-          name="textArea"
-          value={values.textArea}
+          name="description"
+          value={values.description}
         />
         <S.Counter>{counter}/400</S.Counter>
       </S.Content>

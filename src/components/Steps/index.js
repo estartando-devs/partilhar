@@ -1,11 +1,18 @@
-import { Fragment } from "react";
+/* eslint-disable */
+import { Fragment, useState } from "react";
 import { useHistory } from "react-router-dom";
-import * as S from "./styles";
+
 import { steps } from "../../mocks/stepsData";
 import { filters } from "../../mocks/filterData";
-import * as I from "../../assets/img";
-import Theme from "../../styles/theme";
+import { registerOng } from "../../services/ongs.service";
+import { registerWithEmailAndPassword } from "../../services/auth.service";
+
 import Tag from "../Tag";
+import Loading from "../Loading";
+import Theme from "../../styles/theme";
+
+import * as S from "./styles";
+import * as I from "../../assets/img";
 
 const Steps = ({
   children,
@@ -13,14 +20,46 @@ const Steps = ({
   setCurrentStep,
   addDataLocalStorage,
   niche,
+  values,
+  setErrorText,
 }) => {
   const isLastStep = steps.length - 1 === currentStep;
+  const [loading, setLoading] = useState(false);
 
   const history = useHistory();
-  function handleNextStep() {
+
+  async function handleNextStep() {
     addDataLocalStorage();
+    if (currentStep === 0 && !values.userId) {
+      try {
+        setLoading(true);
+        const { email, password } = values;
+        const response = await registerWithEmailAndPassword({
+          email,
+          password,
+        });
+        const { user } = response;
+        const newValues = { ...values, userId: user.id };
+        localStorage.setItem("datas", JSON.stringify(newValues));
+        setLoading(false);
+        setCurrentStep((prevState) => prevState + 1);
+        setErrorText("");
+      } catch (err) {
+        setLoading(false);
+        setErrorText(err.message);
+      }
+      return;
+    }
     if (currentStep === 4) {
-      history.push("/perfil");
+      try {
+        setLoading(true);
+        const response = await registerOng(values);
+        setLoading(false);
+        localStorage.setItem("datas", JSON.stringify({}));
+        history.push("/perfil", { response });
+      } catch (err) {
+        setLoading(false);
+      }
       return;
     }
     setCurrentStep((prevState) => prevState + 1);
@@ -77,7 +116,13 @@ const Steps = ({
         <S.Text>Redes Sociais</S.Text>
       </S.ContainerText>
 
-      <S.ContainerStep>{children}</S.ContainerStep>
+      {loading ? (
+        <S.ContainerLoading>
+          <Loading />
+        </S.ContainerLoading>
+      ) : (
+        <S.ContainerStep>{children}</S.ContainerStep>
+      )}
 
       <S.Button
         onClick={handleNextStep}

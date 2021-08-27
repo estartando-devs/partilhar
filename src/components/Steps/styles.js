@@ -104,3 +104,7 @@ export const TagContainer = styled.div`
   margin-bottom: 30px;
   max-width: 500px;
 `;
+
+export const ContainerLoading = styled.div`
+  min-height: 40vh;
+`;
