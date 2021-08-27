@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
+
 import theme from "../../styles/theme";
 
 import {
@@ -6,12 +9,28 @@ import {
   Button,
   LayoutComponent,
 } from "../../components";
+
 import { google } from "../../assets/img";
+
+import { login } from "../../services/auth.service";
 
 import * as S from "./styles";
 
 const Login = () => {
   const borderColor = theme.palette.text.secondary;
+  const [user, setUser] = useState({});
+  const history = useHistory();
+
+  function onChange(e) {
+    const { name, value } = e.target;
+    setUser({ ...user, [name]: value });
+  }
+
+  async function onClick() {
+    const { success } = await login(user.email, user.password);
+
+    if (success) history.push("/");
+  }
 
   return (
     <LayoutComponent dontShowSearch>
@@ -20,17 +39,21 @@ const Login = () => {
           <S.Title>Seja bem vindo(a)!</S.Title>
           <S.ContainerInput>
             <InputWithLabel
+              name="email"
               textLabel="Seu email"
               width="328px"
               borderColor={borderColor}
               fontWeight="500"
+              onChange={onChange}
             />
             <InputWithLabel
+              name="password"
               textLabel="Senha"
               width="328px"
               borderColor={borderColor}
               fontWeight="500"
               type="password"
+              onChange={onChange}
             />
           </S.ContainerInput>
           <S.ContainerRemember>
@@ -44,6 +67,7 @@ const Login = () => {
               color={theme.palette.text.light.primary}
               widthMaxMedia="315px"
               heightMedia="50px"
+              onClick={onClick}
             >
               ENTRAR
             </Button>

@@ -69,6 +69,7 @@ import instagramBlack from "./instagramBlack.svg";
 import linkedIn from "./linkedIn.svg";
 import twitter from "./twitter.svg";
 import google from "./google.svg";
+import logout from "./logout.png";
 
 export {
   about,
@@ -142,4 +143,5 @@ export {
   twitter,
   checkX,
   google,
+  logout,
 };
