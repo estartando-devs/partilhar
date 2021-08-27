@@ -25,7 +25,7 @@ export const Title = styled.div`
   text-align: center;
   font-size: 20px;
   font-weight: 700;
-  color: ${({ theme }) => theme.palette.text.primary};
+  color: ${(props) => props.theme.palette.text.primary};
   @media (min-width: 768px) {
     font-size: 1.4rem;
   }
