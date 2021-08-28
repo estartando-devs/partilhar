@@ -8,9 +8,13 @@ const TextArea = ({
   value,
   width,
   height,
+  textLabel,
+  borderColor,
+  widthMedia,
 }) => {
   return (
     <S.Container>
+      <S.Label>{textLabel}</S.Label>
       <S.TextArea
         placeholder={placeholder}
         onChange={onChange}
@@ -19,6 +23,8 @@ const TextArea = ({
         value={value}
         width={width}
         height={height}
+        borderColor={borderColor}
+        widthMedia={widthMedia}
       />
     </S.Container>
   );

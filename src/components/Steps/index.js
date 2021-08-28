@@ -55,7 +55,6 @@ const Steps = ({
         setLoading(true);
         const response = await registerOng(values);
         setLoading(false);
-        localStorage.setItem("datas", JSON.stringify({}));
         history.push("/perfil", { response });
       } catch (err) {
         setLoading(false);

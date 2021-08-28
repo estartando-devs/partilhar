@@ -23,6 +23,7 @@ import InputWithLabel from "./InputWithLabel";
 import TextArea from "./TextArea";
 import Checkbox from "./Checkbox";
 import Loading from "./Loading";
+import CarouselComponent from "./CarouselComponent";
 
 export {
   Header,
@@ -50,4 +51,5 @@ export {
   TextArea,
   Checkbox,
   Loading,
+  CarouselComponent,
 };

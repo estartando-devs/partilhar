@@ -13,7 +13,7 @@ export const createOngs = async (body) => {
 };
 
 export const registerOng = async (body) => {
-  const newBody = { ...body, projectImages: [] };
+  const newBody = { ...body, projectImages: [], logo: "" };
   const response = await createOngs(newBody);
   return response;
 };

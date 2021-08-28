@@ -1,60 +1,91 @@
+import { useState, useEffect } from "react";
+import {
+  CarouselComponent,
+  InputWithLabel,
+  LayoutComponent,
+  TextArea,
+  Tag,
+} from "../../components";
+
 import * as S from "./styles";
-import { logoOng, edit } from "../../assets/img";
-import { InputWithLabel } from "../../components";
-import { TextArea } from "../../components/TextArea/styles";
+import { edit } from "../../assets/img";
+import theme from "../../styles/theme";
 
 const Profile = () => {
+  const [ong, setOng] = useState({});
+
+  useEffect(() => {
+    const datas = JSON.parse(localStorage.getItem("datas"));
+    setOng(datas);
+  }, []);
+  console.log(ong);
   return (
-    <S.Container>
-      <S.ContainerProfile>
-        <S.Profile>
-          <S.ProfileImg>
-            <S.Banner src={logoOng} alt="Logo Ong" />
-            <S.ProfileEdit>
-              <S.Img src={edit} alt="Editar perfil" />
-              <S.Text>Editar Perfil</S.Text>
-            </S.ProfileEdit>
-          </S.ProfileImg>
-          <S.ProfileData>
-            <S.Title>Amar é cuidar</S.Title>
-            <S.Text>amarecuidar@gmail.com</S.Text>
-            <S.Text> (00) 00000-0000</S.Text>
-            <S.Text>12.345.678/9101-11</S.Text>
-          </S.ProfileData>
-        </S.Profile>
-        <InputWithLabel
-          textLabel="Causa"
-          placeholder="Apoio às mulheres"
-          fontSize="16px"
-        />
-        <TextArea
-          textLabel="Descrição"
-          fontSize="16px"
-          placeholder="Nossa ong se iniciou em ..."
-          width="340px"
-        />
-        <InputWithLabel
-          textLabel="Facebook"
-          placeholder="Amar é cuidar"
-          fontSize="16px"
-        />
-        <InputWithLabel
-          textLabel="Instagram"
-          placeholder="Amar é cuidar"
-          fontSize="16px"
-        />
-        <InputWithLabel
-          textLabel="Linkendin"
-          placeholder="Amarecuidar"
-          fontSize="16px"
-        />
-        <InputWithLabel
-          textLabel="Twitter"
-          placeholder="AmarÉcuidar"
-          fontSize="16px"
-        />
-      </S.ContainerProfile>
-    </S.Container>
+    <LayoutComponent dontShowSearch>
+      <Tag
+        bgColor={ong?.niche?.bgColor}
+        niche={ong?.niche?.title}
+        icon={ong?.niche?.icon}
+      />
+      <S.Container>
+        <S.ContainerProfile>
+          <S.Profile>
+            <S.ProfileImg>
+              <S.Banner src={ong.logo} alt="Logo Ong" />
+              <S.ProfileEdit>
+                <S.ImgEdit src={edit} alt="Editar perfil" />
+                <S.TextEdit>Editar Perfil</S.TextEdit>
+              </S.ProfileEdit>
+            </S.ProfileImg>
+            <S.ProfileData>
+              <S.Title>{ong?.ong}</S.Title>
+              <S.Text>{ong?.email}</S.Text>
+              <S.Text> {ong?.phone}</S.Text>
+              <S.Text>{ong?.cnpj}</S.Text>
+            </S.ProfileData>
+          </S.Profile>
+          <InputWithLabel
+            textLabel="Causa"
+            fontSize="16px"
+            value={ong?.niche?.title}
+          />
+
+          <TextArea
+            textLabel="Descrição"
+            fontSize="16px"
+            width="340px"
+            widthMedia="750px"
+            name="description"
+            borderColor={theme.palette.text.placeholder.primary}
+            value={ong?.description}
+          />
+          <InputWithLabel
+            textLabel="Facebook"
+            fontSize="16px"
+            value={ong?.networks?.facebook}
+          />
+          <InputWithLabel
+            textLabel="Instagram"
+            fontSize="16px"
+            value={ong?.networks?.instagram}
+          />
+          <InputWithLabel
+            textLabel="Linkendin"
+            fontSize="16px"
+            value={ong?.networks?.linkedin}
+          />
+          <InputWithLabel
+            textLabel="Twitter"
+            fontSize="16px"
+            value={ong?.networks?.twitter}
+          />
+          <CarouselComponent>
+            {ong?.projectImages?.map((image) => (
+              <S.Img src={image.url} alt={image.name} />
+            ))}
+          </CarouselComponent>
+        </S.ContainerProfile>
+      </S.Container>
+    </LayoutComponent>
   );
 };
 
