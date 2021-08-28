@@ -11,6 +11,7 @@ const TextArea = ({
   textLabel,
   borderColor,
   widthMedia,
+  ...rest
 }) => {
   return (
     <S.Container>
@@ -25,6 +26,7 @@ const TextArea = ({
         height={height}
         borderColor={borderColor}
         widthMedia={widthMedia}
+        {...rest}
       />
     </S.Container>
   );

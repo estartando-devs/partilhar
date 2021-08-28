@@ -19,8 +19,16 @@ const Register = () => {
     setNiche(datas?.nicho || "");
   }
 
-  useEffect(() => {
+  useEffect(async () => {
     getDatasLocalStorage();
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user)
+      setValues((prev) => ({
+        ...prev,
+        email: user.email,
+        isGoogleUser: user.isGoogleUser,
+        userId: user.id,
+      }));
   }, []);
 
   const renderStep = {
@@ -41,7 +49,6 @@ const Register = () => {
         addDataLocalStorage={addDataLocalStorage}
         niche={niche}
         values={values}
-        setValues={setValues}
         setErrorText={setErrorText}
       >
         <StepElement

@@ -1,11 +1,8 @@
-/* eslint-disable */
 import { Fragment, useState } from "react";
 import { useHistory } from "react-router-dom";
 
 import { steps } from "../../mocks/stepsData";
-import { filters } from "../../mocks/filterData";
 import { registerOng } from "../../services/ongs.service";
-import { registerWithEmailAndPassword } from "../../services/auth.service";
 
 import Tag from "../Tag";
 import Loading from "../Loading";
@@ -13,6 +10,7 @@ import Theme from "../../styles/theme";
 
 import * as S from "./styles";
 import * as I from "../../assets/img";
+import { causes } from "../../utils/Causes";
 
 const Steps = ({
   children,
@@ -21,7 +19,7 @@ const Steps = ({
   addDataLocalStorage,
   niche,
   values,
-  setErrorText,
+  setTextError,
 }) => {
   const isLastStep = steps.length - 1 === currentStep;
   const [loading, setLoading] = useState(false);
@@ -29,27 +27,6 @@ const Steps = ({
   const history = useHistory();
 
   async function handleNextStep() {
-    addDataLocalStorage();
-    if (currentStep === 0 && !values.userId) {
-      try {
-        setLoading(true);
-        const { email, password } = values;
-        const response = await registerWithEmailAndPassword({
-          email,
-          password,
-        });
-        const { user } = response;
-        const newValues = { ...values, userId: user.id };
-        localStorage.setItem("datas", JSON.stringify(newValues));
-        setLoading(false);
-        setCurrentStep((prevState) => prevState + 1);
-        setErrorText("");
-      } catch (err) {
-        setLoading(false);
-        setErrorText(err.message);
-      }
-      return;
-    }
     if (currentStep === 4) {
       try {
         setLoading(true);
@@ -57,14 +34,16 @@ const Steps = ({
         setLoading(false);
         history.push("/perfil", { response });
       } catch (err) {
+        setTextError(err.message);
         setLoading(false);
       }
       return;
     }
+    addDataLocalStorage();
     setCurrentStep((prevState) => prevState + 1);
   }
 
-  const findCause = niche && filters.find((filter) => filter.niche === niche);
+  const findCause = causes[niche];
 
   return (
     <S.Container>

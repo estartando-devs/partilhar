@@ -10,11 +10,15 @@ import {
   LayoutComponent,
   Loading,
 } from "../../components";
-import { loginWithEmailAndPassword } from "../../services/auth.service";
+import {
+  loginWithEmailAndPassword,
+  loginWithGoogle,
+} from "../../services/auth.service";
 
 import { google } from "../../assets/img";
 
 import * as S from "./styles";
+import { getOngs } from "../../services/ongs.service";
 
 const Login = () => {
   const borderColor = theme.palette.text.secondary;
@@ -40,6 +44,26 @@ const Login = () => {
       history.push("/");
     } catch (err) {
       setLoading(false);
+      setErrorText(err.message);
+    }
+  }
+
+  async function handleLoginGoogle() {
+    setErrorText("");
+    try {
+      const response = await loginWithGoogle();
+      const ongs = await getOngs();
+      const haveOng = ongs.find((ong) => ong.userId === response.user.id);
+      localStorage.setItem("user", JSON.stringify(response.user));
+
+      if (!haveOng) {
+        history.push("/cadastro");
+        return;
+      }
+
+      localStorage.setItem("userOng", JSON.stringify(haveOng));
+      history.push("/");
+    } catch (err) {
       setErrorText(err.message);
     }
   }
@@ -75,7 +99,9 @@ const Login = () => {
             </S.ContainerInput>
             <S.ContainerRemember>
               <Checkbox text="Lembre-me" />
-              <S.TextLink fontSize="16px">Esqueci minha senha</S.TextLink>
+              <S.TextLink to="/login" fontSize="16px">
+                Esqueci minha senha
+              </S.TextLink>
             </S.ContainerRemember>
             {errorText && <S.ErrorText>{errorText}</S.ErrorText>}
             <S.ContainerButtom>
@@ -98,6 +124,7 @@ const Login = () => {
                 widthMaxMedia="315px"
                 heightMedia="50px"
                 weightMedia="400"
+                onClick={handleLoginGoogle}
               >
                 <S.Icon src={google} alt="google" />
                 Entrar com Conta Google
