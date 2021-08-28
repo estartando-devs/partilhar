@@ -18,10 +18,10 @@ export const Content = styled.div`
 export const Dots = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100px;
   margin-top: 16px;
-  /* border-radius: 50%; */
+  gap: 10px;
 `;
 
 export const Dot = styled.div`
