@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   display: flex;
@@ -55,4 +56,8 @@ export const ContainerSearch = styled.div`
   @media (min-width: 768px) {
     display: initial;
   }
+`;
+
+export const ItemLink = styled(Link)`
+  width: min-content;
 `;

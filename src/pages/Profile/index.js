@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import {
   CarouselComponent,
   InputWithLabel,
@@ -7,23 +6,23 @@ import {
   Tag,
 } from "../../components";
 
-import * as S from "./styles";
+import { causes } from "../../utils/Causes";
 import { edit } from "../../assets/img";
+
 import theme from "../../styles/theme";
+import * as S from "./styles";
 
 const Profile = () => {
-  const [ong, setOng] = useState({});
+  const ong = JSON.parse(localStorage.getItem("userOng"));
 
-  useEffect(() => {
-    const datas = JSON.parse(localStorage.getItem("datas"));
-    setOng(datas);
-  }, []);
+  const findCause = causes[ong.niche];
+
   return (
     <LayoutComponent dontShowSearch>
       <Tag
-        bgColor={ong?.niche?.bgColor}
-        niche={ong?.niche?.title}
-        icon={ong?.niche?.icon}
+        bgColor={findCause.bgColor}
+        niche={findCause.title}
+        icon={findCause.icon}
       />
       <S.Container>
         <S.ContainerProfile>
@@ -36,16 +35,17 @@ const Profile = () => {
               </S.ProfileEdit>
             </S.ProfileImg>
             <S.ProfileData>
-              <S.Title>{ong?.ong}</S.Title>
-              <S.Text>{ong?.email}</S.Text>
-              <S.Text> {ong?.phone}</S.Text>
-              <S.Text>{ong?.cnpj}</S.Text>
+              <S.Title>{ong.ong}</S.Title>
+              <S.Text>{ong.email}</S.Text>
+              <S.Text> {ong.phone}</S.Text>
+              <S.Text>{ong.cnpj}</S.Text>
             </S.ProfileData>
           </S.Profile>
           <InputWithLabel
             textLabel="Causa"
             fontSize="16px"
-            value={ong?.niche?.title}
+            value={ong.niche.title}
+            readOnly
           />
 
           <TextArea
@@ -55,33 +55,40 @@ const Profile = () => {
             widthMedia="750px"
             name="description"
             borderColor={theme.palette.text.placeholder.primary}
-            value={ong?.description}
+            value={ong.description}
+            readOnly
           />
           <InputWithLabel
             textLabel="Facebook"
             fontSize="16px"
-            value={ong?.networks?.facebook}
+            value={ong.networks.facebook}
+            readOnly
           />
           <InputWithLabel
             textLabel="Instagram"
             fontSize="16px"
-            value={ong?.networks?.instagram}
+            value={ong.networks.instagram}
+            readOnly
           />
           <InputWithLabel
             textLabel="Linkendin"
             fontSize="16px"
-            value={ong?.networks?.linkedin}
+            value={ong.networks.linkedin}
+            readOnly
           />
           <InputWithLabel
             textLabel="Twitter"
             fontSize="16px"
-            value={ong?.networks?.twitter}
+            value={ong.networks.twitter}
+            readOnly
           />
-          <CarouselComponent>
-            {ong?.projectImages?.map((image) => (
-              <S.Img src={image.url} alt={image.name} />
-            ))}
-          </CarouselComponent>
+          {!!ong.projectImages.length && (
+            <CarouselComponent>
+              {ong.projectImages.map((image) => (
+                <S.Img key={image.name} src={image.url} alt={image.name} />
+              ))}
+            </CarouselComponent>
+          )}
         </S.ContainerProfile>
       </S.Container>
     </LayoutComponent>

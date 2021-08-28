@@ -1,14 +1,16 @@
 import { useState } from "react";
-import * as S from "./styles";
-import { filters } from "../../../../mocks/filterData";
+
 import { TextArea } from "../../../../components/TextArea/styles";
+import { filters } from "../../../../mocks/filterData";
+
+import * as S from "./styles";
 
 const Cause = ({ setNiche, values, setValues }) => {
   const [counter, setCounter] = useState(0);
 
-  function registerDatas(nicho, title, bgColor, icon) {
+  function registerDatas(nicho) {
     setNiche(nicho);
-    setValues({ ...values, niche: { cause: nicho, title, bgColor, icon } });
+    setValues({ ...values, niche: nicho });
   }
 
   function limiterCaracter(e) {
@@ -36,14 +38,9 @@ const Cause = ({ setNiche, values, setValues }) => {
                   name="radio"
                   bgColor={filter.bgColor}
                   onClick={() => {
-                    registerDatas(
-                      filter.niche,
-                      filter.title,
-                      filter.bgColor,
-                      filter.icon
-                    );
+                    registerDatas(filter.niche);
                   }}
-                  checked={filter.niche === values?.niche?.cause}
+                  checked={filter.niche === values?.niche}
                 />
               </S.Label>
             </S.Item>

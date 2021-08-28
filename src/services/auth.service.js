@@ -7,7 +7,6 @@ import {
 } from "./firebase/authEmail";
 import { googleProviderLogin } from "./firebase/authGoogle";
 import { getByKey, save, update } from "./firebase/handlers";
-import { http } from "./http";
 
 const basePath = process.env.REACT_APP_BASE_PATH;
 
@@ -18,17 +17,8 @@ export const loginWithGoogle = async (profileData) => {
     const newUser = await save(`${basePath}/users`, {
       ...profileData,
       ...user,
+      isGoogleUser: true,
     });
-
-    http.post(
-      "new-user-partilhar",
-      {
-        userEmail: newUser.email,
-      },
-      {
-        baseURL: "https://poker-champioship.herokuapp.com/",
-      }
-    );
 
     return {
       user: newUser,
@@ -106,6 +96,15 @@ export const onAuthStateChange = (callback) => {
 
 export const logout = async () => {
   const response = await firebase.auth().signOut();
+  localStorage.clear();
+
+  return response;
+};
+
+export const getUser = async () => {
+  const user = await firebase.auth().currentUser;
+  if (!user) return null;
+  const response = await getByKey(`${basePath}/users`, "email", user.email);
 
   return response;
 };
