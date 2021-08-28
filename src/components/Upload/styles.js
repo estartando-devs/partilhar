@@ -120,7 +120,7 @@ export const Alert = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 12px;
+  font-size: ${(props) => (props.error ? "8px" : "12px")};
   width: 230px;
   position: absolute;
   font-weight: 900;
@@ -129,4 +129,12 @@ export const Alert = styled.div`
     font-size: 1.2rem;
     width: 350px;
   }
+  ${({ inlineUpload }) =>
+    inlineUpload &&
+    css`
+      font-size: 8px;
+      @media (min-width: 768px) {
+        font-size: 10px;
+      }
+    `};
 `;

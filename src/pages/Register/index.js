@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import { LayoutComponent, Steps } from "../../components";
 import * as Step from "./Steps";
 
@@ -6,6 +7,8 @@ const Register = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [values, setValues] = useState([]);
   const [niche, setNiche] = useState("");
+
+  const history = useHistory();
 
   function addDataLocalStorage() {
     const datas = JSON.stringify(values);
@@ -18,8 +21,18 @@ const Register = () => {
     setNiche(datas?.nicho || "");
   }
 
-  useEffect(() => {
+  useEffect(async () => {
     getDatasLocalStorage();
+    const user = JSON.parse(localStorage.getItem("user"));
+    const haveOng = JSON.parse(localStorage.getItem("userOng"));
+    if (haveOng) history.push("/perfil");
+    if (user)
+      setValues((prev) => ({
+        ...prev,
+        email: user.email,
+        isGoogleUser: user.isGoogleUser,
+        userId: user.id,
+      }));
   }, []);
 
   const renderStep = {
@@ -39,6 +52,7 @@ const Register = () => {
         setCurrentStep={setCurrentStep}
         addDataLocalStorage={addDataLocalStorage}
         niche={niche}
+        values={values}
       >
         <StepElement
           values={values}

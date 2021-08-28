@@ -1,11 +1,16 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { useHistory } from "react-router-dom";
-import * as S from "./styles";
+
 import { steps } from "../../mocks/stepsData";
-import { filters } from "../../mocks/filterData";
-import * as I from "../../assets/img";
-import Theme from "../../styles/theme";
+import { registerOng } from "../../services/ongs.service";
+
 import Tag from "../Tag";
+import Loading from "../Loading";
+import Theme from "../../styles/theme";
+
+import * as S from "./styles";
+import * as I from "../../assets/img";
+import { causes } from "../../utils/Causes";
 
 const Steps = ({
   children,
@@ -13,20 +18,30 @@ const Steps = ({
   setCurrentStep,
   addDataLocalStorage,
   niche,
+  values,
 }) => {
   const isLastStep = steps.length - 1 === currentStep;
+  const [loading, setLoading] = useState(false);
 
   const history = useHistory();
-  function handleNextStep() {
-    addDataLocalStorage();
-    if (currentStep === 4) {
-      history.push("/perfil");
+
+  async function handleNextStep() {
+    if (isLastStep) {
+      setLoading(true);
+      try {
+        await registerOng(values);
+        setLoading(false);
+        history.push("/");
+      } catch (err) {
+        setLoading(false);
+      }
       return;
     }
+    addDataLocalStorage();
     setCurrentStep((prevState) => prevState + 1);
   }
 
-  const findCause = niche && filters.find((filter) => filter.niche === niche);
+  const findCause = causes[niche] || {};
 
   return (
     <S.Container>
@@ -34,7 +49,7 @@ const Steps = ({
         <S.TagContainer>
           <Tag
             bgColor={findCause.bgColor}
-            niche={findCause.niche}
+            niche={findCause.title}
             icon={findCause.icon}
           />
         </S.TagContainer>
@@ -77,7 +92,13 @@ const Steps = ({
         <S.Text>Redes Sociais</S.Text>
       </S.ContainerText>
 
-      <S.ContainerStep>{children}</S.ContainerStep>
+      {loading ? (
+        <S.ContainerLoading>
+          <Loading />
+        </S.ContainerLoading>
+      ) : (
+        <S.ContainerStep>{children}</S.ContainerStep>
+      )}
 
       <S.Button
         onClick={handleNextStep}

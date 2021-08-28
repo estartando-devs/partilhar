@@ -51,7 +51,7 @@ const Upload = ({ onUpload, image, inlineUpload, initialName }) => {
     <S.Container inlineUpload={inlineUpload}>
       <S.ContainerInput>
         <S.Label inlineUpload={inlineUpload}>
-          <S.Alert>{text}</S.Alert>
+          <S.Alert inlineUpload={inlineUpload}>{text}</S.Alert>
           <S.Input
             type="file"
             id="file"
@@ -64,7 +64,9 @@ const Upload = ({ onUpload, image, inlineUpload, initialName }) => {
           )}
           {inlineUpload && (
             <S.MessageBox>
-              <S.Message>{fileName || "Selecione um arquivo"}</S.Message>
+              <S.Message>
+                {!text && (fileName || "Selecione um arquivo")}
+              </S.Message>
               <S.UploadStatus
                 src={fileName ? I.uploadCloudChecked : cloudStatus[progress]}
                 alt=""

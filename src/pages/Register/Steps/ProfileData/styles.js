@@ -86,3 +86,7 @@ export const Input = styled.input`
     height: 42px;
   }
 `;
+
+export const Error = styled.p`
+  color: ${(props) => props.theme.palette.tertiary.tertiary_1};
+`;

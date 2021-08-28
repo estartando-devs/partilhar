@@ -1,21 +1,24 @@
 import { useState } from "react";
-import * as S from "./styles";
-import { filters } from "../../../../mocks/filterData";
+
 import { TextArea } from "../../../../components/TextArea/styles";
+import { filters } from "../../../../mocks/filterData";
+
+import * as S from "./styles";
 
 const Cause = ({ setNiche, values, setValues }) => {
   const [counter, setCounter] = useState(0);
 
-  function registerDatas(nicho, title) {
+  function registerDatas(nicho) {
     setNiche(nicho);
-    setValues({ ...values, nicho, title });
+    setValues({ ...values, niche: nicho });
   }
 
   function limiterCaracter(e) {
     setCounter(e.target.value.length);
   }
+
   function onChange(value) {
-    setValues({ ...values, textArea: value });
+    setValues({ ...values, description: value });
   }
 
   return (
@@ -35,9 +38,9 @@ const Cause = ({ setNiche, values, setValues }) => {
                   name="radio"
                   bgColor={filter.bgColor}
                   onClick={() => {
-                    registerDatas(filter.niche, filter.title);
+                    registerDatas(filter.niche);
                   }}
-                  checked={filter.niche === values.nicho}
+                  checked={filter.niche === values?.niche}
                 />
               </S.Label>
             </S.Item>
@@ -51,8 +54,8 @@ const Cause = ({ setNiche, values, setValues }) => {
             onChange(e.target.value);
           }}
           maxLength={400}
-          name="textArea"
-          value={values.textArea}
+          name="description"
+          value={values.description}
         />
         <S.Counter>{counter}/400</S.Counter>
       </S.Content>

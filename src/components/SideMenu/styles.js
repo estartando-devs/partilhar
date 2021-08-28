@@ -14,6 +14,7 @@ export const Container = styled.div`
   transform: translateX(${(props) => (props.show ? "-100%" : "0")});
   transition: transform 0.8s;
   box-sizing: border-box;
+  z-index: 2;
   @media (min-width: 768px) {
     display: flex;
     position: unset;
@@ -57,7 +58,8 @@ export const ItemMenu = styled(Link)`
   @media (min-width: 768px) {
     font-size: 1.2rem;
     height: 100%;
-    width: 130px;
+    min-width: 120px;
+    padding: 0 25px;
     gap: 0;
     justify-content: center;
     :hover {
@@ -77,7 +79,7 @@ export const ItemMenuDesktop = styled(Link)`
     font-weight: 500;
     font-size: 1.2rem;
     height: 100%;
-    width: 160px;
+    min-width: 120px;
 
     :hover {
       background-color: ${(props) => props.theme.palette.text.light.primary}30;
@@ -113,6 +115,7 @@ export const Overlay = styled.div`
     height: 100vh;
     top: 0;
     transition: opacity 0.5s;
+    z-index: 2;
 
     ${(props) =>
       props.show &&
@@ -124,6 +127,8 @@ export const Overlay = styled.div`
 `;
 
 export const Imagem = styled.img`
+  width: 20px;
+  height: 20px;
   @media (min-width: 768px) {
     display: none;
   }

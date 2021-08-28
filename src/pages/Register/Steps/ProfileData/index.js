@@ -1,6 +1,6 @@
-import { useEffect } from "react";
-import * as S from "./styles";
 import { InputWithLabel, Upload } from "../../../../components";
+
+import * as S from "./styles";
 
 const ProfileData = ({ values, setValues }) => {
   function onUpload(image) {
@@ -11,15 +11,6 @@ const ProfileData = ({ values, setValues }) => {
     const { name, value } = e.target;
     setValues({ ...values, [name]: value });
   }
-
-  function getDatasLocalStorage() {
-    const datas = localStorage.getItem("datas");
-    setValues(JSON.parse(datas) || []);
-  }
-
-  useEffect(() => {
-    getDatasLocalStorage();
-  }, []);
 
   const {
     ong,
@@ -33,6 +24,7 @@ const ProfileData = ({ values, setValues }) => {
     phone,
     reason,
     logo,
+    isGoogleUser,
   } = values;
 
   return (
@@ -103,23 +95,29 @@ const ProfileData = ({ values, setValues }) => {
             onChange={onChange}
             name="email"
             value={email}
+            autocomplete={false}
+            readOnly={isGoogleUser}
           />
-          <InputWithLabel
-            type="password"
-            textLabel="Senha"
-            placeholder="**********"
-            onChange={onChange}
-            name="password"
-            value={password}
-          />
-          <InputWithLabel
-            type="password"
-            textLabel="Confirmar Senha"
-            placeholder="**********"
-            onChange={onChange}
-            name="confirmPassword"
-            value={confirmPassword}
-          />
+          {!isGoogleUser && (
+            <>
+              <InputWithLabel
+                type="password"
+                textLabel="Senha"
+                placeholder="**********"
+                onChange={onChange}
+                name="password"
+                value={password}
+              />
+              <InputWithLabel
+                type="password"
+                textLabel="Confirmar Senha"
+                placeholder="**********"
+                onChange={onChange}
+                name="confirmPassword"
+                value={confirmPassword}
+              />
+            </>
+          )}
         </S.Form>
       </S.Content>
     </S.Container>

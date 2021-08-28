@@ -52,8 +52,8 @@ const OngDetails = () => {
 
         <CardData title="Seja voluntário!" bgColor={ong.bgColor}>
           <S.Border>
-            <S.ContentData gap="10px">
-              <S.Data>
+            <S.ContentData gap="20px">
+              <S.Data gap="10px">
                 <S.TextHeader>Endereço:</S.TextHeader>
                 <S.TextHeader width="80px">
                   Horário de funcionamento:
@@ -61,7 +61,7 @@ const OngDetails = () => {
                 <S.TextHeader>Telefone:</S.TextHeader>
                 <S.TextHeader>Redes sociais:</S.TextHeader>
               </S.Data>
-              <S.Data>
+              <S.Data gap="10px">
                 <S.Text>{ong.address}</S.Text>
                 <S.Text>{ong.time}</S.Text>
                 <S.Text>{ong.phone}</S.Text>
