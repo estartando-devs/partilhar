@@ -21,7 +21,12 @@ export const SubTitle = styled.h3`
     font-size: 1.2rem;
   }
 `;
-export const Data = styled.div``;
+
+export const Data = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ gap }) => gap};
+`;
 
 export const TextHeader = styled.p`
   display: flex;

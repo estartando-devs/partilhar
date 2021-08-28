@@ -19,7 +19,6 @@ const Steps = ({
   addDataLocalStorage,
   niche,
   values,
-  setTextError,
 }) => {
   const isLastStep = steps.length - 1 === currentStep;
   const [loading, setLoading] = useState(false);
@@ -27,14 +26,13 @@ const Steps = ({
   const history = useHistory();
 
   async function handleNextStep() {
-    if (currentStep === 4) {
+    if (isLastStep) {
+      setLoading(true);
       try {
-        setLoading(true);
-        const response = await registerOng(values);
+        await registerOng(values);
         setLoading(false);
-        history.push("/perfil", { response });
+        history.push("/");
       } catch (err) {
-        setTextError(err.message);
         setLoading(false);
       }
       return;
@@ -43,7 +41,7 @@ const Steps = ({
     setCurrentStep((prevState) => prevState + 1);
   }
 
-  const findCause = causes[niche];
+  const findCause = causes[niche] || {};
 
   return (
     <S.Container>

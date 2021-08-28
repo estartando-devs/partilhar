@@ -7,7 +7,6 @@ import {
 } from "./firebase/authEmail";
 import { googleProviderLogin } from "./firebase/authGoogle";
 import { getByKey, save, update } from "./firebase/handlers";
-import { http } from "./http";
 
 const basePath = process.env.REACT_APP_BASE_PATH;
 
@@ -20,16 +19,6 @@ export const loginWithGoogle = async (profileData) => {
       ...user,
       isGoogleUser: true,
     });
-
-    http.post(
-      "new-user-partilhar",
-      {
-        userEmail: newUser.email,
-      },
-      {
-        baseURL: "https://poker-champioship.herokuapp.com/",
-      }
-    );
 
     return {
       user: newUser,

@@ -40,7 +40,7 @@ const Cause = ({ setNiche, values, setValues }) => {
                   onClick={() => {
                     registerDatas(filter.niche);
                   }}
-                  checked={filter.niche === values?.niche?.cause}
+                  checked={filter.niche === values?.niche}
                 />
               </S.Label>
             </S.Item>

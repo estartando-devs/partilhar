@@ -2,7 +2,7 @@ import { InputWithLabel, Upload } from "../../../../components";
 
 import * as S from "./styles";
 
-const ProfileData = ({ values, setValues, errorText }) => {
+const ProfileData = ({ values, setValues }) => {
   function onUpload(image) {
     setValues({ ...values, logo: image.url });
   }
@@ -118,7 +118,6 @@ const ProfileData = ({ values, setValues, errorText }) => {
               />
             </>
           )}
-          {errorText && <S.Error>{errorText}</S.Error>}{" "}
         </S.Form>
       </S.Content>
     </S.Container>

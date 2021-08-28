@@ -14,7 +14,15 @@ export const createOngs = async (body) => {
 };
 
 export const registerOng = async (body) => {
-  localStorage.clear();
+  localStorage.removeItem("datas");
+
+  const formatedImages = body.projectImages
+    .map((item) => ({
+      url: item.url,
+      name: item.name,
+    }))
+    .filter((item) => item.url);
+
   const { email, password, isGoogleUser } = body;
 
   if (isGoogleUser) {
@@ -26,7 +34,10 @@ export const registerOng = async (body) => {
 
     const response = await createOngs(newBody);
 
-    localStorage.setItem("userOng", JSON.stringify(body));
+    localStorage.setItem(
+      "userOng",
+      JSON.stringify({ ...body, projectImages: formatedImages })
+    );
     return response;
   }
 
@@ -43,7 +54,14 @@ export const registerOng = async (body) => {
     logo: "",
   };
 
+  delete body.password;
+  delete body.confirmPassword;
+
   const response = await createOngs(newBody);
-  localStorage.setItem("userOng", JSON.stringify(body));
+  localStorage.setItem("user", JSON.stringify(responseUser.user));
+  localStorage.setItem(
+    "userOng",
+    JSON.stringify({ ...body, projectImages: formatedImages })
+  );
   return response;
 };

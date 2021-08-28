@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import { LayoutComponent, Steps } from "../../components";
 import * as Step from "./Steps";
 
@@ -6,7 +7,8 @@ const Register = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [values, setValues] = useState([]);
   const [niche, setNiche] = useState("");
-  const [errorText, setErrorText] = useState("");
+
+  const history = useHistory();
 
   function addDataLocalStorage() {
     const datas = JSON.stringify(values);
@@ -22,6 +24,8 @@ const Register = () => {
   useEffect(async () => {
     getDatasLocalStorage();
     const user = JSON.parse(localStorage.getItem("user"));
+    const haveOng = JSON.parse(localStorage.getItem("userOng"));
+    if (haveOng) history.push("/perfil");
     if (user)
       setValues((prev) => ({
         ...prev,
@@ -49,13 +53,11 @@ const Register = () => {
         addDataLocalStorage={addDataLocalStorage}
         niche={niche}
         values={values}
-        setErrorText={setErrorText}
       >
         <StepElement
           values={values}
           setValues={setValues}
           setNiche={setNiche}
-          errorText={errorText}
         />
       </Steps>
     </LayoutComponent>

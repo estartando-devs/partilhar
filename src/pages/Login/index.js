@@ -36,10 +36,20 @@ const Login = () => {
     setErrorText("");
     setLoading(true);
     try {
-      await loginWithEmailAndPassword({
+      const response = await loginWithEmailAndPassword({
         email: user.email,
         password: user.password,
       });
+      const ongs = await getOngs();
+      const haveOng = ongs.find((ong) => ong.userId === response.user.id);
+      localStorage.setItem("user", JSON.stringify(response.user));
+
+      if (!haveOng) {
+        history.push("/cadastro");
+        return;
+      }
+
+      localStorage.setItem("userOng", JSON.stringify(haveOng));
       setLoading(false);
       history.push("/");
     } catch (err) {
@@ -49,6 +59,7 @@ const Login = () => {
   }
 
   async function handleLoginGoogle() {
+    setLoading(true);
     setErrorText("");
     try {
       const response = await loginWithGoogle();
@@ -61,9 +72,11 @@ const Login = () => {
         return;
       }
 
+      setLoading(false);
       localStorage.setItem("userOng", JSON.stringify(haveOng));
       history.push("/");
     } catch (err) {
+      setLoading(false);
       setErrorText(err.message);
     }
   }

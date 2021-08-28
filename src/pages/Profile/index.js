@@ -14,7 +14,8 @@ import * as S from "./styles";
 
 const Profile = () => {
   const ong = JSON.parse(localStorage.getItem("userOng"));
-  const findCause = causes[ong?.niche?.cause];
+
+  const findCause = causes[ong.niche];
 
   return (
     <LayoutComponent dontShowSearch>
@@ -84,7 +85,7 @@ const Profile = () => {
           {!!ong.projectImages.length && (
             <CarouselComponent>
               {ong.projectImages.map((image) => (
-                <S.Img src={image.url} alt={image.name} />
+                <S.Img key={image.name} src={image.url} alt={image.name} />
               ))}
             </CarouselComponent>
           )}
