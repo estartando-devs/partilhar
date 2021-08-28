@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import * as S from "./styles";
 import * as I from "../../assets/img";
 import SideMenu from "../SideMenu";
@@ -18,9 +17,9 @@ const Header = ({ dontShowSearch }) => {
   return (
     <S.Container>
       <S.ContentHeader>
-        <Link to="/" onClick={() => window.scrollTo(0, 0)}>
+        <S.ItemLink to="/" onClick={() => window.scrollTo(0, 0)}>
           <S.ImagemLogo src={I.logo} alt="Logo" />
-        </Link>
+        </S.ItemLink>
 
         <S.ContainerSearch>{!dontShowSearch && <Search />}</S.ContainerSearch>
       </S.ContentHeader>
