@@ -16,6 +16,7 @@ export const Label = styled.label`
 `;
 export const Input = styled.input`
   margin-top: 2px;
+  outline: none;
   font-size: 14px;
   width: ${(props) => props.width || "340px"};
   height: ${(props) => props.height || "38px"};

@@ -57,7 +57,8 @@ export const ItemMenu = styled(Link)`
   @media (min-width: 768px) {
     font-size: 1.2rem;
     height: 100%;
-    width: 130px;
+    min-width: 120px;
+    padding: 0 25px;
     gap: 0;
     justify-content: center;
     :hover {
@@ -77,7 +78,7 @@ export const ItemMenuDesktop = styled(Link)`
     font-weight: 500;
     font-size: 1.2rem;
     height: 100%;
-    width: 160px;
+    min-width: 120px;
 
     :hover {
       background-color: ${(props) => props.theme.palette.text.light.primary}30;

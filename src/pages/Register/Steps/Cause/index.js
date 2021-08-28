@@ -6,9 +6,9 @@ import { TextArea } from "../../../../components/TextArea/styles";
 const Cause = ({ setNiche, values, setValues }) => {
   const [counter, setCounter] = useState(0);
 
-  function registerDatas(nicho, title, bgColor) {
+  function registerDatas(nicho, title, bgColor, icon) {
     setNiche(nicho);
-    setValues({ ...values, niche: { cause: nicho, title, bgColor } });
+    setValues({ ...values, niche: { cause: nicho, title, bgColor, icon } });
   }
 
   function limiterCaracter(e) {
@@ -36,7 +36,12 @@ const Cause = ({ setNiche, values, setValues }) => {
                   name="radio"
                   bgColor={filter.bgColor}
                   onClick={() => {
-                    registerDatas(filter.niche, filter.title, filter.bgColor);
+                    registerDatas(
+                      filter.niche,
+                      filter.title,
+                      filter.bgColor,
+                      filter.icon
+                    );
                   }}
                   checked={filter.niche === values?.niche?.cause}
                 />

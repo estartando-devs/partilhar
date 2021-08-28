@@ -70,6 +70,8 @@ import linkedIn from "./linkedIn.svg";
 import twitter from "./twitter.svg";
 import google from "./google.svg";
 import logout from "./logout.png";
+import logoOng from "./logoOng.svg";
+import edit from "./edit.svg";
 
 export {
   about,
@@ -144,4 +146,6 @@ export {
   checkX,
   google,
   logout,
+  logoOng,
+  edit,
 };
