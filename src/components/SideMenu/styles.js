@@ -14,6 +14,7 @@ export const Container = styled.div`
   transform: translateX(${(props) => (props.show ? "-100%" : "0")});
   transition: transform 0.8s;
   box-sizing: border-box;
+  z-index: 2;
   @media (min-width: 768px) {
     display: flex;
     position: unset;
@@ -114,6 +115,7 @@ export const Overlay = styled.div`
     height: 100vh;
     top: 0;
     transition: opacity 0.5s;
+    z-index: 2;
 
     ${(props) =>
       props.show &&
