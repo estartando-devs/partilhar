@@ -18,7 +18,6 @@ const Profile = () => {
     const datas = JSON.parse(localStorage.getItem("datas"));
     setOng(datas);
   }, []);
-  console.log(ong);
   return (
     <LayoutComponent dontShowSearch>
       <Tag
