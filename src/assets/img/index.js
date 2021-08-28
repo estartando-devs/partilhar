@@ -69,7 +69,7 @@ import instagramBlack from "./instagramBlack.svg";
 import linkedIn from "./linkedIn.svg";
 import twitter from "./twitter.svg";
 import google from "./google.svg";
-import logout from "./logout.png";
+import logout from "./logout.svg";
 import logoOng from "./logoOng.svg";
 import edit from "./edit.svg";
 
