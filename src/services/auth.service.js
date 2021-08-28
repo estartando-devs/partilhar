@@ -18,6 +18,7 @@ export const loginWithGoogle = async (profileData) => {
     const newUser = await save(`${basePath}/users`, {
       ...profileData,
       ...user,
+      isGoogleUser: true,
     });
 
     http.post(
@@ -106,6 +107,15 @@ export const onAuthStateChange = (callback) => {
 
 export const logout = async () => {
   const response = await firebase.auth().signOut();
+  localStorage.clear();
+
+  return response;
+};
+
+export const getUser = async () => {
+  const user = await firebase.auth().currentUser;
+  if (!user) return null;
+  const response = await getByKey(`${basePath}/users`, "email", user.email);
 
   return response;
 };
